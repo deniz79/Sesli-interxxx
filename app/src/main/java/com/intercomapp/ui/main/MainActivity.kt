@@ -17,7 +17,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.intercomapp.R
 import com.intercomapp.databinding.ActivityMainBinding
 import com.intercomapp.service.IntercomService
-import com.intercomapp.ui.contacts.ContactsFragment
+import com.intercomapp.ui.friends.FriendsFragment
 import com.intercomapp.ui.groups.GroupsFragment
 import com.intercomapp.ui.home.HomeFragment
 import com.intercomapp.ui.profile.ProfileFragment
@@ -85,7 +85,7 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
                 R.id.nav_friends -> {
-                    loadFragment(ContactsFragment())
+                    loadFragment(FriendsFragment())
                     true
                 }
                 R.id.nav_groups -> {
