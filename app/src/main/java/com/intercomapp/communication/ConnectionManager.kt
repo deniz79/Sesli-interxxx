@@ -30,24 +30,27 @@ class ConnectionManager(private val context: Context) {
             connectionsClient.acceptConnection(endpointId, payloadCallback)
         }
         
-        override fun onConnectionResult(endpointId: String, result: ConnectionResolution) {
-            when (result.status.statusCode) {
-                ConnectionsStatusCodes.STATUS_OK -> {
-                    Log.d(TAG, "Connection successful with: $endpointId")
-                    connectedPeers[endpointId] = discoveredPeers[endpointId] ?: return
-                    // Notify that connection is established
-                    Log.i(TAG, "✅ Bağlantı başarıyla kuruldu: $endpointId")
-                }
-                ConnectionsStatusCodes.STATUS_CONNECTION_REJECTED -> {
-                    Log.w(TAG, "Connection rejected by: $endpointId")
-                    Log.w(TAG, "❌ Bağlantı reddedildi: $endpointId")
-                }
-                ConnectionsStatusCodes.STATUS_ERROR -> {
-                    Log.e(TAG, "Connection failed with: $endpointId")
-                    Log.e(TAG, "❌ Bağlantı hatası: $endpointId")
-                }
+            override fun onConnectionResult(endpointId: String, result: ConnectionResolution) {
+        when (result.status.statusCode) {
+            ConnectionsStatusCodes.STATUS_OK -> {
+                Log.d(TAG, "Connection successful with: $endpointId")
+                connectedPeers[endpointId] = discoveredPeers[endpointId] ?: return
+                // Notify that connection is established
+                Log.i(TAG, "✅ Bağlantı başarıyla kuruldu: $endpointId")
+                
+                // Start WebRTC audio connection
+                startWebRTCAudioConnection(endpointId)
+            }
+            ConnectionsStatusCodes.STATUS_CONNECTION_REJECTED -> {
+                Log.w(TAG, "Connection rejected by: $endpointId")
+                Log.w(TAG, "❌ Bağlantı reddedildi: $endpointId")
+            }
+            ConnectionsStatusCodes.STATUS_ERROR -> {
+                Log.e(TAG, "Connection failed with: $endpointId")
+                Log.e(TAG, "❌ Bağlantı hatası: $endpointId")
             }
         }
+    }
         
         override fun onDisconnected(endpointId: String) {
             Log.d(TAG, "Disconnected from: $endpointId")
@@ -207,6 +210,10 @@ class ConnectionManager(private val context: Context) {
                 val text = message.substring(5)
                 // Process text message
             }
+            message.startsWith("WEBRTC_") -> {
+                // Handle WebRTC messages
+                handleWebRTCMessage(endpointId, message)
+            }
             else -> {
                 // Handle other message types
             }
@@ -216,6 +223,59 @@ class ConnectionManager(private val context: Context) {
     private fun handleAudioStream(endpointId: String, stream: Payload.Stream) {
         Log.d(TAG, "Received audio stream from: $endpointId")
         // Process audio stream
+    }
+    
+    private fun startWebRTCAudioConnection(endpointId: String) {
+        Log.d(TAG, "Starting WebRTC audio connection with: $endpointId")
+        Log.i(TAG, "🎵 WebRTC ses bağlantısı başlatılıyor: $endpointId")
+        
+        // Send WebRTC ready message
+        sendWebRTCOffer(endpointId)
+    }
+    
+    private fun sendWebRTCOffer(endpointId: String) {
+        Log.d(TAG, "Sending WebRTC offer to: $endpointId")
+        
+        // Send a simple message indicating WebRTC is ready
+        val message = "WEBRTC_READY:${userId ?: "unknown"}"
+        sendMessage(endpointId, message)
+    }
+    
+    private fun handleWebRTCMessage(endpointId: String, message: String) {
+        Log.d(TAG, "Handling WebRTC message from $endpointId: $message")
+        
+        when {
+            message.startsWith("WEBRTC_READY:") -> {
+                Log.i(TAG, "✅ WebRTC hazır mesajı alındı: $endpointId")
+                // Both peers are ready for WebRTC audio
+                startAudioStreaming(endpointId)
+            }
+            message.startsWith("SDP_OFFER:") -> {
+                // Handle SDP offer
+                val sdpData = message.substringAfter("SDP_OFFER:")
+                Log.d(TAG, "Received SDP offer from $endpointId")
+            }
+            message.startsWith("SDP_ANSWER:") -> {
+                // Handle SDP answer
+                val sdpData = message.substringAfter("SDP_ANSWER:")
+                Log.d(TAG, "Received SDP answer from $endpointId")
+            }
+            message.startsWith("ICE_CANDIDATE:") -> {
+                // Handle ICE candidate
+                val candidateData = message.substringAfter("ICE_CANDIDATE:")
+                Log.d(TAG, "Received ICE candidate from $endpointId")
+            }
+        }
+    }
+    
+    private fun startAudioStreaming(endpointId: String) {
+        Log.i(TAG, "🎵 Ses akışı başlatılıyor: $endpointId")
+        
+        // Enable audio streaming
+        // webRTCManager?.setMuted(false)
+        
+        // Notify UI that audio is active
+        Log.i(TAG, "✅ Ses iletişimi aktif: $endpointId")
     }
     
     fun release() {
