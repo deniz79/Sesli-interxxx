@@ -220,6 +220,10 @@ class ConnectionManager(private val context: Context) {
                 // Handle WebRTC messages
                 handleWebRTCMessage(endpointId, message)
             }
+            message.startsWith("CALL_") -> {
+                // Handle call messages
+                handleCallMessage(endpointId, message)
+            }
             else -> {
                 // Handle other message types
             }
@@ -303,6 +307,36 @@ class ConnectionManager(private val context: Context) {
         
         // Notify UI that audio is active
         Log.i(TAG, "✅ Ses iletişimi aktif: $endpointId")
+    }
+    
+    private fun handleCallMessage(endpointId: String, message: String) {
+        Log.d(TAG, "Handling call message from $endpointId: $message")
+        
+        when {
+            message.startsWith("CALL_REQUEST:") -> {
+                val callerId = message.substringAfter("CALL_REQUEST:")
+                Log.i(TAG, "📞 Arama isteği alındı: $callerId")
+                // Show incoming call notification
+                showIncomingCallNotification(endpointId, callerId)
+            }
+            message.startsWith("CALL_ACCEPTED:") -> {
+                val accepterId = message.substringAfter("CALL_ACCEPTED:")
+                Log.i(TAG, "✅ Arama kabul edildi: $accepterId")
+                // Start audio connection
+                startWebRTCAudioConnection(endpointId)
+            }
+            message.startsWith("CALL_REJECTED:") -> {
+                val rejecterId = message.substringAfter("CALL_REJECTED:")
+                Log.i(TAG, "❌ Arama reddedildi: $rejecterId")
+                // Handle call rejection
+            }
+        }
+    }
+    
+    private fun showIncomingCallNotification(endpointId: String, callerId: String) {
+        // This would show an incoming call notification
+        Log.i(TAG, "📞 Gelen arama: $callerId")
+        // In a real implementation, this would show a notification or dialog
     }
     
     fun release() {

@@ -32,6 +32,8 @@ class VoiceRoomViewModel : ViewModel() {
     // State variables
     private var isMuted = false
     private var otherUserId: String? = null
+    private var isCallActive = false
+    private var isCallInitiator = false
     
     init {
         // Initialize with current user info
@@ -44,7 +46,7 @@ class VoiceRoomViewModel : ViewModel() {
         
         // Set initial connection status
         _connectionStatus.value = ConnectionStatus(
-            message = "Bağlantı kuruluyor...",
+            message = "Arama bekleniyor...",
             color = R.color.warning
         )
     }
@@ -71,8 +73,14 @@ class VoiceRoomViewModel : ViewModel() {
             isMuted = false
         )
         
-        // Start audio connection
-        startAudioConnection()
+        // Set as call initiator
+        isCallInitiator = true
+        
+        // Update connection status
+        _connectionStatus.value = ConnectionStatus(
+            message = "Arama başlatılıyor...",
+            color = R.color.warning
+        )
     }
     
     private fun startAudioConnection() {
@@ -90,6 +98,58 @@ class VoiceRoomViewModel : ViewModel() {
                 _message.value = "Ses iletişimi başlatıldı"
             }
         }
+    }
+    
+    fun startCall() {
+        if (isCallActive) return
+        
+        isCallActive = true
+        isCallInitiator = true
+        
+        // Update connection status
+        _connectionStatus.value = ConnectionStatus(
+            message = "Arama yapılıyor...",
+            color = R.color.warning
+        )
+        
+        // Send call request to other user
+        otherUserId?.let { userId ->
+            intercomService?.let { service ->
+                service.connectionManager?.sendMessage(userId, "CALL_REQUEST:${authRepository.currentUser?.uid ?: "unknown"}")
+            }
+        }
+        
+        _message.value = "Arama başlatıldı"
+    }
+    
+    fun acceptCall() {
+        if (isCallActive) return
+        
+        isCallActive = true
+        isCallInitiator = false
+        
+        // Update connection status
+        _connectionStatus.value = ConnectionStatus(
+            message = "Arama kabul edildi",
+            color = R.color.success
+        )
+        
+        // Start audio connection
+        startAudioConnection()
+        
+        _message.value = "Arama kabul edildi"
+    }
+    
+    fun rejectCall() {
+        // Send reject message
+        otherUserId?.let { userId ->
+            intercomService?.let { service ->
+                service.connectionManager?.sendMessage(userId, "CALL_REJECTED:${authRepository.currentUser?.uid ?: "unknown"}")
+            }
+        }
+        
+        _message.value = "Arama reddedildi"
+        // Navigate back
     }
     
     fun toggleMute() {

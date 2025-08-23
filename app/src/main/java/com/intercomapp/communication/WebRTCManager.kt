@@ -123,11 +123,8 @@ class WebRTCManager {
                     val bytesRead = audioRecord?.read(buffer, 0, buffer.size) ?: 0
                     
                     if (bytesRead > 0 && !isMuted) {
-                        // Send audio data to connected peers
+                        // Send audio data to connected peers (but don't play our own audio)
                         sendAudioToPeers(buffer.copyOf(bytesRead))
-                        
-                        // Play received audio
-                        audioTrack?.write(buffer, 0, bytesRead)
                     }
                     
                     delay(10) // Small delay to prevent blocking

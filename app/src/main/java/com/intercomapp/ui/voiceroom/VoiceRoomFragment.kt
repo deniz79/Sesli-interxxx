@@ -51,6 +51,11 @@ class VoiceRoomFragment : Fragment() {
     }
     
     private fun setupViews() {
+        // Call button
+        binding.btnCall.setOnClickListener {
+            viewModel.startCall()
+        }
+        
         // Mute button
         binding.btnMute.setOnClickListener {
             viewModel.toggleMute()
@@ -93,6 +98,9 @@ class VoiceRoomFragment : Fragment() {
         viewModel.connectionStatus.observe(viewLifecycleOwner) { status ->
             binding.tvConnectionStatus.text = status.message
             binding.tvConnectionStatus.setTextColor(resources.getColor(status.color, null))
+            
+            // Update button visibility based on call status
+            updateButtonVisibility()
         }
         
         // Messages
@@ -101,6 +109,14 @@ class VoiceRoomFragment : Fragment() {
                 Toast.makeText(context, it, Toast.LENGTH_SHORT).show()
             }
         }
+    }
+    
+    private fun updateButtonVisibility() {
+        // Show call button when not connected, hide when connected
+        val isConnected = viewModel.connectionStatus.value?.message?.contains("Bağlantı kuruldu") == true
+        
+        binding.btnCall.visibility = if (isConnected) View.GONE else View.VISIBLE
+        binding.btnMute.visibility = if (isConnected) View.VISIBLE else View.GONE
     }
     
     override fun onDestroyView() {

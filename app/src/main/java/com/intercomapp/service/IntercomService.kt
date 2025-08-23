@@ -20,7 +20,7 @@ class IntercomService : Service() {
     lateinit var webRTCManager: WebRTCManager
     private lateinit var voiceCommandManager: VoiceCommandManager
     private lateinit var authRepository: AuthRepository
-    private lateinit var connectionManager: ConnectionManager
+    lateinit var connectionManager: ConnectionManager
     
     private val serviceScope = CoroutineScope(Dispatchers.IO + SupervisorJob())
     private val binder = IntercomBinder()

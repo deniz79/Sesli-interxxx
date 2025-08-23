@@ -225,13 +225,27 @@
                 android:gravity="center"
                 android:orientation="horizontal">
 
-                <!-- Mute Button -->
+                <!-- Call Button (when not connected) -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_call"
+                    style="@style/Widget.Material3.Button.IconButton.Filled"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginEnd="16dp"
+                    android:visibility="gone"
+                    app:backgroundTint="@color/success"
+                    app:icon="@drawable/ic_call"
+                    app:iconSize="24dp"
+                    app:iconTint="@color/white" />
+
+                <!-- Mute Button (when connected) -->
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btn_mute"
                     style="@style/Widget.Material3.Button.IconButton.Filled"
                     android:layout_width="64dp"
                     android:layout_height="64dp"
                     android:layout_marginEnd="16dp"
+                    android:visibility="gone"
                     app:icon="@drawable/ic_mic_on"
                     app:iconSize="24dp"
                     app:iconTint="@color/white" />
