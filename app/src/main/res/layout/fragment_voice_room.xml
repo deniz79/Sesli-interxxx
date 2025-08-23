@@ -66,9 +66,10 @@
             android:padding="16dp">
 
             <TextView
+                android:id="@+id/tv_participants_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="👥 Katılımcılar"
+                android:text="👥 Katılımcılar (1)"
                 android:textColor="@color/text_primary"
                 android:textSize="18sp"
                 android:textStyle="bold" />

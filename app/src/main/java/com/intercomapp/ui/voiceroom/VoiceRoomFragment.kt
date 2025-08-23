@@ -110,6 +110,9 @@ class VoiceRoomFragment : Fragment() {
             
             // Update button visibility based on call status
             updateButtonVisibility()
+            
+            // Update participants count
+            updateParticipantsCount()
         }
         
         // Messages
@@ -123,6 +126,13 @@ class VoiceRoomFragment : Fragment() {
     private fun updateButtonVisibility() {
         // Always show mute and disconnect buttons
         binding.btnMute.visibility = View.VISIBLE
+    }
+    
+    private fun updateParticipantsCount() {
+        // Count participants based on connection status
+        val isConnected = viewModel.connectionStatus.value?.message?.contains("Ses bağlantısı kuruldu") == true
+        val participantCount = if (isConnected) 2 else 1
+        binding.tvParticipantsTitle.text = "👥 Katılımcılar ($participantCount)"
     }
     
     override fun onDestroyView() {

@@ -166,6 +166,11 @@ class WebRTCManager {
         }
     }
     
+    // Add method to check if peer is connected
+    fun isPeerConnected(peerId: String): Boolean {
+        return audioStreams.containsKey(peerId)
+    }
+    
     private fun sendAudioMessage(peerId: String, audioMessage: String) {
         // Send audio message through connection manager
         connectionManager?.sendMessage(peerId, audioMessage)

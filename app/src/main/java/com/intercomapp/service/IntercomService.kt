@@ -352,6 +352,15 @@ class IntercomService : Service() {
                     Log.i(TAG, "🎤 Mikrofon durumu: $peerId - ${if (isMuted) "Kapalı" else "Açık"}")
                 }
             }
+            "ROOM_JOINED" -> {
+                // Room join notification
+                val parts = endpointId.split(":")
+                if (parts.size == 2) {
+                    val peerId = parts[0]
+                    val joinedUserId = parts[1]
+                    Log.i(TAG, "🚪 Odaya katılım: $peerId - $joinedUserId")
+                }
+            }
         }
     }
     

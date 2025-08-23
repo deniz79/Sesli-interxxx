@@ -55,9 +55,7 @@
                 android:id="@+id/btn_add_friend"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Ekle"
-                app:icon="@drawable/ic_person_add"
-                app:iconGravity="textStart" />
+                android:text="Ekle" />
 
         </LinearLayout>
 

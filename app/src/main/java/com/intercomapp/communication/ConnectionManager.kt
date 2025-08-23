@@ -181,8 +181,13 @@ class ConnectionManager(private val context: Context) {
     }
     
     fun sendMessage(endpointId: String, message: String) {
-        val payload = Payload.fromBytes(message.toByteArray())
-        connectionsClient.sendPayload(endpointId, payload)
+        try {
+            val payload = Payload.fromBytes(message.toByteArray())
+            connectionsClient.sendPayload(endpointId, payload)
+            Log.d(TAG, "📤 Message sent to $endpointId: $message")
+        } catch (e: Exception) {
+            Log.e(TAG, "❌ Failed to send message to $endpointId", e)
+        }
     }
     
     fun sendAudioStream(endpointId: String, audioData: ByteArray) {
@@ -236,6 +241,13 @@ class ConnectionManager(private val context: Context) {
                 Log.i(TAG, "✅ Ses bağlantısı onaylandı: $connectedUserId")
                 // Notify callback about audio connection
                 callCallback?.invoke("AUDIO_CONNECTED", endpointId)
+            }
+            message.startsWith("ROOM_JOINED:") -> {
+                // Handle room join notification
+                val joinedUserId = message.substringAfter("ROOM_JOINED:")
+                Log.i(TAG, "🚪 Odaya katılım: $joinedUserId")
+                // Notify callback about room join
+                callCallback?.invoke("ROOM_JOINED", "$endpointId:$joinedUserId")
             }
             message.startsWith("MIC_STATUS:") -> {
                 // Handle microphone status update

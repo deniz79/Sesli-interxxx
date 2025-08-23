@@ -1,6 +1,7 @@
 package com.intercomapp.ui.friends
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -32,53 +33,75 @@ class FriendsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         
-        viewModel = ViewModelProvider(this)[FriendsViewModel::class.java]
-        
-        // Get service from MainActivity
-        (activity as? MainActivity)?.let { mainActivity ->
-            viewModel.setIntercomService(mainActivity.getIntercomService())
+        try {
+            viewModel = ViewModelProvider(this)[FriendsViewModel::class.java]
+            
+            // Get service from MainActivity
+            (activity as? MainActivity)?.let { mainActivity ->
+                viewModel.setIntercomService(mainActivity.getIntercomService())
+            }
+            
+            setupViews()
+            setupRecyclerView()
+            observeViewModel()
+        } catch (e: Exception) {
+            Log.e("FriendsFragment", "Error in onViewCreated", e)
+            Toast.makeText(context, "Arkadaşlar sayfası yüklenirken hata oluştu", Toast.LENGTH_SHORT).show()
         }
-        
-        setupViews()
-        setupRecyclerView()
-        observeViewModel()
     }
     
     private fun setupViews() {
-        // Add friend button
-        binding.btnAddFriend.setOnClickListener {
-            val friendId = binding.etFriendId.text.toString().trim()
-            if (friendId.isNotEmpty()) {
-                viewModel.addFriend(friendId)
-                binding.etFriendId.text?.clear()
-            } else {
-                Toast.makeText(context, "Lütfen arkadaş ID'sini girin", Toast.LENGTH_SHORT).show()
+        try {
+            // Add friend button
+            binding.btnAddFriend.setOnClickListener {
+                val friendId = binding.etFriendId.text.toString().trim()
+                if (friendId.isNotEmpty()) {
+                    viewModel.addFriend(friendId)
+                    binding.etFriendId.text?.clear()
+                } else {
+                    Toast.makeText(context, "Lütfen arkadaş ID'sini girin", Toast.LENGTH_SHORT).show()
+                }
             }
+        } catch (e: Exception) {
+            Log.e("FriendsFragment", "Error in setupViews", e)
         }
     }
     
     private fun setupRecyclerView() {
-        friendsAdapter = FriendsListAdapter { friend ->
-            // Call friend directly
-            callFriend(friend.id)
-        }
-        
-        binding.recyclerViewFriends.apply {
-            layoutManager = LinearLayoutManager(context)
-            adapter = friendsAdapter
+        try {
+            friendsAdapter = FriendsListAdapter { friend ->
+                // Call friend directly
+                callFriend(friend.id)
+            }
+            
+            binding.recyclerViewFriends.apply {
+                layoutManager = LinearLayoutManager(context)
+                adapter = friendsAdapter
+            }
+        } catch (e: Exception) {
+            Log.e("FriendsFragment", "Error in setupRecyclerView", e)
+            Toast.makeText(context, "Arkadaş listesi yüklenirken hata oluştu", Toast.LENGTH_SHORT).show()
         }
     }
     
     private fun observeViewModel() {
-        viewModel.friends.observe(viewLifecycleOwner) { friends ->
-            friendsAdapter.submitList(friends)
-            binding.tvNoFriends.visibility = if (friends.isEmpty()) View.VISIBLE else View.GONE
-        }
-        
-        viewModel.message.observe(viewLifecycleOwner) { message ->
-            message?.let {
-                Toast.makeText(context, it, Toast.LENGTH_SHORT).show()
+        try {
+            viewModel.friends.observe(viewLifecycleOwner) { friends ->
+                try {
+                    friendsAdapter.submitList(friends)
+                    binding.tvNoFriends.visibility = if (friends.isEmpty()) View.VISIBLE else View.GONE
+                } catch (e: Exception) {
+                    Log.e("FriendsFragment", "Error updating friends list", e)
+                }
             }
+            
+            viewModel.message.observe(viewLifecycleOwner) { message ->
+                message?.let {
+                    Toast.makeText(context, it, Toast.LENGTH_SHORT).show()
+                }
+            }
+        } catch (e: Exception) {
+            Log.e("FriendsFragment", "Error in observeViewModel", e)
         }
     }
     

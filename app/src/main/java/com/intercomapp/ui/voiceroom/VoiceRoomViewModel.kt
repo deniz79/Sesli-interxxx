@@ -81,6 +81,12 @@ class VoiceRoomViewModel : ViewModel() {
         // Start audio connection immediately
         startAudioConnection()
         
+        // Send room join notification to other user
+        intercomService?.let { service ->
+            val currentUserId = authRepository.currentUser?.uid ?: "unknown"
+            service.connectionManager?.sendMessage(userId, "ROOM_JOINED:$currentUserId")
+        }
+        
         _message.value = "Ses odasına bağlandı"
     }
     
@@ -109,6 +115,22 @@ class VoiceRoomViewModel : ViewModel() {
         )
         
         _message.value = "Ses iletişimi aktif"
+    }
+    
+    fun onRoomJoined(peerId: String, joinedUserId: String) {
+        // Called when someone joins the room
+        _connectionStatus.value = ConnectionStatus(
+            message = "Katılımcı odaya girdi",
+            color = R.color.success
+        )
+        
+        _message.value = "Odaya katılım: $joinedUserId"
+    }
+    
+    fun onMicrophoneStatusChanged(peerId: String, isMuted: Boolean) {
+        // Called when microphone status changes
+        updateOtherUserMuteStatus(isMuted)
+        _message.value = if (isMuted) "Karşı taraf mikrofonu kapattı" else "Karşı taraf mikrofonu açtı"
     }
     
 
