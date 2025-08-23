@@ -16,6 +16,7 @@
     <!-- Main -->
     <string name="home">Ana Sayfa</string>
     <string name="contacts">Kişiler</string>
+    <string name="friends">Arkadaşlar</string>
     <string name="groups">Gruplar</string>
     <string name="profile">Profil</string>
     <string name="settings">Ayarlar</string>

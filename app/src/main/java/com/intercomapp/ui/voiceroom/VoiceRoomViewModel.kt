@@ -125,6 +125,14 @@ class VoiceRoomViewModel : ViewModel() {
             service.setMuted(isMuted)
         }
         
+        // Send microphone status to other user
+        otherUserId?.let { userId ->
+            intercomService?.let { service ->
+                val micStatus = if (isMuted) "MUTED" else "UNMUTED"
+                service.connectionManager?.sendMessage(userId, "MIC_STATUS:$micStatus")
+            }
+        }
+        
         // Show message
         _message.value = if (isMuted) "Mikrofon susturuldu" else "Mikrofon açıldı"
     }

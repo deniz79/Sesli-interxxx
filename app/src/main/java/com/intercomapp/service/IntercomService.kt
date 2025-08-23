@@ -343,6 +343,15 @@ class IntercomService : Service() {
                 // Audio connection established
                 Log.i(TAG, "🎵 Ses bağlantısı kuruldu: $endpointId")
             }
+            "MIC_STATUS" -> {
+                // Microphone status update
+                val parts = endpointId.split(":")
+                if (parts.size == 2) {
+                    val peerId = parts[0]
+                    val isMuted = parts[1].toBoolean()
+                    Log.i(TAG, "🎤 Mikrofon durumu: $peerId - ${if (isMuted) "Kapalı" else "Açık"}")
+                }
+            }
         }
     }
     

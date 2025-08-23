@@ -237,6 +237,14 @@ class ConnectionManager(private val context: Context) {
                 // Notify callback about audio connection
                 callCallback?.invoke("AUDIO_CONNECTED", endpointId)
             }
+            message.startsWith("MIC_STATUS:") -> {
+                // Handle microphone status update
+                val micStatus = message.substringAfter("MIC_STATUS:")
+                val isMuted = micStatus == "MUTED"
+                Log.i(TAG, "🎤 Mikrofon durumu güncellendi: ${if (isMuted) "Kapalı" else "Açık"}")
+                // Notify callback about microphone status
+                callCallback?.invoke("MIC_STATUS", "$endpointId:$isMuted")
+            }
             else -> {
                 // Handle other message types
             }
@@ -244,14 +252,15 @@ class ConnectionManager(private val context: Context) {
     }
     
     private fun handleAudioData(endpointId: String, audioData: String) {
-        Log.d(TAG, "Received audio data from $endpointId: ${audioData.length} bytes")
+        Log.d(TAG, "📥 Received audio data from $endpointId: ${audioData.length} chars")
         
         // Convert base64 audio data back to bytes and play
         try {
             val audioBytes = android.util.Base64.decode(audioData, android.util.Base64.DEFAULT)
+            Log.d(TAG, "🔊 Decoded audio: ${audioBytes.size} bytes")
             playAudioData(audioBytes)
         } catch (e: Exception) {
-            Log.e(TAG, "Failed to decode audio data", e)
+            Log.e(TAG, "❌ Failed to decode audio data", e)
         }
     }
     

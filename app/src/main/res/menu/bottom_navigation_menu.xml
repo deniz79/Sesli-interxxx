@@ -6,9 +6,9 @@
         android:title="@string/home" />
     
     <item
-        android:id="@+id/nav_contacts"
-        android:icon="@drawable/ic_contacts"
-        android:title="@string/contacts" />
+        android:id="@+id/nav_friends"
+        android:icon="@drawable/ic_friends"
+        android:title="@string/friends" />
     
     <item
         android:id="@+id/nav_groups"

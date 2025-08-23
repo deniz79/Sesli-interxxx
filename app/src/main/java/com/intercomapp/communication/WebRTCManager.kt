@@ -149,7 +149,7 @@ class WebRTCManager {
     private fun sendAudioToPeers(audioData: ByteArray) {
         // Send audio data to all connected peers via ConnectionManager
         if (audioStreams.isNotEmpty()) {
-            Log.v(TAG, "Sending audio data: ${audioData.size} bytes to ${audioStreams.size} peers")
+            Log.d(TAG, "🎤 Sending audio data: ${audioData.size} bytes to ${audioStreams.size} peers")
             
             // Convert audio data to base64 for transmission
             val audioDataBase64 = android.util.Base64.encodeToString(audioData, android.util.Base64.DEFAULT)
@@ -159,8 +159,10 @@ class WebRTCManager {
             audioStreams.keys.forEach { peerId ->
                 // Send through connection manager
                 sendAudioMessage(peerId, audioMessage)
-                Log.d(TAG, "Sending audio to peer: $peerId")
+                Log.d(TAG, "📤 Audio sent to peer: $peerId")
             }
+        } else {
+            Log.w(TAG, "⚠️ No audio streams available to send audio")
         }
     }
     

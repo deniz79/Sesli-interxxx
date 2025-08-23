@@ -84,7 +84,7 @@ class MainActivity : AppCompatActivity() {
                     loadFragment(HomeFragment())
                     true
                 }
-                R.id.nav_contacts -> {
+                R.id.nav_friends -> {
                     loadFragment(ContactsFragment())
                     true
                 }
@@ -138,7 +138,7 @@ class MainActivity : AppCompatActivity() {
         intent?.getStringExtra("notification_type")?.let { type ->
             when (type) {
                 "call" -> {
-                    binding.bottomNavigation.selectedItemId = R.id.nav_contacts
+                    binding.bottomNavigation.selectedItemId = R.id.nav_friends
                 }
                 "group" -> {
                     binding.bottomNavigation.selectedItemId = R.id.nav_groups

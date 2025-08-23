@@ -73,6 +73,13 @@ class VoiceRoomFragment : Fragment() {
         viewModel.myUserInfo.observe(viewLifecycleOwner) { userInfo ->
             binding.tvMyName.text = userInfo.name
             binding.tvMyStatus.text = if (userInfo.isMuted) "🔇 Ses kapalı" else "🎤 Ses açık"
+            binding.tvMyStatus.setTextColor(
+                resources.getColor(
+                    if (userInfo.isMuted) com.intercomapp.R.color.error 
+                    else com.intercomapp.R.color.success, 
+                    null
+                )
+            )
             binding.ivMyMicStatus.setImageResource(
                 if (userInfo.isMuted) com.intercomapp.R.drawable.ic_mic_off 
                 else com.intercomapp.R.drawable.ic_mic_on
@@ -83,6 +90,13 @@ class VoiceRoomFragment : Fragment() {
         viewModel.otherUserInfo.observe(viewLifecycleOwner) { userInfo ->
             binding.tvOtherName.text = userInfo.name
             binding.tvOtherStatus.text = if (userInfo.isMuted) "🔇 Ses kapalı" else "🎤 Ses açık"
+            binding.tvOtherStatus.setTextColor(
+                resources.getColor(
+                    if (userInfo.isMuted) com.intercomapp.R.color.error 
+                    else com.intercomapp.R.color.success, 
+                    null
+                )
+            )
             binding.ivOtherMicStatus.setImageResource(
                 if (userInfo.isMuted) com.intercomapp.R.drawable.ic_mic_off 
                 else com.intercomapp.R.drawable.ic_mic_on
