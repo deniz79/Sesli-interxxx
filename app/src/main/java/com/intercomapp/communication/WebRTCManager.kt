@@ -46,10 +46,17 @@ class WebRTCManager {
         audioManager?.isSpeakerphoneOn = true
         audioManager?.isMicrophoneMute = false
         
+        // Set volume to maximum for testing
+        audioManager?.let { am ->
+            am.setStreamVolume(AudioManager.STREAM_VOICE_CALL, am.getStreamMaxVolume(AudioManager.STREAM_VOICE_CALL), 0)
+            am.setStreamVolume(AudioManager.STREAM_MUSIC, am.getStreamMaxVolume(AudioManager.STREAM_MUSIC), 0)
+        }
+        
         // Initialize audio components
         initializeAudioComponents()
         
         Log.i(TAG, "✅ Basit ses iletişimi başarıyla başlatıldı")
+        Log.i(TAG, "🔊 Ses seviyesi maksimuma ayarlandı (test için)")
     }
     
     fun setConnectionManager(connectionManager: ConnectionManager) {
@@ -224,6 +231,38 @@ class WebRTCManager {
     
     fun setUserId(userId: String) {
         Log.d(TAG, "Setting user ID: $userId")
+        
+        // Save user ID for echo prevention
+        context?.getSharedPreferences("user_prefs", Context.MODE_PRIVATE)?.edit()?.apply {
+            putString("user_id", userId)
+            apply()
+        }
+    }
+    
+    // Test audio function for debugging
+    fun playTestAudio() {
+        try {
+            Log.i(TAG, "🔊 Test sesi çalınıyor...")
+            
+            // Create a simple test tone (440 Hz sine wave)
+            val sampleRate = 44100
+            val duration = 1.0 // 1 second
+            val frequency = 440.0 // A4 note
+            val numSamples = (sampleRate * duration).toInt()
+            val audioData = ByteArray(numSamples * 2) // 16-bit samples
+            
+            for (i in 0 until numSamples) {
+                val sample = (Math.sin(2 * Math.PI * frequency * i / sampleRate) * 32767).toInt().toShort()
+                audioData[i * 2] = (sample.toInt() and 0xFF).toByte()
+                audioData[i * 2 + 1] = (sample.toInt() shr 8 and 0xFF).toByte()
+            }
+            
+            // Play the test audio
+            playReceivedAudio(audioData)
+            Log.i(TAG, "✅ Test sesi çalındı")
+        } catch (e: Exception) {
+            Log.e(TAG, "❌ Test sesi çalınamadı", e)
+        }
     }
     
     fun connectToSignalingServer() {
@@ -265,5 +304,12 @@ class WebRTCManager {
         } catch (e: Exception) {
             Log.e(TAG, "❌ Error playing received audio", e)
         }
+    }
+    
+    // Add method to check if we should play audio (avoid echo)
+    private fun shouldPlayAudio(fromPeerId: String): Boolean {
+        // Don't play audio from ourselves to avoid echo
+        val currentUserId = context?.getSharedPreferences("user_prefs", Context.MODE_PRIVATE)?.getString("user_id", "") ?: ""
+        return fromPeerId != currentUserId
     }
 }

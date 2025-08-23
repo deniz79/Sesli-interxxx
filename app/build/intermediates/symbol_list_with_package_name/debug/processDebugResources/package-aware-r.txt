@@ -3000,6 +3000,7 @@ drawable ic_call_end
 drawable ic_clear_black_24
 drawable ic_clock_black_24dp
 drawable ic_contacts
+drawable ic_copy
 drawable ic_group
 drawable ic_groups
 drawable ic_home
@@ -3211,6 +3212,7 @@ id browser_actions_menu_view
 id btn_add_friend
 id btn_connect
 id btn_copy_id
+id btn_copy_room_id
 id btn_create_room
 id btn_disconnect
 id btn_join_room

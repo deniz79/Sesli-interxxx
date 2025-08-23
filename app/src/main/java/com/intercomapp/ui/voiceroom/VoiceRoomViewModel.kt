@@ -57,14 +57,14 @@ class VoiceRoomViewModel : ViewModel() {
         
         // Set initial connection status
         _connectionStatus.value = ConnectionStatus(
-            message = "Arama bekleniyor...",
+            message = "Oda bekleniyor...",
             color = R.color.warning
         )
         
         // Initialize participant count with just me
         val currentUserId = currentUser?.uid ?: "unknown"
         connectedParticipants.add(currentUserId)
-        _participantCount.value = connectedParticipants.size
+        _participantCount.value = 1 // Start with just me
     }
     
     fun setIntercomService(service: IntercomService?) {
@@ -99,6 +99,11 @@ class VoiceRoomViewModel : ViewModel() {
         }
     }
     
+    fun playTestAudio() {
+        intercomService?.webRTCManager?.playTestAudio()
+        _message.value = "Test sesi çalınıyor..."
+    }
+    
     fun setOtherUserId(userId: String) {
         otherUserId = userId
         // Don't set other user info until someone actually joins
@@ -106,12 +111,9 @@ class VoiceRoomViewModel : ViewModel() {
         
         // Update connection status
         _connectionStatus.value = ConnectionStatus(
-            message = "Ses odasına bağlanılıyor...",
+            message = "Odaya bağlanılıyor...",
             color = R.color.warning
         )
-        
-        // Start audio connection immediately
-        startAudioConnection()
         
         // Send room join notification to other users in the room
         intercomService?.let { service ->
@@ -120,7 +122,7 @@ class VoiceRoomViewModel : ViewModel() {
             service.connectionManager?.sendMessage(currentRoomId, "ROOM_JOINED:$currentUserId")
         }
         
-        _message.value = "Ses odasına bağlandı"
+        _message.value = "Odaya bağlandı"
         
         // Start checking for real connection
         startConnectionCheck()
@@ -155,22 +157,27 @@ class VoiceRoomViewModel : ViewModel() {
     
     fun onRoomJoined(peerId: String, joinedUserId: String) {
         // Called when someone joins the room
-        connectedParticipants.add(joinedUserId)
-        _participantCount.value = connectedParticipants.size
-        
-        // Set other user info when someone actually joins
-        _otherUserInfo.value = UserInfo(
-            id = joinedUserId,
-            name = "Katılımcı ${joinedUserId.take(8)}...",
-            isMuted = false
-        )
-        
-        _connectionStatus.value = ConnectionStatus(
-            message = "Katılımcı odaya girdi",
-            color = R.color.success
-        )
-        
-        _message.value = "Odaya katılım: $joinedUserId"
+        if (!connectedParticipants.contains(joinedUserId)) {
+            connectedParticipants.add(joinedUserId)
+            _participantCount.value = connectedParticipants.size
+            
+            // Set other user info when someone actually joins
+            _otherUserInfo.value = UserInfo(
+                id = joinedUserId,
+                name = "Katılımcı ${joinedUserId.take(8)}...",
+                isMuted = false
+            )
+            
+            _connectionStatus.value = ConnectionStatus(
+                message = "Katılımcı odaya girdi",
+                color = R.color.success
+            )
+            
+            _message.value = "Odaya katılım: $joinedUserId"
+            
+            // Start audio connection when someone joins
+            startAudioConnection()
+        }
     }
     
     fun onParticipantLeft(userId: String) {

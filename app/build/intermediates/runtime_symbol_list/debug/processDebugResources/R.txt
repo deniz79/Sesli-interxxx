@@ -2999,6 +2999,7 @@ int drawable ic_call_end 0x7f0800ee
 int drawable ic_clear_black_24 0x7f0800ef
 int drawable ic_clock_black_24dp 0x7f0800f0
 int drawable ic_contacts 0x7f0800f1
+int drawable ic_copy 0x7f080156
 int drawable ic_group 0x7f0800f2
 int drawable ic_groups 0x7f0800f3
 int drawable ic_home 0x7f0800f4
@@ -3210,6 +3211,7 @@ int id browser_actions_menu_view 0x7f0a006b
 int id btn_add_friend 0x7f0a006c
 int id btn_connect 0x7f0a006d
 int id btn_copy_id 0x7f0a006f
+int id btn_copy_room_id 0x7f0a0292
 int id btn_create_room 0x7f0a028d
 int id btn_disconnect 0x7f0a0070
 int id btn_join_room 0x7f0a028e

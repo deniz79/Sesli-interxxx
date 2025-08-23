@@ -3025,6 +3025,7 @@ drawable ic_person_add
 drawable ic_profile
 drawable ic_search_black_24
 drawable ic_stop
+drawable ic_volume_up
 drawable m3_appbar_background
 drawable m3_avd_hide_password
 drawable m3_avd_show_password
@@ -3222,6 +3223,7 @@ id btn_mute
 id btn_register
 id btn_start_music
 id btn_stop_music
+id btn_test_audio
 id btn_voice_command
 id btn_volume_down
 id btn_volume_up

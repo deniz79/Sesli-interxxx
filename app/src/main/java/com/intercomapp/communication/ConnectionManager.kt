@@ -266,6 +266,13 @@ class ConnectionManager(private val context: Context) {
     private fun handleAudioData(endpointId: String, audioData: String) {
         Log.d(TAG, "📥 Received audio data from $endpointId: ${audioData.length} chars")
         
+        // Check if this audio is from ourselves to avoid echo
+        val currentUserId = userId ?: ""
+        if (endpointId == currentUserId) {
+            Log.d(TAG, "🔄 Ignoring own audio to prevent echo")
+            return
+        }
+        
         // Convert base64 audio data back to bytes and play
         try {
             val audioBytes = android.util.Base64.decode(audioData, android.util.Base64.DEFAULT)

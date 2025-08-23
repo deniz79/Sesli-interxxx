@@ -64,6 +64,11 @@ class VoiceRoomFragment : Fragment() {
             viewModel.toggleMute()
         }
         
+        // Test audio button
+        binding.btnTestAudio.setOnClickListener {
+            viewModel.playTestAudio()
+        }
+        
         // Disconnect button
         binding.btnDisconnect.setOnClickListener {
             viewModel.disconnect()
