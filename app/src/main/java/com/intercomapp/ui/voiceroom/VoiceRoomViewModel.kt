@@ -9,7 +9,6 @@ import androidx.lifecycle.ViewModel
 import com.intercomapp.R
 import com.intercomapp.data.repository.AuthRepository
 import com.intercomapp.service.IntercomService
-import com.intercomapp.communication.WebRTCManager
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -100,14 +99,12 @@ class VoiceRoomViewModel : ViewModel() {
     }
     
     fun playTestAudio() {
-        intercomService?.webRTCManager?.playTestAudio()
+        intercomService?.audioManager?.playTestAudio()
         _message.value = "Test sesi çalınıyor..."
     }
     
     fun setOtherUserId(userId: String) {
         otherUserId = userId
-        // Don't set other user info until someone actually joins
-        // _otherUserInfo.value will remain null initially
         
         // Update connection status
         _connectionStatus.value = ConnectionStatus(
@@ -115,41 +112,42 @@ class VoiceRoomViewModel : ViewModel() {
             color = R.color.warning
         )
         
-        // Send room join notification to other users in the room
+        // Create room or join room based on whether we're the first user
         intercomService?.let { service ->
             val currentUserId = authRepository.currentUser?.uid ?: "unknown"
             val currentRoomId = _roomId.value ?: ""
-            service.connectionManager?.sendMessageByRoomId(currentRoomId, "ROOM_JOINED:$currentUserId")
+            
+            // For now, we'll create a room and wait for others to join
+            // In a real implementation, you'd check if room exists first
+            createRoom(currentRoomId, currentUserId)
         }
         
-        _message.value = "Odaya bağlandı"
+        _message.value = "Oda oluşturuldu, diğer kullanıcılar bekleniyor..."
         
         // Start checking for real connection
         startConnectionCheck()
     }
     
-    private fun startAudioConnection() {
-        otherUserId?.let { userId ->
-            intercomService?.let { service ->
-                val currentRoomId = _roomId.value ?: ""
-                val endpointId = service.connectionManager?.getEndpointIdForRoom(currentRoomId)
-                
-                if (endpointId != null) {
-                    // Create WebRTC connection using endpoint ID
-                    service.webRTCManager?.createPeerConnectionByRoomId(currentRoomId, endpointId)
-                    
-                    // Update connection status to waiting
-                    _connectionStatus.value = ConnectionStatus(
-                        message = "Karşı taraf bekleniyor...",
-                        color = R.color.warning
-                    )
-                    
-                    _message.value = "Ses bağlantısı başlatıldı"
-                } else {
-                    _message.value = "Endpoint bulunamadı, bağlantı bekleniyor..."
-                }
+    private fun createRoom(roomId: String, userId: String) {
+        intercomService?.let { service ->
+            val intent = android.content.Intent(service, IntercomService::class.java).apply {
+                action = "CREATE_ROOM"
+                putExtra("room_id", roomId)
+                putExtra("user_id", userId)
             }
+            service.startService(intent)
         }
+    }
+    
+    private fun startAudioConnection() {
+        // Audio connection is handled automatically by SimpleAudioManager
+        // when someone joins the room
+        _connectionStatus.value = ConnectionStatus(
+            message = "Ses bağlantısı hazırlanıyor...",
+            color = R.color.warning
+        )
+        
+        _message.value = "Ses sistemi başlatıldı"
     }
     
     fun onAudioConnected() {
@@ -176,14 +174,13 @@ class VoiceRoomViewModel : ViewModel() {
             )
             
             _connectionStatus.value = ConnectionStatus(
-                message = "Katılımcı odaya girdi",
+                message = "Katılımcı odaya girdi - Ses bağlantısı kuruldu!",
                 color = R.color.success
             )
             
-            _message.value = "Odaya katılım: $joinedUserId"
+            _message.value = "Odaya katılım: $joinedUserId - Artık konuşabilirsiniz!"
             
-            // Start audio connection when someone joins
-            startAudioConnection()
+            // Audio connection is automatically established by SimpleAudioManager
         }
     }
     
@@ -216,16 +213,11 @@ class VoiceRoomViewModel : ViewModel() {
         
         // Update service
         intercomService?.let { service ->
-            service.webRTCManager?.setMuted(isMuted)
             service.setMuted(isMuted)
         }
         
-        // Send microphone status to other user
-        intercomService?.let { service ->
-            val currentRoomId = _roomId.value ?: ""
-            val micStatus = if (isMuted) "MUTED" else "UNMUTED"
-            service.connectionManager?.sendMessageByRoomId(currentRoomId, "MIC_STATUS:$micStatus")
-        }
+        // Microphone status is handled automatically by SimpleAudioManager
+        // No need to send separate messages
         
         // Show message
         _message.value = if (isMuted) "Mikrofon susturuldu" else "Mikrofon açıldı"
@@ -233,13 +225,8 @@ class VoiceRoomViewModel : ViewModel() {
     
     fun disconnect() {
         intercomService?.let { service ->
-            val currentRoomId = _roomId.value ?: ""
-            val endpointId = service.connectionManager?.getEndpointIdForRoom(currentRoomId)
-            
-            if (endpointId != null) {
-                // Disconnect WebRTC
-                service.webRTCManager?.disconnect(endpointId)
-            }
+            // Disconnect audio manager
+            service.disconnect()
             
             // Update connection status
             _connectionStatus.value = ConnectionStatus(
@@ -254,9 +241,7 @@ class VoiceRoomViewModel : ViewModel() {
     private fun updateConnectionStatus() {
         // Update connection status based on current state
         intercomService?.let { service ->
-            val currentRoomId = _roomId.value ?: ""
-            val endpointId = service.connectionManager?.getEndpointIdForRoom(currentRoomId)
-            val isConnected = endpointId != null && service.webRTCManager?.isPeerConnected(endpointId) == true
+            val isConnected = service.getAudioConnectionStatus()
             
             _connectionStatus.value = ConnectionStatus(
                 message = if (isConnected) "Ses bağlantısı kuruldu" else "Bağlantı bekleniyor...",
@@ -273,13 +258,11 @@ class VoiceRoomViewModel : ViewModel() {
                 delay(2000)
                 
                 intercomService?.let { service ->
-                    val currentRoomId = _roomId.value ?: ""
-                    val endpointId = service.connectionManager?.getEndpointIdForRoom(currentRoomId)
-                    val isConnected = endpointId != null && service.webRTCManager?.isPeerConnected(endpointId) == true
+                    val isConnected = service.getAudioConnectionStatus()
                     
                     if (isConnected) {
                         _connectionStatus.value = ConnectionStatus(
-                            message = "Ses bağlantısı kuruldu",
+                            message = "Ses bağlantısı kuruldu - Konuşabilirsiniz!",
                             color = R.color.success
                         )
                         shouldContinue = false

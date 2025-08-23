@@ -112,10 +112,9 @@ class HomeViewModel : ViewModel() {
                 _message.value = "Bağlantı kesildi"
                 _connectionState.value = false
             } else {
-                // Connect
-                service.connect()
-                _message.value = "Bağlantı aranıyor..."
-                _connectionState.value = true
+                // For new system, use room creation instead
+                _message.value = "Yeni sistem için oda oluşturun"
+                _connectionState.value = false
             }
             updateStates()
         } ?: run {

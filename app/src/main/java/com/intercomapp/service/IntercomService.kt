@@ -10,17 +10,15 @@ import com.intercomapp.IntercomApplication
 import com.intercomapp.R
 import com.intercomapp.communication.VoiceCommand
 import com.intercomapp.communication.VoiceCommandManager
-import com.intercomapp.communication.WebRTCManager
-import com.intercomapp.communication.ConnectionManager
+import com.intercomapp.communication.SimpleAudioManager
 import com.intercomapp.data.repository.AuthRepository
 import kotlinx.coroutines.*
 
 class IntercomService : Service() {
     
-    lateinit var webRTCManager: WebRTCManager
+    lateinit var audioManager: SimpleAudioManager
     private lateinit var voiceCommandManager: VoiceCommandManager
     private lateinit var authRepository: AuthRepository
-    lateinit var connectionManager: ConnectionManager
     
     private val serviceScope = CoroutineScope(Dispatchers.IO + SupervisorJob())
     private val binder = IntercomBinder()
@@ -44,27 +42,15 @@ class IntercomService : Service() {
         Log.d(TAG, "IntercomService created")
         
         // Initialize dependencies manually (Hilt disabled)
-        webRTCManager = WebRTCManager()
+        audioManager = SimpleAudioManager()
         voiceCommandManager = VoiceCommandManager(this)
         authRepository = AuthRepository()
-        connectionManager = ConnectionManager(this)
         
         // Initialize managers
-        webRTCManager.initialize(this)
-        webRTCManager.setConnectionManager(connectionManager)
-        connectionManager.setWebRTCManager(webRTCManager)
-        
-        // Set call callback
-        connectionManager.setCallCallback { callType, endpointId ->
-            handleCallEvent(callType, endpointId)
-        }
-        
+        audioManager.initialize(this)
         voiceCommandManager.initialize()
         
-        // Connect to signaling server
-        webRTCManager.connectToSignalingServer()
-        
-        Log.i(TAG, "✅ Ses iletişimi için WebRTC aktif")
+        Log.i(TAG, "✅ Basit ses sistemi aktif")
         
         // Start voice command listening
         startVoiceCommandListening()
@@ -80,7 +66,17 @@ class IntercomService : Service() {
         when (intent?.action) {
             "START_FOREGROUND" -> startForegroundService()
             "STOP_FOREGROUND" -> stopForegroundService()
-            "CONNECT" -> connect()
+            "CREATE_ROOM" -> {
+                val roomId = intent.getStringExtra("room_id") ?: ""
+                val userId = intent.getStringExtra("user_id") ?: ""
+                createRoom(roomId, userId)
+            }
+            "JOIN_ROOM" -> {
+                val roomId = intent.getStringExtra("room_id") ?: ""
+                val userId = intent.getStringExtra("user_id") ?: ""
+                val serverIp = intent.getStringExtra("server_ip") ?: ""
+                joinRoom(roomId, userId, serverIp)
+            }
             "DISCONNECT" -> disconnect()
             "MUTE" -> toggleMute()
             "START_MUSIC" -> startMusic()
@@ -141,7 +137,10 @@ class IntercomService : Service() {
         Log.d(TAG, "Handling voice command: $command")
         
         when (command) {
-            VoiceCommand.CONNECT -> connect()
+            VoiceCommand.CONNECT -> {
+                // For now, just show a message
+                Log.i(TAG, "Voice command: CONNECT - Use room system instead")
+            }
             VoiceCommand.DISCONNECT -> disconnect()
             VoiceCommand.MUTE -> toggleMute()
             VoiceCommand.UNMUTE -> toggleMute()
@@ -157,31 +156,19 @@ class IntercomService : Service() {
         voiceCommandManager.clearCommand()
     }
     
-                        fun connect() {
-        if (isConnected) {
-            Log.d(TAG, "Already connected")
-            return
-        }
-
+    private fun createRoom(roomId: String, userId: String) {
+        Log.i(TAG, "🚪 Oda oluşturuluyor: $roomId")
+        
         serviceScope.launch {
             try {
-                // Set user ID in WebRTC manager for echo prevention
-                val currentUserId = authRepository.currentUser?.uid ?: "unknown"
-                webRTCManager.setUserId(currentUserId)
+                audioManager.createRoom(roomId, userId)
                 
-                // Start discovery and advertising
-                connectionManager.startDiscovery()
-                connectionManager.startAdvertising(
-                    currentUserId,
-                    authRepository.currentUser?.displayName ?: "Unknown User"
-                )
-
                 // Update user status
                 val currentUser = authRepository.currentUser
                 if (currentUser != null) {
                     authRepository.updateUserStatus(
                         currentUser.uid,
-                        "ONLINE",
+                        "IN_ROOM",
                         true
                     )
                 }
@@ -189,12 +176,38 @@ class IntercomService : Service() {
                 isConnected = true
                 updateNotification()
 
-                Log.d(TAG, "Connected successfully")
-                Log.i(TAG, "✅ Bağlantı başarıyla kuruldu")
+                Log.i(TAG, "✅ Oda başarıyla oluşturuldu")
 
             } catch (e: Exception) {
-                Log.e(TAG, "Failed to connect", e)
-                Log.e(TAG, "❌ Bağlantı hatası: ${e.message}")
+                Log.e(TAG, "❌ Oda oluşturma hatası: ${e.message}")
+            }
+        }
+    }
+    
+    private fun joinRoom(roomId: String, userId: String, serverIp: String) {
+        Log.i(TAG, "🚪 Odaya katılınıyor: $roomId")
+        
+        serviceScope.launch {
+            try {
+                audioManager.joinRoom(roomId, userId, serverIp)
+                
+                // Update user status
+                val currentUser = authRepository.currentUser
+                if (currentUser != null) {
+                    authRepository.updateUserStatus(
+                        currentUser.uid,
+                        "IN_ROOM",
+                        true
+                    )
+                }
+
+                isConnected = true
+                updateNotification()
+
+                Log.i(TAG, "✅ Odaya başarıyla katıldı")
+
+            } catch (e: Exception) {
+                Log.e(TAG, "❌ Odaya katılma hatası: ${e.message}")
             }
         }
     }
@@ -207,13 +220,8 @@ class IntercomService : Service() {
         
         serviceScope.launch {
             try {
-                // Stop discovery and advertising
-                connectionManager.stopDiscovery()
-                connectionManager.stopAdvertising()
-                connectionManager.disconnectFromAllPeers()
-                
-                // Disconnect all WebRTC connections
-                webRTCManager.disconnectAll()
+                // Disconnect audio manager
+                audioManager.disconnect()
                 
                 // Update user status
                 val currentUser = authRepository.currentUser
@@ -238,7 +246,7 @@ class IntercomService : Service() {
     
     private fun toggleMute() {
         isMuted = !isMuted
-        webRTCManager.setMuted(isMuted)
+        audioManager.setMuted(isMuted)
         updateNotification()
         
         Log.d(TAG, if (isMuted) "Muted" else "Unmuted")
@@ -285,87 +293,16 @@ class IntercomService : Service() {
         notificationManager.notify(FOREGROUND_SERVICE_ID, notification)
     }
     
-    fun connectToSpecificUser(targetUserId: String) {
-        Log.d(TAG, "Attempting to connect to specific user: $targetUserId")
-        
-        serviceScope.launch {
-            try {
-                // Start advertising our own ID
-                val currentUser = authRepository.currentUser
-                if (currentUser != null) {
-                    connectionManager.startAdvertising(
-                        currentUser.uid,
-                        currentUser.displayName ?: "Unknown User"
-                    )
-                    
-                    // Start discovery to find target user
-                    connectionManager.startDiscovery()
-                    
-                    // Set connection status to true when attempting to connect
-                    isConnected = true
-                    updateNotification()
-                    
-                    // Store target user ID for connection
-                    // In a real implementation, you'd use a signaling server
-                    // For now, we'll use Nearby Connections discovery
-                    
-                    Log.d(TAG, "Searching for user: ${targetUserId.take(8)}...")
-                    Log.d(TAG, "Started discovery for user: $targetUserId")
-                } else {
-                    Log.e(TAG, "No current user found")
-                }
-            } catch (e: Exception) {
-                Log.e(TAG, "Failed to connect to specific user", e)
-            }
-        }
-    }
-    
     // Public methods for activity to call
     fun getConnectionStatus(): Boolean = isConnected
     fun getMuteStatus(): Boolean = isMuted
     fun getMusicStatus(): Boolean = isMusicPlaying
+    fun getAudioConnectionStatus(): Boolean = audioManager.isConnected()
     
     fun setMuted(muted: Boolean) {
         isMuted = muted
-        webRTCManager.setMuted(muted)
+        audioManager.setMuted(muted)
         updateNotification()
-    }
-    
-    private fun handleCallEvent(callType: String, endpointId: String) {
-        Log.d(TAG, "Call event: $callType from $endpointId")
-        
-        when (callType) {
-            "CALL_ACCEPTED" -> {
-                // Notify UI that call was accepted
-                Log.i(TAG, "📞 Arama kabul edildi: $endpointId")
-            }
-            "CALL_CONFIRMED" -> {
-                // Both parties confirmed, audio connection is ready
-                Log.i(TAG, "✅ Ses bağlantısı hazır: $endpointId")
-            }
-            "AUDIO_CONNECTED" -> {
-                // Audio connection established
-                Log.i(TAG, "🎵 Ses bağlantısı kuruldu: $endpointId")
-            }
-            "MIC_STATUS" -> {
-                // Microphone status update
-                val parts = endpointId.split(":")
-                if (parts.size == 2) {
-                    val peerId = parts[0]
-                    val isMuted = parts[1].toBoolean()
-                    Log.i(TAG, "🎤 Mikrofon durumu: $peerId - ${if (isMuted) "Kapalı" else "Açık"}")
-                }
-            }
-            "ROOM_JOINED" -> {
-                // Room join notification
-                val parts = endpointId.split(":")
-                if (parts.size == 2) {
-                    val peerId = parts[0]
-                    val joinedUserId = parts[1]
-                    Log.i(TAG, "🚪 Odaya katılım: $peerId - $joinedUserId")
-                }
-            }
-        }
     }
     
     override fun onDestroy() {
@@ -374,6 +311,6 @@ class IntercomService : Service() {
         
         serviceScope.cancel()
         voiceCommandManager.release()
-        webRTCManager.release()
+        audioManager.release()
     }
 }
