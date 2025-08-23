@@ -29,6 +29,7 @@ class WebRTCManager {
     private var isMuted = false
     private var audioJob: Job? = null
     private val audioStreams = ConcurrentHashMap<String, AudioStream>()
+    private var connectionManager: ConnectionManager? = null
     
     data class AudioStream(
         val peerId: String,
@@ -49,6 +50,11 @@ class WebRTCManager {
         initializeAudioComponents()
         
         Log.i(TAG, "✅ Basit ses iletişimi başarıyla başlatıldı")
+    }
+    
+    fun setConnectionManager(connectionManager: ConnectionManager) {
+        this.connectionManager = connectionManager
+        Log.d(TAG, "Connection manager set for audio communication")
     }
     
     private fun initializeAudioComponents() {
@@ -142,11 +148,27 @@ class WebRTCManager {
     }
     
     private fun sendAudioToPeers(audioData: ByteArray) {
-        // In a real implementation, this would send audio data to connected peers
-        // For now, we'll just log that audio is being processed
+        // Send audio data to all connected peers via ConnectionManager
         if (audioStreams.isNotEmpty()) {
-            Log.v(TAG, "Processing audio data: ${audioData.size} bytes")
+            Log.v(TAG, "Sending audio data: ${audioData.size} bytes to ${audioStreams.size} peers")
+            
+            // Convert audio data to base64 for transmission
+            val audioDataBase64 = android.util.Base64.encodeToString(audioData, android.util.Base64.DEFAULT)
+            val audioMessage = "AUDIO:$audioDataBase64"
+            
+            // Send audio data to each connected peer
+            audioStreams.keys.forEach { peerId ->
+                // Send through connection manager
+                sendAudioMessage(peerId, audioMessage)
+                Log.d(TAG, "Sending audio to peer: $peerId")
+            }
         }
+    }
+    
+    private fun sendAudioMessage(peerId: String, audioMessage: String) {
+        // Send audio message through connection manager
+        connectionManager?.sendMessage(peerId, audioMessage)
+        Log.d(TAG, "Audio message sent to $peerId: ${audioMessage.length} chars")
     }
     
     fun disconnect(peerId: String) {
@@ -219,5 +241,13 @@ class WebRTCManager {
     fun handleIceCandidate(peerId: String, candidate: String) {
         Log.d(TAG, "Handling ICE candidate for: $peerId")
         // For simple audio, we don't need ICE candidates
+    }
+    
+    fun playReceivedAudio(audioBytes: ByteArray) {
+        Log.d(TAG, "Playing received audio: ${audioBytes.size} bytes")
+        
+        // Play the received audio through AudioTrack
+        audioTrack?.write(audioBytes, 0, audioBytes.size)
+        Log.i(TAG, "🎵 Alınan ses oynatılıyor: ${audioBytes.size} bytes")
     }
 }

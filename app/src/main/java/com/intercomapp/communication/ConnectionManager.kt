@@ -21,6 +21,7 @@ class ConnectionManager(private val context: Context) {
     private var isDiscovering = false
     private var isAdvertising = false
     private var userId: String? = null
+    private var webRTCManager: WebRTCManager? = null
     
     private val connectionLifecycleCallback = object : ConnectionLifecycleCallback() {
         override fun onConnectionInitiated(endpointId: String, info: ConnectionInfo) {
@@ -196,6 +197,11 @@ class ConnectionManager(private val context: Context) {
         return connectedPeers.values.toList()
     }
     
+    fun setWebRTCManager(webRTCManager: WebRTCManager) {
+        this.webRTCManager = webRTCManager
+        Log.d(TAG, "WebRTC manager set for audio communication")
+    }
+    
     private fun handleMessage(endpointId: String, message: String) {
         Log.d(TAG, "Received message from $endpointId: $message")
         // Handle different message types
@@ -203,7 +209,7 @@ class ConnectionManager(private val context: Context) {
             message.startsWith("AUDIO:") -> {
                 // Handle audio data
                 val audioData = message.substring(6)
-                // Process audio data
+                handleAudioData(endpointId, audioData)
             }
             message.startsWith("TEXT:") -> {
                 // Handle text message
@@ -218,6 +224,27 @@ class ConnectionManager(private val context: Context) {
                 // Handle other message types
             }
         }
+    }
+    
+    private fun handleAudioData(endpointId: String, audioData: String) {
+        Log.d(TAG, "Received audio data from $endpointId: ${audioData.length} bytes")
+        
+        // Convert base64 audio data back to bytes and play
+        try {
+            val audioBytes = android.util.Base64.decode(audioData, android.util.Base64.DEFAULT)
+            playAudioData(audioBytes)
+        } catch (e: Exception) {
+            Log.e(TAG, "Failed to decode audio data", e)
+        }
+    }
+    
+    private fun playAudioData(audioBytes: ByteArray) {
+        // Play received audio data
+        Log.d(TAG, "Playing audio data: ${audioBytes.size} bytes")
+        
+        // Play the audio through the WebRTC manager
+        webRTCManager?.playReceivedAudio(audioBytes)
+        Log.i(TAG, "🎵 Ses verisi oynatılıyor: ${audioBytes.size} bytes")
     }
     
     private fun handleAudioStream(endpointId: String, stream: Payload.Stream) {

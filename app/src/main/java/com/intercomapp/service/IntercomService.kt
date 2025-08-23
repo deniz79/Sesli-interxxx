@@ -51,6 +51,8 @@ class IntercomService : Service() {
         
         // Initialize managers
         webRTCManager.initialize(this)
+        webRTCManager.setConnectionManager(connectionManager)
+        connectionManager.setWebRTCManager(webRTCManager)
         voiceCommandManager.initialize()
         
         // Connect to signaling server
