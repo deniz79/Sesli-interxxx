@@ -308,8 +308,11 @@ class ConnectionManager(private val context: Context) {
     private fun startAudioStreaming(endpointId: String) {
         Log.i(TAG, "🎵 Ses akışı başlatılıyor: $endpointId")
         
+        // Create audio connection with the peer
+        webRTCManager?.createPeerConnection(endpointId)
+        
         // Enable audio streaming
-        // webRTCManager?.setMuted(false)
+        webRTCManager?.setMuted(false)
         
         // Notify UI that audio is active
         Log.i(TAG, "✅ Ses iletişimi aktif: $endpointId")

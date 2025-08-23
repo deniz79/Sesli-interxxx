@@ -51,11 +51,6 @@ class VoiceRoomFragment : Fragment() {
     }
     
     private fun setupViews() {
-        // Call button
-        binding.btnCall.setOnClickListener {
-            viewModel.startCall()
-        }
-        
         // Mute button
         binding.btnMute.setOnClickListener {
             viewModel.toggleMute()
@@ -112,11 +107,8 @@ class VoiceRoomFragment : Fragment() {
     }
     
     private fun updateButtonVisibility() {
-        // Show call button when not connected, hide when connected
-        val isConnected = viewModel.connectionStatus.value?.message?.contains("Bağlantı kuruldu") == true
-        
-        binding.btnCall.visibility = if (isConnected) View.GONE else View.VISIBLE
-        binding.btnMute.visibility = if (isConnected) View.VISIBLE else View.GONE
+        // Always show mute and disconnect buttons
+        binding.btnMute.visibility = View.VISIBLE
     }
     
     override fun onDestroyView() {

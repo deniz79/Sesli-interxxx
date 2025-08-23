@@ -32,8 +32,7 @@ class VoiceRoomViewModel : ViewModel() {
     // State variables
     private var isMuted = false
     private var otherUserId: String? = null
-    private var isCallActive = false
-    private var isCallInitiator = false
+
     
     init {
         // Initialize with current user info
@@ -73,14 +72,16 @@ class VoiceRoomViewModel : ViewModel() {
             isMuted = false
         )
         
-        // Set as call initiator
-        isCallInitiator = true
-        
         // Update connection status
         _connectionStatus.value = ConnectionStatus(
-            message = "Arama başlatılıyor...",
+            message = "Ses odasına bağlanılıyor...",
             color = R.color.warning
         )
+        
+        // Start audio connection immediately
+        startAudioConnection()
+        
+        _message.value = "Ses odasına bağlandı"
     }
     
     private fun startAudioConnection() {
@@ -100,74 +101,7 @@ class VoiceRoomViewModel : ViewModel() {
         }
     }
     
-    fun startCall() {
-        if (isCallActive) return
-        
-        isCallActive = true
-        isCallInitiator = true
-        
-        // Update connection status
-        _connectionStatus.value = ConnectionStatus(
-            message = "Arama yapılıyor...",
-            color = R.color.warning
-        )
-        
-        // Send call request to other user
-        otherUserId?.let { userId ->
-            intercomService?.let { service ->
-                service.connectionManager?.sendMessage(userId, "CALL_REQUEST:${authRepository.currentUser?.uid ?: "unknown"}")
-            }
-        }
-        
-        _message.value = "Arama başlatıldı"
-    }
-    
-    fun onCallAccepted() {
-        // Called when the other party accepts the call
-        _connectionStatus.value = ConnectionStatus(
-            message = "Arama kabul edildi, bağlantı kuruluyor...",
-            color = R.color.success
-        )
-        
-        // Start audio connection after a short delay
-        android.os.Handler(android.os.Looper.getMainLooper()).postDelayed({
-            startAudioConnection()
-        }, 1000)
-    }
-    
-    fun acceptCall() {
-        if (isCallActive) return
-        
-        isCallActive = true
-        isCallInitiator = false
-        
-        // Update connection status
-        _connectionStatus.value = ConnectionStatus(
-            message = "Arama kabul edildi",
-            color = R.color.success
-        )
-        
-        // Send acceptance message to caller
-        otherUserId?.let { userId ->
-            intercomService?.let { service ->
-                service.connectionManager.sendMessage(userId, "CALL_ACCEPTED:${authRepository.currentUser?.uid ?: "unknown"}")
-            }
-        }
-        
-        _message.value = "Arama kabul edildi"
-    }
-    
-    fun rejectCall() {
-        // Send reject message
-        otherUserId?.let { userId ->
-            intercomService?.let { service ->
-                service.connectionManager?.sendMessage(userId, "CALL_REJECTED:${authRepository.currentUser?.uid ?: "unknown"}")
-            }
-        }
-        
-        _message.value = "Arama reddedildi"
-        // Navigate back
-    }
+
     
     fun toggleMute() {
         isMuted = !isMuted
