@@ -68,8 +68,15 @@ node server.js
 ## 📥 APK İndirme
 
 Doğrudan APK dosyasını indirmek için:
-- [Sesli-Intercom-App.apk](Sesli-Intercom-App.apk) dosyasını indirin
+
+### 🟢 **Önerilen: Debug APK (İmzalı)**
+- [Sesli-Intercom-App-Debug.apk](Sesli-Intercom-App-Debug.apk) dosyasını indirin
 - Android cihazınıza yükleyin
+- **Bu APK imzalanmıştır ve doğrudan yüklenebilir**
+
+### ⚠️ **Alternatif: Release APK (İmzalanmamış)**
+- [Sesli-Intercom-App.apk](Sesli-Intercom-App.apk) dosyasını indirin
+- **Bu APK imzalanmamıştır, yükleme sorunları yaşayabilirsiniz**
 
 ## 🛠️ Teknik Detaylar
 
