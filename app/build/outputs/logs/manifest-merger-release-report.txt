@@ -1,0 +1,969 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:2:1-69:12
+INJECTED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:2:1-69:12
+INJECTED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:2:1-69:12
+INJECTED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:2:1-69:12
+MERGED from [androidx.databinding:viewbinding:8.1.0] /Users/denizyetik/.gradle/caches/transforms-3/5bfa6b72916dd299e5a426fc41953f19/transformed/viewbinding-8.1.0/AndroidManifest.xml:2:1-7:12
+MERGED from [com.karumi:dexter:6.2.3] /Users/denizyetik/.gradle/caches/transforms-3/60332f7dc334d0378eb9bb628621d1c1/transformed/dexter-6.2.3/AndroidManifest.xml:17:1-32:12
+MERGED from [androidx.navigation:navigation-ui-ktx:2.5.3] /Users/denizyetik/.gradle/caches/transforms-3/71936aaee78034dbd5f942cb58542592/transformed/navigation-ui-ktx-2.5.3/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-ui:2.5.3] /Users/denizyetik/.gradle/caches/transforms-3/e30345ff7a93f23ee4df02704a5f3070/transformed/navigation-ui-2.5.3/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.material:material:1.8.0] /Users/denizyetik/.gradle/caches/transforms-3/7a2cf9992d9bb2956bf491dd08961359/transformed/material-1.8.0/AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/denizyetik/.gradle/caches/transforms-3/bd5a6e45e1056c41b00ade9aca2e26ec/transformed/constraintlayout-2.1.4/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/denizyetik/.gradle/caches/transforms-3/ef2661132c497dbdce1764de81cb9dca/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/denizyetik/.gradle/caches/transforms-3/2323e8e09ab045ed5b5113d9e7175019/transformed/appcompat-1.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:glide:4.15.1] /Users/denizyetik/.gradle/caches/transforms-3/453e32c892ba213a9b62f3e6d08eedb2/transformed/glide-4.15.1/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/denizyetik/.gradle/caches/transforms-3/4c8bc1ab65aeedfdf47f6fa7e2e3b367/transformed/viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-nearby:18.5.0] /Users/denizyetik/.gradle/caches/transforms-3/3718b0868ff7a3c961e1ec57bce0893e/transformed/play-services-nearby-18.5.0/AndroidManifest.xml:2:1-16:12
+MERGED from [com.google.firebase:firebase-storage-ktx:20.2.0] /Users/denizyetik/.gradle/caches/transforms-3/ae3a87286c0e39746468cc80826fdc7d/transformed/firebase-storage-ktx-20.2.0/AndroidManifest.xml:2:1-20:12
+MERGED from [com.google.firebase:firebase-storage:20.2.0] /Users/denizyetik/.gradle/caches/transforms-3/ecbba366544b8fcacfe60cbb7ed6604e/transformed/firebase-storage-20.2.0/AndroidManifest.xml:15:1-38:12
+MERGED from [com.google.firebase:firebase-firestore-ktx:24.6.0] /Users/denizyetik/.gradle/caches/transforms-3/492618f379572f6414f7e143aeedfac7/transformed/firebase-firestore-ktx-24.6.0/AndroidManifest.xml:2:1-20:12
+MERGED from [com.google.firebase:firebase-firestore:24.6.0] /Users/denizyetik/.gradle/caches/transforms-3/3080b8267f53b135f5d5fdb33a2acc7c/transformed/firebase-firestore-24.6.0/AndroidManifest.xml:2:1-25:12
+MERGED from [com.google.firebase:firebase-messaging-ktx:23.1.2] /Users/denizyetik/.gradle/caches/transforms-3/8ea34a5c769fb7d00068316d00febe91/transformed/firebase-messaging-ktx-23.1.2/AndroidManifest.xml:17:1-34:12
+MERGED from [com.google.firebase:firebase-messaging:23.1.2] /Users/denizyetik/.gradle/caches/transforms-3/27a11c9f2ed48ce7a59f7d3aae37e5a4/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:17:1-61:12
+MERGED from [com.google.firebase:firebase-auth-ktx:22.0.0] /Users/denizyetik/.gradle/caches/transforms-3/69fb1c51c90021fbe946e786203626b8/transformed/firebase-auth-ktx-22.0.0/AndroidManifest.xml:2:1-17:12
+MERGED from [com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-3/463932f0f41b444f1d821ceb80f82e19/transformed/firebase-auth-22.0.0/AndroidManifest.xml:17:1-75:12
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] /Users/denizyetik/.gradle/caches/transforms-3/7dfb18759013ae35a345d7c594d1b6ba/transformed/firebase-appcheck-interop-17.0.0/AndroidManifest.xml:15:1-25:12
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] /Users/denizyetik/.gradle/caches/transforms-3/7d02bdf73ba5f8312998ce1c728cbe97/transformed/firebase-database-collection-18.0.1/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] /Users/denizyetik/.gradle/caches/transforms-3/ae909b3f6396c7c077b3fed5cbe6872c/transformed/play-services-auth-api-phone-17.4.0/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/denizyetik/.gradle/caches/transforms-3/cf4ad96e877f8edaf56c0307db57eb41/transformed/play-services-base-18.0.1/AndroidManifest.xml:16:1-24:12
+MERGED from [com.google.firebase:firebase-common-ktx:20.3.2] /Users/denizyetik/.gradle/caches/transforms-3/fe611ff84d5f013d7e98c1fb21cb2bab/transformed/firebase-common-ktx-20.3.2/AndroidManifest.xml:2:1-20:12
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/denizyetik/.gradle/caches/transforms-3/aa7256ca8801063ae48cb69bc983194e/transformed/firebase-auth-interop-20.0.0/AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.firebase:firebase-datatransport:18.1.7] /Users/denizyetik/.gradle/caches/transforms-3/89e1d92e45b126bd1f4cae950815756c/transformed/firebase-datatransport-18.1.7/AndroidManifest.xml:15:1-33:12
+MERGED from [com.google.firebase:firebase-installations:17.1.3] /Users/denizyetik/.gradle/caches/transforms-3/ddecafea92fc72c72e6be1bc2e33607c/transformed/firebase-installations-17.1.3/AndroidManifest.xml:2:1-23:12
+MERGED from [com.google.firebase:firebase-common:20.3.2] /Users/denizyetik/.gradle/caches/transforms-3/e54c263e2787faee6b5b867b6028f330/transformed/firebase-common-20.3.2/AndroidManifest.xml:15:1-39:12
+MERGED from [com.google.android.recaptcha:recaptcha:18.1.2] /Users/denizyetik/.gradle/caches/transforms-3/de9275f85b5c72626736d6f6ad712921/transformed/recaptcha-18.1.2/AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.android.play:integrity:1.1.0] /Users/denizyetik/.gradle/caches/transforms-3/07823691c32cf53ca0107b5d6ad0418e/transformed/integrity-1.1.0/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.firebase:firebase-installations-interop:17.1.0] /Users/denizyetik/.gradle/caches/transforms-3/a002d8a799b8c4e894c4489770df96a1/transformed/firebase-installations-interop-17.1.0/AndroidManifest.xml:15:1-22:12
+MERGED from [com.google.firebase:firebase-iid-interop:17.1.0] /Users/denizyetik/.gradle/caches/transforms-3/6cc1ee22b6e4cea13cb4b286390b3b9b/transformed/firebase-iid-interop-17.1.0/AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] /Users/denizyetik/.gradle/caches/transforms-3/5c1b7a684518ce5062611854a0913af0/transformed/play-services-cloud-messaging-17.0.1/AndroidManifest.xml:2:1-13:12
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/denizyetik/.gradle/caches/transforms-3/42b107efce1a20260ddfa4736c96227b/transformed/play-services-tasks-18.0.2/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-stats:17.0.2] /Users/denizyetik/.gradle/caches/transforms-3/1b1714ad31fc37ed038340f83dd7a867/transformed/play-services-stats-17.0.2/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] /Users/denizyetik/.gradle/caches/transforms-3/0a6d2b99a23f0daf918ad9ffe15f8d40/transformed/firebase-measurement-connector-19.0.0/AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/denizyetik/.gradle/caches/transforms-3/f2ec65d68fb6866c5e97883f468ceb34/transformed/play-services-basement-18.1.0/AndroidManifest.xml:16:1-26:12
+MERGED from [androidx.navigation:navigation-fragment-ktx:2.5.3] /Users/denizyetik/.gradle/caches/transforms-3/f18bab8f2423a650475e45c919826676/transformed/navigation-fragment-ktx-2.5.3/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-fragment:2.5.3] /Users/denizyetik/.gradle/caches/transforms-3/8ee1b5559d799ef2ac8339af97c4299f/transformed/navigation-fragment-2.5.3/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment-ktx:1.5.4] /Users/denizyetik/.gradle/caches/transforms-3/88b49ce35ae4cc1bc45ce631d430e4d2/transformed/fragment-ktx-1.5.4/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment:1.5.4] /Users/denizyetik/.gradle/caches/transforms-3/9ac3d52846002642ffd0e80c0ac1b96e/transformed/fragment-1.5.4/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.5.3] /Users/denizyetik/.gradle/caches/transforms-3/d9d902ba388921f894646c7347397067/transformed/navigation-runtime-ktx-2.5.3/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-runtime:2.5.3] /Users/denizyetik/.gradle/caches/transforms-3/8f0faf790d650a6ee69010c9bcaa4210/transformed/navigation-runtime-2.5.3/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity-ktx:1.6.0] /Users/denizyetik/.gradle/caches/transforms-3/b347eb96b21db67278234189f29c8a67/transformed/activity-ktx-1.6.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.6.0] /Users/denizyetik/.gradle/caches/transforms-3/253132786fd966c52a317f9e16bca8d0/transformed/activity-1.6.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/denizyetik/.gradle/caches/transforms-3/4a49153ea774ea103a00ab19f0dc8c4e/transformed/emoji2-views-helper-1.2.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/denizyetik/.gradle/caches/transforms-3/5b78097da924ba1c79cb152a05628d3c/transformed/emoji2-1.2.0/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.navigation:navigation-common-ktx:2.5.3] /Users/denizyetik/.gradle/caches/transforms-3/c0e470e290e8fb6d469524ab1d8d8893/transformed/navigation-common-ktx-2.5.3/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-common:2.5.3] /Users/denizyetik/.gradle/caches/transforms-3/c409265e63ecf636bfdda9892ab891e7/transformed/navigation-common-2.5.3/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/denizyetik/.gradle/caches/transforms-3/3468671e81d0d58dc7ede437279f54f3/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/denizyetik/.gradle/caches/transforms-3/c17a05cc079e3f41a6b41b1c3c7ac25b/transformed/savedstate-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.1] /Users/denizyetik/.gradle/caches/transforms-3/f3a9cfee5f2cacf45ec9e3a789d00cfb/transformed/lifecycle-runtime-ktx-2.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.1] /Users/denizyetik/.gradle/caches/transforms-3/038bd750107a50f62e58eac3bfee4191/transformed/lifecycle-livedata-core-2.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/denizyetik/.gradle/caches/transforms-3/6cdff91770b2dfcfab4aba52475948ed/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.6.1] /Users/denizyetik/.gradle/caches/transforms-3/b3267a7780429fb842e946d69dae95ec/transformed/lifecycle-livedata-core-ktx-2.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/denizyetik/.gradle/caches/transforms-3/863e01b1c85e91b01e243e41c21a826a/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/denizyetik/.gradle/caches/transforms-3/fde746c1bccd75b2a42bffe1658477e7/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/denizyetik/.gradle/caches/transforms-3/fb3552f297a3e9abb312b227eb56de1a/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.1] /Users/denizyetik/.gradle/caches/transforms-3/290621bf775f8e9853264194a5c54f0d/transformed/lifecycle-livedata-2.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1] /Users/denizyetik/.gradle/caches/transforms-3/caaad1a85be9e959fc1bbf0112bac964/transformed/lifecycle-viewmodel-savedstate-2.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core-ktx:1.9.0] /Users/denizyetik/.gradle/caches/transforms-3/0e2c1100b8789caf226f4792024eea72/transformed/core-ktx-1.9.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/denizyetik/.gradle/caches/transforms-3/3b98742a38e83e2aae7692635834a269/transformed/drawerlayout-1.1.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/denizyetik/.gradle/caches/transforms-3/302cc55037e5f82a5246c7ee8c6993d3/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/denizyetik/.gradle/caches/transforms-3/6992a0584a8e237a0eb697a3f62750a2/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/denizyetik/.gradle/caches/transforms-3/3d656377c817fd7a8de1b8b0e57d7905/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer:2.18.7] /Users/denizyetik/.gradle/caches/transforms-3/6d7a365098000c377ff22870bc41394d/transformed/exoplayer-2.18.7/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-dash:2.18.7] /Users/denizyetik/.gradle/caches/transforms-3/ed7af8c22a32af9d6c09fd71ba07c41c/transformed/exoplayer-dash-2.18.7/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-hls:2.18.7] /Users/denizyetik/.gradle/caches/transforms-3/b942215f11e4c897dce1d371eb948caa/transformed/exoplayer-hls-2.18.7/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-rtsp:2.18.7] /Users/denizyetik/.gradle/caches/transforms-3/aacd9ab22d845c52666ac680bebbf2bf/transformed/exoplayer-rtsp-2.18.7/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.18.7] /Users/denizyetik/.gradle/caches/transforms-3/ef2acbbfdb2ae863199bf04e645564b5/transformed/exoplayer-smoothstreaming-2.18.7/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.18.7] /Users/denizyetik/.gradle/caches/transforms-3/b9f448d421b9c227b4cf17c69a976947/transformed/exoplayer-core-2.18.7/AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] /Users/denizyetik/.gradle/caches/transforms-3/9b983b3c508dc41cf6e2135962e5b6b9/transformed/slidingpanelayout-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-ui:2.18.7] /Users/denizyetik/.gradle/caches/transforms-3/062f15ef7355fb9535db4170620aa182/transformed/exoplayer-ui-2.18.7/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.recyclerview:recyclerview:1.2.1] /Users/denizyetik/.gradle/caches/transforms-3/e0748095b5a4172849122ef4e8ea3ef0/transformed/recyclerview-1.2.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/denizyetik/.gradle/caches/transforms-3/976a7a4c17d4749ddbf92b6b3f997aaa/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.1.0] /Users/denizyetik/.gradle/caches/transforms-3/9e9ef3fcc057ce344e32624b0d0ef383/transformed/customview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.media:media:1.6.0] /Users/denizyetik/.gradle/caches/transforms-3/171e733d5e336fb665619fbdfc303bcb/transformed/media-1.6.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.browser:browser:1.4.0] /Users/denizyetik/.gradle/caches/transforms-3/f9776fcad6cfb8f247072db31519043b/transformed/browser-1.4.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.4.1] /Users/denizyetik/.gradle/caches/transforms-3/e29298b93d52cd913f6f8682f0cbb88c/transformed/transition-1.4.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.window:window:1.0.0] /Users/denizyetik/.gradle/caches/transforms-3/fc4d45bbf5af0a5b9332d2f6ce2510c3/transformed/window-1.0.0/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.core:core:1.9.0] /Users/denizyetik/.gradle/caches/transforms-3/a3edcc05acab73ba05c1f4ac01657d95/transformed/core-1.9.0/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.1] /Users/denizyetik/.gradle/caches/transforms-3/89de691e8d230bb8e531f52d2969cff2/transformed/lifecycle-runtime-2.6.1/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.1] /Users/denizyetik/.gradle/caches/transforms-3/d2e2dcacf9b3c4fb80fe71c95ca78269/transformed/lifecycle-viewmodel-2.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.6.1] /Users/denizyetik/.gradle/caches/transforms-3/0fad76e33c9c408e0436389a8ffc5626/transformed/lifecycle-livedata-ktx-2.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1] /Users/denizyetik/.gradle/caches/transforms-3/dd5af705476e9bc3d5bd386acd63cf86/transformed/lifecycle-viewmodel-ktx-2.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [de.hdodenhof:circleimageview:3.1.0] /Users/denizyetik/.gradle/caches/transforms-3/7eff79596ec60bb6a7bef38be542c973/transformed/circleimageview-3.1.0/AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/denizyetik/.gradle/caches/transforms-3/0eb65909892bd0fee2d73f011e20b1f7/transformed/transport-backend-cct-3.1.8/AndroidManifest.xml:15:1-37:12
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/denizyetik/.gradle/caches/transforms-3/a4f415202b9ba192b87d3ec8eac74d59/transformed/transport-runtime-3.1.8/AndroidManifest.xml:15:1-41:12
+MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] /Users/denizyetik/.gradle/caches/transforms-3/15da4fef02f00d834742f1c472c2139e/transformed/firebase-encoders-json-18.0.0/AndroidManifest.xml:15:1-23:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/denizyetik/.gradle/caches/transforms-3/ada29df07c0b10ad7e76ca864a4148ac/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/denizyetik/.gradle/caches/transforms-3/0399f189c91c6982fef67acf99a35b04/transformed/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.exoplayer:exoplayer-datasource:2.18.7] /Users/denizyetik/.gradle/caches/transforms-3/6e15659c0bfe51cb76bb1c78845a5b0e/transformed/exoplayer-datasource-2.18.7/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-database:2.18.7] /Users/denizyetik/.gradle/caches/transforms-3/339ca7f32af0c466d1ea2bcce06ab210/transformed/exoplayer-database-2.18.7/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-extractor:2.18.7] /Users/denizyetik/.gradle/caches/transforms-3/88c9ab4ab7137df03f92390b9ac14e94/transformed/exoplayer-extractor-2.18.7/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-decoder:2.18.7] /Users/denizyetik/.gradle/caches/transforms-3/cab30237a29799b0f092fdcd96b03d1e/transformed/exoplayer-decoder-2.18.7/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.exoplayer:exoplayer-common:2.18.7] /Users/denizyetik/.gradle/caches/transforms-3/0c567ee8b9a47bf09b65760a22a38a49/transformed/exoplayer-common-2.18.7/AndroidManifest.xml:17:1-26:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.15.1] /Users/denizyetik/.gradle/caches/transforms-3/ca01140220601d37829f31d9f4c374f7/transformed/gifdecoder-4.15.1/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.exifinterface:exifinterface:1.3.3] /Users/denizyetik/.gradle/caches/transforms-3/dee8198d6eb54baba4c9bf9fa0c5061f/transformed/exifinterface-1.3.3/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/denizyetik/.gradle/caches/transforms-3/50ede56ed15f4f7955f3f7a5442a476b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/denizyetik/.gradle/caches/transforms-3/66a26e09c648ff04ddf1d2c8681e4fea/transformed/startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/denizyetik/.gradle/caches/transforms-3/39d5b2270b6d2d8751e239b330f2ac31/transformed/tracing-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-components:17.1.0] /Users/denizyetik/.gradle/caches/transforms-3/4d72facd52324e46842c15c92d17adb3/transformed/firebase-components-17.1.0/AndroidManifest.xml:15:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/denizyetik/.gradle/caches/transforms-3/21676d46e25736bdc9c358c4b50a3037/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/denizyetik/.gradle/caches/transforms-3/edd036286a3653e0178bf6b02741e2f7/transformed/core-runtime-2.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/denizyetik/.gradle/caches/transforms-3/e1240d3bde5dc87ff6676b8cc6513038/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/denizyetik/.gradle/caches/transforms-3/02377ae7622bd443dea04bb52d73aab5/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.datatransport:transport-api:3.0.0] /Users/denizyetik/.gradle/caches/transforms-3/13e48b95d23e906b8c23509ff53f4bf8/transformed/transport-api-3.0.0/AndroidManifest.xml:15:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/denizyetik/.gradle/caches/transforms-3/ddd149ea6498b073a7e099562f53f043/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /Users/denizyetik/.gradle/caches/transforms-3/194d137b862f546b61964e79f589c126/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/denizyetik/.gradle/caches/transforms-3/645b8608ee74e728707a14c72b09f1f0/transformed/annotation-experimental-1.3.0/AndroidManifest.xml:17:1-22:12
+MERGED from [io.grpc:grpc-android:1.52.1] /Users/denizyetik/.gradle/caches/transforms-3/ee18becca0c8ea5fa2b3dbcaba69434a/transformed/grpc-android-1.52.1/AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] /Users/denizyetik/.gradle/caches/transforms-3/7c4f56986e9ee36b88d62b5a9d5ca0b9/transformed/protolite-well-known-types-18.0.0/AndroidManifest.xml:2:1-11:12
+	package
+		INJECTED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:3:5-51
+	android:versionCode
+		INJECTED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:6:5-67
+MERGED from [com.google.firebase:firebase-storage:20.2.0] /Users/denizyetik/.gradle/caches/transforms-3/ecbba366544b8fcacfe60cbb7ed6604e/transformed/firebase-storage-20.2.0/AndroidManifest.xml:26:5-67
+MERGED from [com.google.firebase:firebase-storage:20.2.0] /Users/denizyetik/.gradle/caches/transforms-3/ecbba366544b8fcacfe60cbb7ed6604e/transformed/firebase-storage-20.2.0/AndroidManifest.xml:26:5-67
+MERGED from [com.google.firebase:firebase-firestore:24.6.0] /Users/denizyetik/.gradle/caches/transforms-3/3080b8267f53b135f5d5fdb33a2acc7c/transformed/firebase-firestore-24.6.0/AndroidManifest.xml:13:5-67
+MERGED from [com.google.firebase:firebase-firestore:24.6.0] /Users/denizyetik/.gradle/caches/transforms-3/3080b8267f53b135f5d5fdb33a2acc7c/transformed/firebase-firestore-24.6.0/AndroidManifest.xml:13:5-67
+MERGED from [com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-3/463932f0f41b444f1d821ceb80f82e19/transformed/firebase-auth-22.0.0/AndroidManifest.xml:25:5-67
+MERGED from [com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-3/463932f0f41b444f1d821ceb80f82e19/transformed/firebase-auth-22.0.0/AndroidManifest.xml:25:5-67
+MERGED from [com.google.firebase:firebase-installations:17.1.3] /Users/denizyetik/.gradle/caches/transforms-3/ddecafea92fc72c72e6be1bc2e33607c/transformed/firebase-installations-17.1.3/AndroidManifest.xml:10:5-67
+MERGED from [com.google.firebase:firebase-installations:17.1.3] /Users/denizyetik/.gradle/caches/transforms-3/ddecafea92fc72c72e6be1bc2e33607c/transformed/firebase-installations-17.1.3/AndroidManifest.xml:10:5-67
+MERGED from [com.google.android.recaptcha:recaptcha:18.1.2] /Users/denizyetik/.gradle/caches/transforms-3/de9275f85b5c72626736d6f6ad712921/transformed/recaptcha-18.1.2/AndroidManifest.xml:7:5-67
+MERGED from [com.google.android.recaptcha:recaptcha:18.1.2] /Users/denizyetik/.gradle/caches/transforms-3/de9275f85b5c72626736d6f6ad712921/transformed/recaptcha-18.1.2/AndroidManifest.xml:7:5-67
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] /Users/denizyetik/.gradle/caches/transforms-3/5c1b7a684518ce5062611854a0913af0/transformed/play-services-cloud-messaging-17.0.1/AndroidManifest.xml:8:5-67
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] /Users/denizyetik/.gradle/caches/transforms-3/5c1b7a684518ce5062611854a0913af0/transformed/play-services-cloud-messaging-17.0.1/AndroidManifest.xml:8:5-67
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/denizyetik/.gradle/caches/transforms-3/0eb65909892bd0fee2d73f011e20b1f7/transformed/transport-backend-cct-3.1.8/AndroidManifest.xml:25:5-67
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/denizyetik/.gradle/caches/transforms-3/0eb65909892bd0fee2d73f011e20b1f7/transformed/transport-backend-cct-3.1.8/AndroidManifest.xml:25:5-67
+	android:name
+		ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:6:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:7:5-79
+MERGED from [com.google.android.gms:play-services-nearby:18.5.0] /Users/denizyetik/.gradle/caches/transforms-3/3718b0868ff7a3c961e1ec57bce0893e/transformed/play-services-nearby-18.5.0/AndroidManifest.xml:7:5-79
+MERGED from [com.google.android.gms:play-services-nearby:18.5.0] /Users/denizyetik/.gradle/caches/transforms-3/3718b0868ff7a3c961e1ec57bce0893e/transformed/play-services-nearby-18.5.0/AndroidManifest.xml:7:5-79
+MERGED from [com.google.firebase:firebase-storage:20.2.0] /Users/denizyetik/.gradle/caches/transforms-3/ecbba366544b8fcacfe60cbb7ed6604e/transformed/firebase-storage-20.2.0/AndroidManifest.xml:25:5-79
+MERGED from [com.google.firebase:firebase-storage:20.2.0] /Users/denizyetik/.gradle/caches/transforms-3/ecbba366544b8fcacfe60cbb7ed6604e/transformed/firebase-storage-20.2.0/AndroidManifest.xml:25:5-79
+MERGED from [com.google.firebase:firebase-firestore:24.6.0] /Users/denizyetik/.gradle/caches/transforms-3/3080b8267f53b135f5d5fdb33a2acc7c/transformed/firebase-firestore-24.6.0/AndroidManifest.xml:12:5-79
+MERGED from [com.google.firebase:firebase-firestore:24.6.0] /Users/denizyetik/.gradle/caches/transforms-3/3080b8267f53b135f5d5fdb33a2acc7c/transformed/firebase-firestore-24.6.0/AndroidManifest.xml:12:5-79
+MERGED from [com.google.firebase:firebase-messaging:23.1.2] /Users/denizyetik/.gradle/caches/transforms-3/27a11c9f2ed48ce7a59f7d3aae37e5a4/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-messaging:23.1.2] /Users/denizyetik/.gradle/caches/transforms-3/27a11c9f2ed48ce7a59f7d3aae37e5a4/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-3/463932f0f41b444f1d821ceb80f82e19/transformed/firebase-auth-22.0.0/AndroidManifest.xml:26:5-79
+MERGED from [com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-3/463932f0f41b444f1d821ceb80f82e19/transformed/firebase-auth-22.0.0/AndroidManifest.xml:26:5-79
+MERGED from [com.google.firebase:firebase-installations:17.1.3] /Users/denizyetik/.gradle/caches/transforms-3/ddecafea92fc72c72e6be1bc2e33607c/transformed/firebase-installations-17.1.3/AndroidManifest.xml:9:5-79
+MERGED from [com.google.firebase:firebase-installations:17.1.3] /Users/denizyetik/.gradle/caches/transforms-3/ddecafea92fc72c72e6be1bc2e33607c/transformed/firebase-installations-17.1.3/AndroidManifest.xml:9:5-79
+MERGED from [com.google.android.recaptcha:recaptcha:18.1.2] /Users/denizyetik/.gradle/caches/transforms-3/de9275f85b5c72626736d6f6ad712921/transformed/recaptcha-18.1.2/AndroidManifest.xml:8:5-79
+MERGED from [com.google.android.recaptcha:recaptcha:18.1.2] /Users/denizyetik/.gradle/caches/transforms-3/de9275f85b5c72626736d6f6ad712921/transformed/recaptcha-18.1.2/AndroidManifest.xml:8:5-79
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] /Users/denizyetik/.gradle/caches/transforms-3/5c1b7a684518ce5062611854a0913af0/transformed/play-services-cloud-messaging-17.0.1/AndroidManifest.xml:7:5-79
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] /Users/denizyetik/.gradle/caches/transforms-3/5c1b7a684518ce5062611854a0913af0/transformed/play-services-cloud-messaging-17.0.1/AndroidManifest.xml:7:5-79
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.18.7] /Users/denizyetik/.gradle/caches/transforms-3/b9f448d421b9c227b4cf17c69a976947/transformed/exoplayer-core-2.18.7/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.18.7] /Users/denizyetik/.gradle/caches/transforms-3/b9f448d421b9c227b4cf17c69a976947/transformed/exoplayer-core-2.18.7/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/denizyetik/.gradle/caches/transforms-3/0eb65909892bd0fee2d73f011e20b1f7/transformed/transport-backend-cct-3.1.8/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/denizyetik/.gradle/caches/transforms-3/0eb65909892bd0fee2d73f011e20b1f7/transformed/transport-backend-cct-3.1.8/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/denizyetik/.gradle/caches/transforms-3/a4f415202b9ba192b87d3ec8eac74d59/transformed/transport-runtime-3.1.8/AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/denizyetik/.gradle/caches/transforms-3/a4f415202b9ba192b87d3ec8eac74d59/transformed/transport-runtime-3.1.8/AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.exoplayer:exoplayer-common:2.18.7] /Users/denizyetik/.gradle/caches/transforms-3/0c567ee8b9a47bf09b65760a22a38a49/transformed/exoplayer-common-2.18.7/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.exoplayer:exoplayer-common:2.18.7] /Users/denizyetik/.gradle/caches/transforms-3/0c567ee8b9a47bf09b65760a22a38a49/transformed/exoplayer-common-2.18.7/AndroidManifest.xml:24:5-79
+MERGED from [io.grpc:grpc-android:1.52.1] /Users/denizyetik/.gradle/caches/transforms-3/ee18becca0c8ea5fa2b3dbcaba69434a/transformed/grpc-android-1.52.1/AndroidManifest.xml:9:5-79
+MERGED from [io.grpc:grpc-android:1.52.1] /Users/denizyetik/.gradle/caches/transforms-3/ee18becca0c8ea5fa2b3dbcaba69434a/transformed/grpc-android-1.52.1/AndroidManifest.xml:9:5-79
+	android:name
+		ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:7:22-76
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:8:5-71
+	android:name
+		ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:8:22-68
+uses-permission#android.permission.MODIFY_AUDIO_SETTINGS
+ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:9:5-80
+	android:name
+		ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:9:22-77
+uses-permission#android.permission.BLUETOOTH
+ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:10:5-68
+	android:name
+		ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:10:22-65
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:11:5-74
+	android:name
+		ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:11:22-71
+uses-permission#android.permission.BLUETOOTH_CONNECT
+ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:12:5-76
+	android:name
+		ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:12:22-73
+uses-permission#android.permission.BLUETOOTH_SCAN
+ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:13:5-73
+	android:name
+		ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:13:22-70
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:14:5-79
+	android:name
+		ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:14:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:15:5-81
+	android:name
+		ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:15:22-78
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:16:5-75
+	android:name
+		ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:16:22-72
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:17:5-80
+	android:name
+		ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:17:22-77
+uses-permission#android.permission.WAKE_LOCK
+ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:18:5-68
+MERGED from [com.google.firebase:firebase-messaging:23.1.2] /Users/denizyetik/.gradle/caches/transforms-3/27a11c9f2ed48ce7a59f7d3aae37e5a4/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:26:5-68
+MERGED from [com.google.firebase:firebase-messaging:23.1.2] /Users/denizyetik/.gradle/caches/transforms-3/27a11c9f2ed48ce7a59f7d3aae37e5a4/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:26:5-68
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] /Users/denizyetik/.gradle/caches/transforms-3/5c1b7a684518ce5062611854a0913af0/transformed/play-services-cloud-messaging-17.0.1/AndroidManifest.xml:9:5-68
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] /Users/denizyetik/.gradle/caches/transforms-3/5c1b7a684518ce5062611854a0913af0/transformed/play-services-cloud-messaging-17.0.1/AndroidManifest.xml:9:5-68
+	android:name
+		ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:18:22-65
+uses-permission#android.permission.FOREGROUND_SERVICE
+ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:19:5-77
+	android:name
+		ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:19:22-74
+uses-permission#android.permission.VIBRATE
+ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:20:5-66
+	android:name
+		ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:20:22-63
+application
+ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:22:5-67:19
+INJECTED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:22:5-67:19
+MERGED from [com.karumi:dexter:6.2.3] /Users/denizyetik/.gradle/caches/transforms-3/60332f7dc334d0378eb9bb628621d1c1/transformed/dexter-6.2.3/AndroidManifest.xml:26:5-30:19
+MERGED from [com.karumi:dexter:6.2.3] /Users/denizyetik/.gradle/caches/transforms-3/60332f7dc334d0378eb9bb628621d1c1/transformed/dexter-6.2.3/AndroidManifest.xml:26:5-30:19
+MERGED from [com.google.android.material:material:1.8.0] /Users/denizyetik/.gradle/caches/transforms-3/7a2cf9992d9bb2956bf491dd08961359/transformed/material-1.8.0/AndroidManifest.xml:24:5-20
+MERGED from [com.google.android.material:material:1.8.0] /Users/denizyetik/.gradle/caches/transforms-3/7a2cf9992d9bb2956bf491dd08961359/transformed/material-1.8.0/AndroidManifest.xml:24:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/denizyetik/.gradle/caches/transforms-3/bd5a6e45e1056c41b00ade9aca2e26ec/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/denizyetik/.gradle/caches/transforms-3/bd5a6e45e1056c41b00ade9aca2e26ec/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:glide:4.15.1] /Users/denizyetik/.gradle/caches/transforms-3/453e32c892ba213a9b62f3e6d08eedb2/transformed/glide-4.15.1/AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:glide:4.15.1] /Users/denizyetik/.gradle/caches/transforms-3/453e32c892ba213a9b62f3e6d08eedb2/transformed/glide-4.15.1/AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.gms:play-services-nearby:18.5.0] /Users/denizyetik/.gradle/caches/transforms-3/3718b0868ff7a3c961e1ec57bce0893e/transformed/play-services-nearby-18.5.0/AndroidManifest.xml:9:5-14:19
+MERGED from [com.google.android.gms:play-services-nearby:18.5.0] /Users/denizyetik/.gradle/caches/transforms-3/3718b0868ff7a3c961e1ec57bce0893e/transformed/play-services-nearby-18.5.0/AndroidManifest.xml:9:5-14:19
+MERGED from [com.google.firebase:firebase-storage-ktx:20.2.0] /Users/denizyetik/.gradle/caches/transforms-3/ae3a87286c0e39746468cc80826fdc7d/transformed/firebase-storage-ktx-20.2.0/AndroidManifest.xml:10:5-18:19
+MERGED from [com.google.firebase:firebase-storage-ktx:20.2.0] /Users/denizyetik/.gradle/caches/transforms-3/ae3a87286c0e39746468cc80826fdc7d/transformed/firebase-storage-ktx-20.2.0/AndroidManifest.xml:10:5-18:19
+MERGED from [com.google.firebase:firebase-storage:20.2.0] /Users/denizyetik/.gradle/caches/transforms-3/ecbba366544b8fcacfe60cbb7ed6604e/transformed/firebase-storage-20.2.0/AndroidManifest.xml:28:5-36:19
+MERGED from [com.google.firebase:firebase-storage:20.2.0] /Users/denizyetik/.gradle/caches/transforms-3/ecbba366544b8fcacfe60cbb7ed6604e/transformed/firebase-storage-20.2.0/AndroidManifest.xml:28:5-36:19
+MERGED from [com.google.firebase:firebase-firestore-ktx:24.6.0] /Users/denizyetik/.gradle/caches/transforms-3/492618f379572f6414f7e143aeedfac7/transformed/firebase-firestore-ktx-24.6.0/AndroidManifest.xml:10:5-18:19
+MERGED from [com.google.firebase:firebase-firestore-ktx:24.6.0] /Users/denizyetik/.gradle/caches/transforms-3/492618f379572f6414f7e143aeedfac7/transformed/firebase-firestore-ktx-24.6.0/AndroidManifest.xml:10:5-18:19
+MERGED from [com.google.firebase:firebase-firestore:24.6.0] /Users/denizyetik/.gradle/caches/transforms-3/3080b8267f53b135f5d5fdb33a2acc7c/transformed/firebase-firestore-24.6.0/AndroidManifest.xml:15:5-23:19
+MERGED from [com.google.firebase:firebase-firestore:24.6.0] /Users/denizyetik/.gradle/caches/transforms-3/3080b8267f53b135f5d5fdb33a2acc7c/transformed/firebase-firestore-24.6.0/AndroidManifest.xml:15:5-23:19
+MERGED from [com.google.firebase:firebase-messaging-ktx:23.1.2] /Users/denizyetik/.gradle/caches/transforms-3/8ea34a5c769fb7d00068316d00febe91/transformed/firebase-messaging-ktx-23.1.2/AndroidManifest.xml:24:5-32:19
+MERGED from [com.google.firebase:firebase-messaging-ktx:23.1.2] /Users/denizyetik/.gradle/caches/transforms-3/8ea34a5c769fb7d00068316d00febe91/transformed/firebase-messaging-ktx-23.1.2/AndroidManifest.xml:24:5-32:19
+MERGED from [com.google.firebase:firebase-messaging:23.1.2] /Users/denizyetik/.gradle/caches/transforms-3/27a11c9f2ed48ce7a59f7d3aae37e5a4/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:30:5-59:19
+MERGED from [com.google.firebase:firebase-messaging:23.1.2] /Users/denizyetik/.gradle/caches/transforms-3/27a11c9f2ed48ce7a59f7d3aae37e5a4/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:30:5-59:19
+MERGED from [com.google.firebase:firebase-auth-ktx:22.0.0] /Users/denizyetik/.gradle/caches/transforms-3/69fb1c51c90021fbe946e786203626b8/transformed/firebase-auth-ktx-22.0.0/AndroidManifest.xml:7:5-15:19
+MERGED from [com.google.firebase:firebase-auth-ktx:22.0.0] /Users/denizyetik/.gradle/caches/transforms-3/69fb1c51c90021fbe946e786203626b8/transformed/firebase-auth-ktx-22.0.0/AndroidManifest.xml:7:5-15:19
+MERGED from [com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-3/463932f0f41b444f1d821ceb80f82e19/transformed/firebase-auth-22.0.0/AndroidManifest.xml:28:5-73:19
+MERGED from [com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-3/463932f0f41b444f1d821ceb80f82e19/transformed/firebase-auth-22.0.0/AndroidManifest.xml:28:5-73:19
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] /Users/denizyetik/.gradle/caches/transforms-3/7dfb18759013ae35a345d7c594d1b6ba/transformed/firebase-appcheck-interop-17.0.0/AndroidManifest.xml:23:5-20
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] /Users/denizyetik/.gradle/caches/transforms-3/7dfb18759013ae35a345d7c594d1b6ba/transformed/firebase-appcheck-interop-17.0.0/AndroidManifest.xml:23:5-20
+MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/denizyetik/.gradle/caches/transforms-3/cf4ad96e877f8edaf56c0307db57eb41/transformed/play-services-base-18.0.1/AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/denizyetik/.gradle/caches/transforms-3/cf4ad96e877f8edaf56c0307db57eb41/transformed/play-services-base-18.0.1/AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.firebase:firebase-common-ktx:20.3.2] /Users/denizyetik/.gradle/caches/transforms-3/fe611ff84d5f013d7e98c1fb21cb2bab/transformed/firebase-common-ktx-20.3.2/AndroidManifest.xml:10:5-18:19
+MERGED from [com.google.firebase:firebase-common-ktx:20.3.2] /Users/denizyetik/.gradle/caches/transforms-3/fe611ff84d5f013d7e98c1fb21cb2bab/transformed/firebase-common-ktx-20.3.2/AndroidManifest.xml:10:5-18:19
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/denizyetik/.gradle/caches/transforms-3/aa7256ca8801063ae48cb69bc983194e/transformed/firebase-auth-interop-20.0.0/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/denizyetik/.gradle/caches/transforms-3/aa7256ca8801063ae48cb69bc983194e/transformed/firebase-auth-interop-20.0.0/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-datatransport:18.1.7] /Users/denizyetik/.gradle/caches/transforms-3/89e1d92e45b126bd1f4cae950815756c/transformed/firebase-datatransport-18.1.7/AndroidManifest.xml:23:5-31:19
+MERGED from [com.google.firebase:firebase-datatransport:18.1.7] /Users/denizyetik/.gradle/caches/transforms-3/89e1d92e45b126bd1f4cae950815756c/transformed/firebase-datatransport-18.1.7/AndroidManifest.xml:23:5-31:19
+MERGED from [com.google.firebase:firebase-installations:17.1.3] /Users/denizyetik/.gradle/caches/transforms-3/ddecafea92fc72c72e6be1bc2e33607c/transformed/firebase-installations-17.1.3/AndroidManifest.xml:13:5-21:19
+MERGED from [com.google.firebase:firebase-installations:17.1.3] /Users/denizyetik/.gradle/caches/transforms-3/ddecafea92fc72c72e6be1bc2e33607c/transformed/firebase-installations-17.1.3/AndroidManifest.xml:13:5-21:19
+MERGED from [com.google.firebase:firebase-common:20.3.2] /Users/denizyetik/.gradle/caches/transforms-3/e54c263e2787faee6b5b867b6028f330/transformed/firebase-common-20.3.2/AndroidManifest.xml:24:5-37:19
+MERGED from [com.google.firebase:firebase-common:20.3.2] /Users/denizyetik/.gradle/caches/transforms-3/e54c263e2787faee6b5b867b6028f330/transformed/firebase-common-20.3.2/AndroidManifest.xml:24:5-37:19
+MERGED from [com.google.android.play:integrity:1.1.0] /Users/denizyetik/.gradle/caches/transforms-3/07823691c32cf53ca0107b5d6ad0418e/transformed/integrity-1.1.0/AndroidManifest.xml:5:5-6:19
+MERGED from [com.google.android.play:integrity:1.1.0] /Users/denizyetik/.gradle/caches/transforms-3/07823691c32cf53ca0107b5d6ad0418e/transformed/integrity-1.1.0/AndroidManifest.xml:5:5-6:19
+MERGED from [com.google.firebase:firebase-iid-interop:17.1.0] /Users/denizyetik/.gradle/caches/transforms-3/6cc1ee22b6e4cea13cb4b286390b3b9b/transformed/firebase-iid-interop-17.1.0/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-iid-interop:17.1.0] /Users/denizyetik/.gradle/caches/transforms-3/6cc1ee22b6e4cea13cb4b286390b3b9b/transformed/firebase-iid-interop-17.1.0/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/denizyetik/.gradle/caches/transforms-3/42b107efce1a20260ddfa4736c96227b/transformed/play-services-tasks-18.0.2/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/denizyetik/.gradle/caches/transforms-3/42b107efce1a20260ddfa4736c96227b/transformed/play-services-tasks-18.0.2/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-stats:17.0.2] /Users/denizyetik/.gradle/caches/transforms-3/1b1714ad31fc37ed038340f83dd7a867/transformed/play-services-stats-17.0.2/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-stats:17.0.2] /Users/denizyetik/.gradle/caches/transforms-3/1b1714ad31fc37ed038340f83dd7a867/transformed/play-services-stats-17.0.2/AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] /Users/denizyetik/.gradle/caches/transforms-3/0a6d2b99a23f0daf918ad9ffe15f8d40/transformed/firebase-measurement-connector-19.0.0/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] /Users/denizyetik/.gradle/caches/transforms-3/0a6d2b99a23f0daf918ad9ffe15f8d40/transformed/firebase-measurement-connector-19.0.0/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/denizyetik/.gradle/caches/transforms-3/f2ec65d68fb6866c5e97883f468ceb34/transformed/play-services-basement-18.1.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/denizyetik/.gradle/caches/transforms-3/f2ec65d68fb6866c5e97883f468ceb34/transformed/play-services-basement-18.1.0/AndroidManifest.xml:20:5-24:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/denizyetik/.gradle/caches/transforms-3/5b78097da924ba1c79cb152a05628d3c/transformed/emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/denizyetik/.gradle/caches/transforms-3/5b78097da924ba1c79cb152a05628d3c/transformed/emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/denizyetik/.gradle/caches/transforms-3/6cdff91770b2dfcfab4aba52475948ed/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/denizyetik/.gradle/caches/transforms-3/6cdff91770b2dfcfab4aba52475948ed/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.window:window:1.0.0] /Users/denizyetik/.gradle/caches/transforms-3/fc4d45bbf5af0a5b9332d2f6ce2510c3/transformed/window-1.0.0/AndroidManifest.xml:24:5-31:19
+MERGED from [androidx.window:window:1.0.0] /Users/denizyetik/.gradle/caches/transforms-3/fc4d45bbf5af0a5b9332d2f6ce2510c3/transformed/window-1.0.0/AndroidManifest.xml:24:5-31:19
+MERGED from [androidx.core:core:1.9.0] /Users/denizyetik/.gradle/caches/transforms-3/a3edcc05acab73ba05c1f4ac01657d95/transformed/core-1.9.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.9.0] /Users/denizyetik/.gradle/caches/transforms-3/a3edcc05acab73ba05c1f4ac01657d95/transformed/core-1.9.0/AndroidManifest.xml:28:5-89
+MERGED from [de.hdodenhof:circleimageview:3.1.0] /Users/denizyetik/.gradle/caches/transforms-3/7eff79596ec60bb6a7bef38be542c973/transformed/circleimageview-3.1.0/AndroidManifest.xml:9:5-20
+MERGED from [de.hdodenhof:circleimageview:3.1.0] /Users/denizyetik/.gradle/caches/transforms-3/7eff79596ec60bb6a7bef38be542c973/transformed/circleimageview-3.1.0/AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/denizyetik/.gradle/caches/transforms-3/0eb65909892bd0fee2d73f011e20b1f7/transformed/transport-backend-cct-3.1.8/AndroidManifest.xml:27:5-35:19
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/denizyetik/.gradle/caches/transforms-3/0eb65909892bd0fee2d73f011e20b1f7/transformed/transport-backend-cct-3.1.8/AndroidManifest.xml:27:5-35:19
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/denizyetik/.gradle/caches/transforms-3/a4f415202b9ba192b87d3ec8eac74d59/transformed/transport-runtime-3.1.8/AndroidManifest.xml:25:5-39:19
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/denizyetik/.gradle/caches/transforms-3/a4f415202b9ba192b87d3ec8eac74d59/transformed/transport-runtime-3.1.8/AndroidManifest.xml:25:5-39:19
+MERGED from [com.github.bumptech.glide:gifdecoder:4.15.1] /Users/denizyetik/.gradle/caches/transforms-3/ca01140220601d37829f31d9f4c374f7/transformed/gifdecoder-4.15.1/AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.15.1] /Users/denizyetik/.gradle/caches/transforms-3/ca01140220601d37829f31d9f4c374f7/transformed/gifdecoder-4.15.1/AndroidManifest.xml:9:5-20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/denizyetik/.gradle/caches/transforms-3/50ede56ed15f4f7955f3f7a5442a476b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/denizyetik/.gradle/caches/transforms-3/50ede56ed15f4f7955f3f7a5442a476b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/denizyetik/.gradle/caches/transforms-3/66a26e09c648ff04ddf1d2c8681e4fea/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/denizyetik/.gradle/caches/transforms-3/66a26e09c648ff04ddf1d2c8681e4fea/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/denizyetik/.gradle/caches/transforms-3/21676d46e25736bdc9c358c4b50a3037/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/denizyetik/.gradle/caches/transforms-3/21676d46e25736bdc9c358c4b50a3037/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+	android:extractNativeLibs
+		INJECTED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.9.0] /Users/denizyetik/.gradle/caches/transforms-3/a3edcc05acab73ba05c1f4ac01657d95/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
+	android:supportsRtl
+		ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:28:9-35
+	android:label
+		ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:27:9-41
+	android:fullBackupContent
+		ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:26:9-54
+	tools:targetApi
+		ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:30:9-29
+	android:allowBackup
+		ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:24:9-35
+	android:theme
+		ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:29:9-49
+	android:dataExtractionRules
+		ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:25:9-65
+	android:name
+		ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:23:9-44
+activity#com.intercomapp.ui.splash.SplashActivity
+ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:32:9-40:20
+	android:exported
+		ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:34:13-36
+	android:theme
+		ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:35:13-65
+	android:name
+		ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:33:13-53
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:36:13-39:29
+action#android.intent.action.MAIN
+ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:37:17-69
+	android:name
+		ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:37:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:38:17-77
+	android:name
+		ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:38:27-74
+activity#com.intercomapp.ui.auth.AuthActivity
+ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:42:9-45:68
+	android:exported
+		ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:44:13-37
+	android:theme
+		ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:45:13-65
+	android:name
+		ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:43:13-49
+activity#com.intercomapp.ui.main.MainActivity
+ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:47:9-51:68
+	android:launchMode
+		ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:50:13-43
+	android:exported
+		ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:49:13-37
+	android:theme
+		ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:51:13-65
+	android:name
+		ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:48:13-49
+service#com.intercomapp.service.IntercomService
+ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:53:9-57:58
+	android:enabled
+		ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:55:13-35
+	android:exported
+		ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:56:13-37
+	android:foregroundServiceType
+		ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:57:13-55
+	android:name
+		ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:54:13-52
+service#com.intercomapp.service.FirebaseMessagingService
+ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:59:9-65:19
+	android:exported
+		ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:61:13-37
+	android:name
+		ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:60:13-61
+intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
+ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:62:13-64:29
+action#com.google.firebase.MESSAGING_EVENT
+ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:63:17-78
+	android:name
+		ADDED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:63:25-75
+uses-sdk
+INJECTED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml
+INJECTED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml
+MERGED from [androidx.databinding:viewbinding:8.1.0] /Users/denizyetik/.gradle/caches/transforms-3/5bfa6b72916dd299e5a426fc41953f19/transformed/viewbinding-8.1.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.databinding:viewbinding:8.1.0] /Users/denizyetik/.gradle/caches/transforms-3/5bfa6b72916dd299e5a426fc41953f19/transformed/viewbinding-8.1.0/AndroidManifest.xml:5:5-44
+MERGED from [com.karumi:dexter:6.2.3] /Users/denizyetik/.gradle/caches/transforms-3/60332f7dc334d0378eb9bb628621d1c1/transformed/dexter-6.2.3/AndroidManifest.xml:22:5-24:41
+MERGED from [com.karumi:dexter:6.2.3] /Users/denizyetik/.gradle/caches/transforms-3/60332f7dc334d0378eb9bb628621d1c1/transformed/dexter-6.2.3/AndroidManifest.xml:22:5-24:41
+MERGED from [androidx.navigation:navigation-ui-ktx:2.5.3] /Users/denizyetik/.gradle/caches/transforms-3/71936aaee78034dbd5f942cb58542592/transformed/navigation-ui-ktx-2.5.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-ui-ktx:2.5.3] /Users/denizyetik/.gradle/caches/transforms-3/71936aaee78034dbd5f942cb58542592/transformed/navigation-ui-ktx-2.5.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-ui:2.5.3] /Users/denizyetik/.gradle/caches/transforms-3/e30345ff7a93f23ee4df02704a5f3070/transformed/navigation-ui-2.5.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-ui:2.5.3] /Users/denizyetik/.gradle/caches/transforms-3/e30345ff7a93f23ee4df02704a5f3070/transformed/navigation-ui-2.5.3/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.material:material:1.8.0] /Users/denizyetik/.gradle/caches/transforms-3/7a2cf9992d9bb2956bf491dd08961359/transformed/material-1.8.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.material:material:1.8.0] /Users/denizyetik/.gradle/caches/transforms-3/7a2cf9992d9bb2956bf491dd08961359/transformed/material-1.8.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/denizyetik/.gradle/caches/transforms-3/bd5a6e45e1056c41b00ade9aca2e26ec/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/denizyetik/.gradle/caches/transforms-3/bd5a6e45e1056c41b00ade9aca2e26ec/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/denizyetik/.gradle/caches/transforms-3/ef2661132c497dbdce1764de81cb9dca/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/denizyetik/.gradle/caches/transforms-3/ef2661132c497dbdce1764de81cb9dca/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/denizyetik/.gradle/caches/transforms-3/2323e8e09ab045ed5b5113d9e7175019/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/denizyetik/.gradle/caches/transforms-3/2323e8e09ab045ed5b5113d9e7175019/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:glide:4.15.1] /Users/denizyetik/.gradle/caches/transforms-3/453e32c892ba213a9b62f3e6d08eedb2/transformed/glide-4.15.1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:glide:4.15.1] /Users/denizyetik/.gradle/caches/transforms-3/453e32c892ba213a9b62f3e6d08eedb2/transformed/glide-4.15.1/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/denizyetik/.gradle/caches/transforms-3/4c8bc1ab65aeedfdf47f6fa7e2e3b367/transformed/viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/denizyetik/.gradle/caches/transforms-3/4c8bc1ab65aeedfdf47f6fa7e2e3b367/transformed/viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.gms:play-services-nearby:18.5.0] /Users/denizyetik/.gradle/caches/transforms-3/3718b0868ff7a3c961e1ec57bce0893e/transformed/play-services-nearby-18.5.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-nearby:18.5.0] /Users/denizyetik/.gradle/caches/transforms-3/3718b0868ff7a3c961e1ec57bce0893e/transformed/play-services-nearby-18.5.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-storage-ktx:20.2.0] /Users/denizyetik/.gradle/caches/transforms-3/ae3a87286c0e39746468cc80826fdc7d/transformed/firebase-storage-ktx-20.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-storage-ktx:20.2.0] /Users/denizyetik/.gradle/caches/transforms-3/ae3a87286c0e39746468cc80826fdc7d/transformed/firebase-storage-ktx-20.2.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-storage:20.2.0] /Users/denizyetik/.gradle/caches/transforms-3/ecbba366544b8fcacfe60cbb7ed6604e/transformed/firebase-storage-20.2.0/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-storage:20.2.0] /Users/denizyetik/.gradle/caches/transforms-3/ecbba366544b8fcacfe60cbb7ed6604e/transformed/firebase-storage-20.2.0/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-firestore-ktx:24.6.0] /Users/denizyetik/.gradle/caches/transforms-3/492618f379572f6414f7e143aeedfac7/transformed/firebase-firestore-ktx-24.6.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-firestore-ktx:24.6.0] /Users/denizyetik/.gradle/caches/transforms-3/492618f379572f6414f7e143aeedfac7/transformed/firebase-firestore-ktx-24.6.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-firestore:24.6.0] /Users/denizyetik/.gradle/caches/transforms-3/3080b8267f53b135f5d5fdb33a2acc7c/transformed/firebase-firestore-24.6.0/AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.firebase:firebase-firestore:24.6.0] /Users/denizyetik/.gradle/caches/transforms-3/3080b8267f53b135f5d5fdb33a2acc7c/transformed/firebase-firestore-24.6.0/AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.firebase:firebase-messaging-ktx:23.1.2] /Users/denizyetik/.gradle/caches/transforms-3/8ea34a5c769fb7d00068316d00febe91/transformed/firebase-messaging-ktx-23.1.2/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-messaging-ktx:23.1.2] /Users/denizyetik/.gradle/caches/transforms-3/8ea34a5c769fb7d00068316d00febe91/transformed/firebase-messaging-ktx-23.1.2/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-messaging:23.1.2] /Users/denizyetik/.gradle/caches/transforms-3/27a11c9f2ed48ce7a59f7d3aae37e5a4/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-messaging:23.1.2] /Users/denizyetik/.gradle/caches/transforms-3/27a11c9f2ed48ce7a59f7d3aae37e5a4/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-auth-ktx:22.0.0] /Users/denizyetik/.gradle/caches/transforms-3/69fb1c51c90021fbe946e786203626b8/transformed/firebase-auth-ktx-22.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-ktx:22.0.0] /Users/denizyetik/.gradle/caches/transforms-3/69fb1c51c90021fbe946e786203626b8/transformed/firebase-auth-ktx-22.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-3/463932f0f41b444f1d821ceb80f82e19/transformed/firebase-auth-22.0.0/AndroidManifest.xml:21:5-23:64
+MERGED from [com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-3/463932f0f41b444f1d821ceb80f82e19/transformed/firebase-auth-22.0.0/AndroidManifest.xml:21:5-23:64
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] /Users/denizyetik/.gradle/caches/transforms-3/7dfb18759013ae35a345d7c594d1b6ba/transformed/firebase-appcheck-interop-17.0.0/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.0.0] /Users/denizyetik/.gradle/caches/transforms-3/7dfb18759013ae35a345d7c594d1b6ba/transformed/firebase-appcheck-interop-17.0.0/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] /Users/denizyetik/.gradle/caches/transforms-3/7d02bdf73ba5f8312998ce1c728cbe97/transformed/firebase-database-collection-18.0.1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] /Users/denizyetik/.gradle/caches/transforms-3/7d02bdf73ba5f8312998ce1c728cbe97/transformed/firebase-database-collection-18.0.1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] /Users/denizyetik/.gradle/caches/transforms-3/ae909b3f6396c7c077b3fed5cbe6872c/transformed/play-services-auth-api-phone-17.4.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:17.4.0] /Users/denizyetik/.gradle/caches/transforms-3/ae909b3f6396c7c077b3fed5cbe6872c/transformed/play-services-auth-api-phone-17.4.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/denizyetik/.gradle/caches/transforms-3/cf4ad96e877f8edaf56c0307db57eb41/transformed/play-services-base-18.0.1/AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/denizyetik/.gradle/caches/transforms-3/cf4ad96e877f8edaf56c0307db57eb41/transformed/play-services-base-18.0.1/AndroidManifest.xml:18:5-43
+MERGED from [com.google.firebase:firebase-common-ktx:20.3.2] /Users/denizyetik/.gradle/caches/transforms-3/fe611ff84d5f013d7e98c1fb21cb2bab/transformed/firebase-common-ktx-20.3.2/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-common-ktx:20.3.2] /Users/denizyetik/.gradle/caches/transforms-3/fe611ff84d5f013d7e98c1fb21cb2bab/transformed/firebase-common-ktx-20.3.2/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/denizyetik/.gradle/caches/transforms-3/aa7256ca8801063ae48cb69bc983194e/transformed/firebase-auth-interop-20.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/denizyetik/.gradle/caches/transforms-3/aa7256ca8801063ae48cb69bc983194e/transformed/firebase-auth-interop-20.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-datatransport:18.1.7] /Users/denizyetik/.gradle/caches/transforms-3/89e1d92e45b126bd1f4cae950815756c/transformed/firebase-datatransport-18.1.7/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-datatransport:18.1.7] /Users/denizyetik/.gradle/caches/transforms-3/89e1d92e45b126bd1f4cae950815756c/transformed/firebase-datatransport-18.1.7/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-installations:17.1.3] /Users/denizyetik/.gradle/caches/transforms-3/ddecafea92fc72c72e6be1bc2e33607c/transformed/firebase-installations-17.1.3/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-installations:17.1.3] /Users/denizyetik/.gradle/caches/transforms-3/ddecafea92fc72c72e6be1bc2e33607c/transformed/firebase-installations-17.1.3/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-common:20.3.2] /Users/denizyetik/.gradle/caches/transforms-3/e54c263e2787faee6b5b867b6028f330/transformed/firebase-common-20.3.2/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-common:20.3.2] /Users/denizyetik/.gradle/caches/transforms-3/e54c263e2787faee6b5b867b6028f330/transformed/firebase-common-20.3.2/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.android.recaptcha:recaptcha:18.1.2] /Users/denizyetik/.gradle/caches/transforms-3/de9275f85b5c72626736d6f6ad712921/transformed/recaptcha-18.1.2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.recaptcha:recaptcha:18.1.2] /Users/denizyetik/.gradle/caches/transforms-3/de9275f85b5c72626736d6f6ad712921/transformed/recaptcha-18.1.2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.play:integrity:1.1.0] /Users/denizyetik/.gradle/caches/transforms-3/07823691c32cf53ca0107b5d6ad0418e/transformed/integrity-1.1.0/AndroidManifest.xml:4:5-44
+MERGED from [com.google.android.play:integrity:1.1.0] /Users/denizyetik/.gradle/caches/transforms-3/07823691c32cf53ca0107b5d6ad0418e/transformed/integrity-1.1.0/AndroidManifest.xml:4:5-44
+MERGED from [com.google.firebase:firebase-installations-interop:17.1.0] /Users/denizyetik/.gradle/caches/transforms-3/a002d8a799b8c4e894c4489770df96a1/transformed/firebase-installations-interop-17.1.0/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-installations-interop:17.1.0] /Users/denizyetik/.gradle/caches/transforms-3/a002d8a799b8c4e894c4489770df96a1/transformed/firebase-installations-interop-17.1.0/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-iid-interop:17.1.0] /Users/denizyetik/.gradle/caches/transforms-3/6cc1ee22b6e4cea13cb4b286390b3b9b/transformed/firebase-iid-interop-17.1.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-iid-interop:17.1.0] /Users/denizyetik/.gradle/caches/transforms-3/6cc1ee22b6e4cea13cb4b286390b3b9b/transformed/firebase-iid-interop-17.1.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] /Users/denizyetik/.gradle/caches/transforms-3/5c1b7a684518ce5062611854a0913af0/transformed/play-services-cloud-messaging-17.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] /Users/denizyetik/.gradle/caches/transforms-3/5c1b7a684518ce5062611854a0913af0/transformed/play-services-cloud-messaging-17.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/denizyetik/.gradle/caches/transforms-3/42b107efce1a20260ddfa4736c96227b/transformed/play-services-tasks-18.0.2/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/denizyetik/.gradle/caches/transforms-3/42b107efce1a20260ddfa4736c96227b/transformed/play-services-tasks-18.0.2/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-stats:17.0.2] /Users/denizyetik/.gradle/caches/transforms-3/1b1714ad31fc37ed038340f83dd7a867/transformed/play-services-stats-17.0.2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-stats:17.0.2] /Users/denizyetik/.gradle/caches/transforms-3/1b1714ad31fc37ed038340f83dd7a867/transformed/play-services-stats-17.0.2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] /Users/denizyetik/.gradle/caches/transforms-3/0a6d2b99a23f0daf918ad9ffe15f8d40/transformed/firebase-measurement-connector-19.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] /Users/denizyetik/.gradle/caches/transforms-3/0a6d2b99a23f0daf918ad9ffe15f8d40/transformed/firebase-measurement-connector-19.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/denizyetik/.gradle/caches/transforms-3/f2ec65d68fb6866c5e97883f468ceb34/transformed/play-services-basement-18.1.0/AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/denizyetik/.gradle/caches/transforms-3/f2ec65d68fb6866c5e97883f468ceb34/transformed/play-services-basement-18.1.0/AndroidManifest.xml:18:5-43
+MERGED from [androidx.navigation:navigation-fragment-ktx:2.5.3] /Users/denizyetik/.gradle/caches/transforms-3/f18bab8f2423a650475e45c919826676/transformed/navigation-fragment-ktx-2.5.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-fragment-ktx:2.5.3] /Users/denizyetik/.gradle/caches/transforms-3/f18bab8f2423a650475e45c919826676/transformed/navigation-fragment-ktx-2.5.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-fragment:2.5.3] /Users/denizyetik/.gradle/caches/transforms-3/8ee1b5559d799ef2ac8339af97c4299f/transformed/navigation-fragment-2.5.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-fragment:2.5.3] /Users/denizyetik/.gradle/caches/transforms-3/8ee1b5559d799ef2ac8339af97c4299f/transformed/navigation-fragment-2.5.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment-ktx:1.5.4] /Users/denizyetik/.gradle/caches/transforms-3/88b49ce35ae4cc1bc45ce631d430e4d2/transformed/fragment-ktx-1.5.4/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment-ktx:1.5.4] /Users/denizyetik/.gradle/caches/transforms-3/88b49ce35ae4cc1bc45ce631d430e4d2/transformed/fragment-ktx-1.5.4/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.5.4] /Users/denizyetik/.gradle/caches/transforms-3/9ac3d52846002642ffd0e80c0ac1b96e/transformed/fragment-1.5.4/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.5.4] /Users/denizyetik/.gradle/caches/transforms-3/9ac3d52846002642ffd0e80c0ac1b96e/transformed/fragment-1.5.4/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.5.3] /Users/denizyetik/.gradle/caches/transforms-3/d9d902ba388921f894646c7347397067/transformed/navigation-runtime-ktx-2.5.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.5.3] /Users/denizyetik/.gradle/caches/transforms-3/d9d902ba388921f894646c7347397067/transformed/navigation-runtime-ktx-2.5.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime:2.5.3] /Users/denizyetik/.gradle/caches/transforms-3/8f0faf790d650a6ee69010c9bcaa4210/transformed/navigation-runtime-2.5.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime:2.5.3] /Users/denizyetik/.gradle/caches/transforms-3/8f0faf790d650a6ee69010c9bcaa4210/transformed/navigation-runtime-2.5.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity-ktx:1.6.0] /Users/denizyetik/.gradle/caches/transforms-3/b347eb96b21db67278234189f29c8a67/transformed/activity-ktx-1.6.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity-ktx:1.6.0] /Users/denizyetik/.gradle/caches/transforms-3/b347eb96b21db67278234189f29c8a67/transformed/activity-ktx-1.6.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.6.0] /Users/denizyetik/.gradle/caches/transforms-3/253132786fd966c52a317f9e16bca8d0/transformed/activity-1.6.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.6.0] /Users/denizyetik/.gradle/caches/transforms-3/253132786fd966c52a317f9e16bca8d0/transformed/activity-1.6.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/denizyetik/.gradle/caches/transforms-3/4a49153ea774ea103a00ab19f0dc8c4e/transformed/emoji2-views-helper-1.2.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/denizyetik/.gradle/caches/transforms-3/4a49153ea774ea103a00ab19f0dc8c4e/transformed/emoji2-views-helper-1.2.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/denizyetik/.gradle/caches/transforms-3/5b78097da924ba1c79cb152a05628d3c/transformed/emoji2-1.2.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/denizyetik/.gradle/caches/transforms-3/5b78097da924ba1c79cb152a05628d3c/transformed/emoji2-1.2.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.navigation:navigation-common-ktx:2.5.3] /Users/denizyetik/.gradle/caches/transforms-3/c0e470e290e8fb6d469524ab1d8d8893/transformed/navigation-common-ktx-2.5.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common-ktx:2.5.3] /Users/denizyetik/.gradle/caches/transforms-3/c0e470e290e8fb6d469524ab1d8d8893/transformed/navigation-common-ktx-2.5.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common:2.5.3] /Users/denizyetik/.gradle/caches/transforms-3/c409265e63ecf636bfdda9892ab891e7/transformed/navigation-common-2.5.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common:2.5.3] /Users/denizyetik/.gradle/caches/transforms-3/c409265e63ecf636bfdda9892ab891e7/transformed/navigation-common-2.5.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/denizyetik/.gradle/caches/transforms-3/3468671e81d0d58dc7ede437279f54f3/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/denizyetik/.gradle/caches/transforms-3/3468671e81d0d58dc7ede437279f54f3/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/denizyetik/.gradle/caches/transforms-3/c17a05cc079e3f41a6b41b1c3c7ac25b/transformed/savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/denizyetik/.gradle/caches/transforms-3/c17a05cc079e3f41a6b41b1c3c7ac25b/transformed/savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.1] /Users/denizyetik/.gradle/caches/transforms-3/f3a9cfee5f2cacf45ec9e3a789d00cfb/transformed/lifecycle-runtime-ktx-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.6.1] /Users/denizyetik/.gradle/caches/transforms-3/f3a9cfee5f2cacf45ec9e3a789d00cfb/transformed/lifecycle-runtime-ktx-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.1] /Users/denizyetik/.gradle/caches/transforms-3/038bd750107a50f62e58eac3bfee4191/transformed/lifecycle-livedata-core-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.6.1] /Users/denizyetik/.gradle/caches/transforms-3/038bd750107a50f62e58eac3bfee4191/transformed/lifecycle-livedata-core-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/denizyetik/.gradle/caches/transforms-3/6cdff91770b2dfcfab4aba52475948ed/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/denizyetik/.gradle/caches/transforms-3/6cdff91770b2dfcfab4aba52475948ed/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.6.1] /Users/denizyetik/.gradle/caches/transforms-3/b3267a7780429fb842e946d69dae95ec/transformed/lifecycle-livedata-core-ktx-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.6.1] /Users/denizyetik/.gradle/caches/transforms-3/b3267a7780429fb842e946d69dae95ec/transformed/lifecycle-livedata-core-ktx-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/denizyetik/.gradle/caches/transforms-3/863e01b1c85e91b01e243e41c21a826a/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/denizyetik/.gradle/caches/transforms-3/863e01b1c85e91b01e243e41c21a826a/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/denizyetik/.gradle/caches/transforms-3/fde746c1bccd75b2a42bffe1658477e7/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/denizyetik/.gradle/caches/transforms-3/fde746c1bccd75b2a42bffe1658477e7/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/denizyetik/.gradle/caches/transforms-3/fb3552f297a3e9abb312b227eb56de1a/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/denizyetik/.gradle/caches/transforms-3/fb3552f297a3e9abb312b227eb56de1a/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.1] /Users/denizyetik/.gradle/caches/transforms-3/290621bf775f8e9853264194a5c54f0d/transformed/lifecycle-livedata-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.6.1] /Users/denizyetik/.gradle/caches/transforms-3/290621bf775f8e9853264194a5c54f0d/transformed/lifecycle-livedata-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1] /Users/denizyetik/.gradle/caches/transforms-3/caaad1a85be9e959fc1bbf0112bac964/transformed/lifecycle-viewmodel-savedstate-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.6.1] /Users/denizyetik/.gradle/caches/transforms-3/caaad1a85be9e959fc1bbf0112bac964/transformed/lifecycle-viewmodel-savedstate-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core-ktx:1.9.0] /Users/denizyetik/.gradle/caches/transforms-3/0e2c1100b8789caf226f4792024eea72/transformed/core-ktx-1.9.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.9.0] /Users/denizyetik/.gradle/caches/transforms-3/0e2c1100b8789caf226f4792024eea72/transformed/core-ktx-1.9.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/denizyetik/.gradle/caches/transforms-3/3b98742a38e83e2aae7692635834a269/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/denizyetik/.gradle/caches/transforms-3/3b98742a38e83e2aae7692635834a269/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/denizyetik/.gradle/caches/transforms-3/302cc55037e5f82a5246c7ee8c6993d3/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/denizyetik/.gradle/caches/transforms-3/302cc55037e5f82a5246c7ee8c6993d3/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/denizyetik/.gradle/caches/transforms-3/6992a0584a8e237a0eb697a3f62750a2/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/denizyetik/.gradle/caches/transforms-3/6992a0584a8e237a0eb697a3f62750a2/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/denizyetik/.gradle/caches/transforms-3/3d656377c817fd7a8de1b8b0e57d7905/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/denizyetik/.gradle/caches/transforms-3/3d656377c817fd7a8de1b8b0e57d7905/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer:2.18.7] /Users/denizyetik/.gradle/caches/transforms-3/6d7a365098000c377ff22870bc41394d/transformed/exoplayer-2.18.7/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer:2.18.7] /Users/denizyetik/.gradle/caches/transforms-3/6d7a365098000c377ff22870bc41394d/transformed/exoplayer-2.18.7/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-dash:2.18.7] /Users/denizyetik/.gradle/caches/transforms-3/ed7af8c22a32af9d6c09fd71ba07c41c/transformed/exoplayer-dash-2.18.7/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-dash:2.18.7] /Users/denizyetik/.gradle/caches/transforms-3/ed7af8c22a32af9d6c09fd71ba07c41c/transformed/exoplayer-dash-2.18.7/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-hls:2.18.7] /Users/denizyetik/.gradle/caches/transforms-3/b942215f11e4c897dce1d371eb948caa/transformed/exoplayer-hls-2.18.7/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-hls:2.18.7] /Users/denizyetik/.gradle/caches/transforms-3/b942215f11e4c897dce1d371eb948caa/transformed/exoplayer-hls-2.18.7/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-rtsp:2.18.7] /Users/denizyetik/.gradle/caches/transforms-3/aacd9ab22d845c52666ac680bebbf2bf/transformed/exoplayer-rtsp-2.18.7/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-rtsp:2.18.7] /Users/denizyetik/.gradle/caches/transforms-3/aacd9ab22d845c52666ac680bebbf2bf/transformed/exoplayer-rtsp-2.18.7/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.18.7] /Users/denizyetik/.gradle/caches/transforms-3/ef2acbbfdb2ae863199bf04e645564b5/transformed/exoplayer-smoothstreaming-2.18.7/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-smoothstreaming:2.18.7] /Users/denizyetik/.gradle/caches/transforms-3/ef2acbbfdb2ae863199bf04e645564b5/transformed/exoplayer-smoothstreaming-2.18.7/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.18.7] /Users/denizyetik/.gradle/caches/transforms-3/b9f448d421b9c227b4cf17c69a976947/transformed/exoplayer-core-2.18.7/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-core:2.18.7] /Users/denizyetik/.gradle/caches/transforms-3/b9f448d421b9c227b4cf17c69a976947/transformed/exoplayer-core-2.18.7/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] /Users/denizyetik/.gradle/caches/transforms-3/9b983b3c508dc41cf6e2135962e5b6b9/transformed/slidingpanelayout-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.2.0] /Users/denizyetik/.gradle/caches/transforms-3/9b983b3c508dc41cf6e2135962e5b6b9/transformed/slidingpanelayout-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-ui:2.18.7] /Users/denizyetik/.gradle/caches/transforms-3/062f15ef7355fb9535db4170620aa182/transformed/exoplayer-ui-2.18.7/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-ui:2.18.7] /Users/denizyetik/.gradle/caches/transforms-3/062f15ef7355fb9535db4170620aa182/transformed/exoplayer-ui-2.18.7/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.2.1] /Users/denizyetik/.gradle/caches/transforms-3/e0748095b5a4172849122ef4e8ea3ef0/transformed/recyclerview-1.2.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.2.1] /Users/denizyetik/.gradle/caches/transforms-3/e0748095b5a4172849122ef4e8ea3ef0/transformed/recyclerview-1.2.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/denizyetik/.gradle/caches/transforms-3/976a7a4c17d4749ddbf92b6b3f997aaa/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/denizyetik/.gradle/caches/transforms-3/976a7a4c17d4749ddbf92b6b3f997aaa/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.1.0] /Users/denizyetik/.gradle/caches/transforms-3/9e9ef3fcc057ce344e32624b0d0ef383/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] /Users/denizyetik/.gradle/caches/transforms-3/9e9ef3fcc057ce344e32624b0d0ef383/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media:media:1.6.0] /Users/denizyetik/.gradle/caches/transforms-3/171e733d5e336fb665619fbdfc303bcb/transformed/media-1.6.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media:media:1.6.0] /Users/denizyetik/.gradle/caches/transforms-3/171e733d5e336fb665619fbdfc303bcb/transformed/media-1.6.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.browser:browser:1.4.0] /Users/denizyetik/.gradle/caches/transforms-3/f9776fcad6cfb8f247072db31519043b/transformed/browser-1.4.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.browser:browser:1.4.0] /Users/denizyetik/.gradle/caches/transforms-3/f9776fcad6cfb8f247072db31519043b/transformed/browser-1.4.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.4.1] /Users/denizyetik/.gradle/caches/transforms-3/e29298b93d52cd913f6f8682f0cbb88c/transformed/transition-1.4.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.4.1] /Users/denizyetik/.gradle/caches/transforms-3/e29298b93d52cd913f6f8682f0cbb88c/transformed/transition-1.4.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.window:window:1.0.0] /Users/denizyetik/.gradle/caches/transforms-3/fc4d45bbf5af0a5b9332d2f6ce2510c3/transformed/window-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.window:window:1.0.0] /Users/denizyetik/.gradle/caches/transforms-3/fc4d45bbf5af0a5b9332d2f6ce2510c3/transformed/window-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.9.0] /Users/denizyetik/.gradle/caches/transforms-3/a3edcc05acab73ba05c1f4ac01657d95/transformed/core-1.9.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.9.0] /Users/denizyetik/.gradle/caches/transforms-3/a3edcc05acab73ba05c1f4ac01657d95/transformed/core-1.9.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.1] /Users/denizyetik/.gradle/caches/transforms-3/89de691e8d230bb8e531f52d2969cff2/transformed/lifecycle-runtime-2.6.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.1] /Users/denizyetik/.gradle/caches/transforms-3/89de691e8d230bb8e531f52d2969cff2/transformed/lifecycle-runtime-2.6.1/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.1] /Users/denizyetik/.gradle/caches/transforms-3/d2e2dcacf9b3c4fb80fe71c95ca78269/transformed/lifecycle-viewmodel-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.1] /Users/denizyetik/.gradle/caches/transforms-3/d2e2dcacf9b3c4fb80fe71c95ca78269/transformed/lifecycle-viewmodel-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.6.1] /Users/denizyetik/.gradle/caches/transforms-3/0fad76e33c9c408e0436389a8ffc5626/transformed/lifecycle-livedata-ktx-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.6.1] /Users/denizyetik/.gradle/caches/transforms-3/0fad76e33c9c408e0436389a8ffc5626/transformed/lifecycle-livedata-ktx-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1] /Users/denizyetik/.gradle/caches/transforms-3/dd5af705476e9bc3d5bd386acd63cf86/transformed/lifecycle-viewmodel-ktx-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1] /Users/denizyetik/.gradle/caches/transforms-3/dd5af705476e9bc3d5bd386acd63cf86/transformed/lifecycle-viewmodel-ktx-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [de.hdodenhof:circleimageview:3.1.0] /Users/denizyetik/.gradle/caches/transforms-3/7eff79596ec60bb6a7bef38be542c973/transformed/circleimageview-3.1.0/AndroidManifest.xml:5:5-7:41
+MERGED from [de.hdodenhof:circleimageview:3.1.0] /Users/denizyetik/.gradle/caches/transforms-3/7eff79596ec60bb6a7bef38be542c973/transformed/circleimageview-3.1.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/denizyetik/.gradle/caches/transforms-3/0eb65909892bd0fee2d73f011e20b1f7/transformed/transport-backend-cct-3.1.8/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/denizyetik/.gradle/caches/transforms-3/0eb65909892bd0fee2d73f011e20b1f7/transformed/transport-backend-cct-3.1.8/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/denizyetik/.gradle/caches/transforms-3/a4f415202b9ba192b87d3ec8eac74d59/transformed/transport-runtime-3.1.8/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/denizyetik/.gradle/caches/transforms-3/a4f415202b9ba192b87d3ec8eac74d59/transformed/transport-runtime-3.1.8/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] /Users/denizyetik/.gradle/caches/transforms-3/15da4fef02f00d834742f1c472c2139e/transformed/firebase-encoders-json-18.0.0/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] /Users/denizyetik/.gradle/caches/transforms-3/15da4fef02f00d834742f1c472c2139e/transformed/firebase-encoders-json-18.0.0/AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/denizyetik/.gradle/caches/transforms-3/ada29df07c0b10ad7e76ca864a4148ac/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/denizyetik/.gradle/caches/transforms-3/ada29df07c0b10ad7e76ca864a4148ac/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/denizyetik/.gradle/caches/transforms-3/0399f189c91c6982fef67acf99a35b04/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/denizyetik/.gradle/caches/transforms-3/0399f189c91c6982fef67acf99a35b04/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.exoplayer:exoplayer-datasource:2.18.7] /Users/denizyetik/.gradle/caches/transforms-3/6e15659c0bfe51cb76bb1c78845a5b0e/transformed/exoplayer-datasource-2.18.7/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-datasource:2.18.7] /Users/denizyetik/.gradle/caches/transforms-3/6e15659c0bfe51cb76bb1c78845a5b0e/transformed/exoplayer-datasource-2.18.7/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-database:2.18.7] /Users/denizyetik/.gradle/caches/transforms-3/339ca7f32af0c466d1ea2bcce06ab210/transformed/exoplayer-database-2.18.7/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-database:2.18.7] /Users/denizyetik/.gradle/caches/transforms-3/339ca7f32af0c466d1ea2bcce06ab210/transformed/exoplayer-database-2.18.7/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-extractor:2.18.7] /Users/denizyetik/.gradle/caches/transforms-3/88c9ab4ab7137df03f92390b9ac14e94/transformed/exoplayer-extractor-2.18.7/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-extractor:2.18.7] /Users/denizyetik/.gradle/caches/transforms-3/88c9ab4ab7137df03f92390b9ac14e94/transformed/exoplayer-extractor-2.18.7/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-decoder:2.18.7] /Users/denizyetik/.gradle/caches/transforms-3/cab30237a29799b0f092fdcd96b03d1e/transformed/exoplayer-decoder-2.18.7/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-decoder:2.18.7] /Users/denizyetik/.gradle/caches/transforms-3/cab30237a29799b0f092fdcd96b03d1e/transformed/exoplayer-decoder-2.18.7/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-common:2.18.7] /Users/denizyetik/.gradle/caches/transforms-3/0c567ee8b9a47bf09b65760a22a38a49/transformed/exoplayer-common-2.18.7/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.exoplayer:exoplayer-common:2.18.7] /Users/denizyetik/.gradle/caches/transforms-3/0c567ee8b9a47bf09b65760a22a38a49/transformed/exoplayer-common-2.18.7/AndroidManifest.xml:20:5-22:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.15.1] /Users/denizyetik/.gradle/caches/transforms-3/ca01140220601d37829f31d9f4c374f7/transformed/gifdecoder-4.15.1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.15.1] /Users/denizyetik/.gradle/caches/transforms-3/ca01140220601d37829f31d9f4c374f7/transformed/gifdecoder-4.15.1/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.3] /Users/denizyetik/.gradle/caches/transforms-3/dee8198d6eb54baba4c9bf9fa0c5061f/transformed/exifinterface-1.3.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.3] /Users/denizyetik/.gradle/caches/transforms-3/dee8198d6eb54baba4c9bf9fa0c5061f/transformed/exifinterface-1.3.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/denizyetik/.gradle/caches/transforms-3/50ede56ed15f4f7955f3f7a5442a476b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/denizyetik/.gradle/caches/transforms-3/50ede56ed15f4f7955f3f7a5442a476b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/denizyetik/.gradle/caches/transforms-3/66a26e09c648ff04ddf1d2c8681e4fea/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/denizyetik/.gradle/caches/transforms-3/66a26e09c648ff04ddf1d2c8681e4fea/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/denizyetik/.gradle/caches/transforms-3/39d5b2270b6d2d8751e239b330f2ac31/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/denizyetik/.gradle/caches/transforms-3/39d5b2270b6d2d8751e239b330f2ac31/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-components:17.1.0] /Users/denizyetik/.gradle/caches/transforms-3/4d72facd52324e46842c15c92d17adb3/transformed/firebase-components-17.1.0/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-components:17.1.0] /Users/denizyetik/.gradle/caches/transforms-3/4d72facd52324e46842c15c92d17adb3/transformed/firebase-components-17.1.0/AndroidManifest.xml:18:5-20:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/denizyetik/.gradle/caches/transforms-3/21676d46e25736bdc9c358c4b50a3037/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/denizyetik/.gradle/caches/transforms-3/21676d46e25736bdc9c358c4b50a3037/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/denizyetik/.gradle/caches/transforms-3/edd036286a3653e0178bf6b02741e2f7/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/denizyetik/.gradle/caches/transforms-3/edd036286a3653e0178bf6b02741e2f7/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/denizyetik/.gradle/caches/transforms-3/e1240d3bde5dc87ff6676b8cc6513038/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/denizyetik/.gradle/caches/transforms-3/e1240d3bde5dc87ff6676b8cc6513038/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/denizyetik/.gradle/caches/transforms-3/02377ae7622bd443dea04bb52d73aab5/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/denizyetik/.gradle/caches/transforms-3/02377ae7622bd443dea04bb52d73aab5/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.datatransport:transport-api:3.0.0] /Users/denizyetik/.gradle/caches/transforms-3/13e48b95d23e906b8c23509ff53f4bf8/transformed/transport-api-3.0.0/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-api:3.0.0] /Users/denizyetik/.gradle/caches/transforms-3/13e48b95d23e906b8c23509ff53f4bf8/transformed/transport-api-3.0.0/AndroidManifest.xml:18:5-20:41
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/denizyetik/.gradle/caches/transforms-3/ddd149ea6498b073a7e099562f53f043/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/denizyetik/.gradle/caches/transforms-3/ddd149ea6498b073a7e099562f53f043/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/denizyetik/.gradle/caches/transforms-3/194d137b862f546b61964e79f589c126/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/denizyetik/.gradle/caches/transforms-3/194d137b862f546b61964e79f589c126/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/denizyetik/.gradle/caches/transforms-3/645b8608ee74e728707a14c72b09f1f0/transformed/annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/denizyetik/.gradle/caches/transforms-3/645b8608ee74e728707a14c72b09f1f0/transformed/annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [io.grpc:grpc-android:1.52.1] /Users/denizyetik/.gradle/caches/transforms-3/ee18becca0c8ea5fa2b3dbcaba69434a/transformed/grpc-android-1.52.1/AndroidManifest.xml:5:5-7:41
+MERGED from [io.grpc:grpc-android:1.52.1] /Users/denizyetik/.gradle/caches/transforms-3/ee18becca0c8ea5fa2b3dbcaba69434a/transformed/grpc-android-1.52.1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] /Users/denizyetik/.gradle/caches/transforms-3/7c4f56986e9ee36b88d62b5a9d5ca0b9/transformed/protolite-well-known-types-18.0.0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.firebase:protolite-well-known-types:18.0.0] /Users/denizyetik/.gradle/caches/transforms-3/7c4f56986e9ee36b88d62b5a9d5ca0b9/transformed/protolite-well-known-types-18.0.0/AndroidManifest.xml:7:5-9:41
+	tools:overrideLibrary
+		ADDED from [com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-3/463932f0f41b444f1d821ceb80f82e19/transformed/firebase-auth-22.0.0/AndroidManifest.xml:23:9-61
+	android:targetSdkVersion
+		INJECTED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml
+activity#com.karumi.dexter.DexterActivity
+ADDED from [com.karumi:dexter:6.2.3] /Users/denizyetik/.gradle/caches/transforms-3/60332f7dc334d0378eb9bb628621d1c1/transformed/dexter-6.2.3/AndroidManifest.xml:27:9-29:72
+	android:theme
+		ADDED from [com.karumi:dexter:6.2.3] /Users/denizyetik/.gradle/caches/transforms-3/60332f7dc334d0378eb9bb628621d1c1/transformed/dexter-6.2.3/AndroidManifest.xml:29:13-69
+	android:name
+		ADDED from [com.karumi:dexter:6.2.3] /Users/denizyetik/.gradle/caches/transforms-3/60332f7dc334d0378eb9bb628621d1c1/transformed/dexter-6.2.3/AndroidManifest.xml:28:13-60
+service#com.google.android.gms.nearby.exposurenotification.WakeUpService
+ADDED from [com.google.android.gms:play-services-nearby:18.5.0] /Users/denizyetik/.gradle/caches/transforms-3/3718b0868ff7a3c961e1ec57bce0893e/transformed/play-services-nearby-18.5.0/AndroidManifest.xml:10:9-13:105
+	android:exported
+		ADDED from [com.google.android.gms:play-services-nearby:18.5.0] /Users/denizyetik/.gradle/caches/transforms-3/3718b0868ff7a3c961e1ec57bce0893e/transformed/play-services-nearby-18.5.0/AndroidManifest.xml:12:13-36
+	android:permission
+		ADDED from [com.google.android.gms:play-services-nearby:18.5.0] /Users/denizyetik/.gradle/caches/transforms-3/3718b0868ff7a3c961e1ec57bce0893e/transformed/play-services-nearby-18.5.0/AndroidManifest.xml:13:13-102
+	android:name
+		ADDED from [com.google.android.gms:play-services-nearby:18.5.0] /Users/denizyetik/.gradle/caches/transforms-3/3718b0868ff7a3c961e1ec57bce0893e/transformed/play-services-nearby-18.5.0/AndroidManifest.xml:11:13-92
+service#com.google.firebase.components.ComponentDiscoveryService
+ADDED from [com.google.firebase:firebase-storage-ktx:20.2.0] /Users/denizyetik/.gradle/caches/transforms-3/ae3a87286c0e39746468cc80826fdc7d/transformed/firebase-storage-ktx-20.2.0/AndroidManifest.xml:11:9-17:19
+MERGED from [com.google.firebase:firebase-storage:20.2.0] /Users/denizyetik/.gradle/caches/transforms-3/ecbba366544b8fcacfe60cbb7ed6604e/transformed/firebase-storage-20.2.0/AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.firebase:firebase-storage:20.2.0] /Users/denizyetik/.gradle/caches/transforms-3/ecbba366544b8fcacfe60cbb7ed6604e/transformed/firebase-storage-20.2.0/AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.firebase:firebase-firestore-ktx:24.6.0] /Users/denizyetik/.gradle/caches/transforms-3/492618f379572f6414f7e143aeedfac7/transformed/firebase-firestore-ktx-24.6.0/AndroidManifest.xml:11:9-17:19
+MERGED from [com.google.firebase:firebase-firestore-ktx:24.6.0] /Users/denizyetik/.gradle/caches/transforms-3/492618f379572f6414f7e143aeedfac7/transformed/firebase-firestore-ktx-24.6.0/AndroidManifest.xml:11:9-17:19
+MERGED from [com.google.firebase:firebase-firestore:24.6.0] /Users/denizyetik/.gradle/caches/transforms-3/3080b8267f53b135f5d5fdb33a2acc7c/transformed/firebase-firestore-24.6.0/AndroidManifest.xml:16:9-22:19
+MERGED from [com.google.firebase:firebase-firestore:24.6.0] /Users/denizyetik/.gradle/caches/transforms-3/3080b8267f53b135f5d5fdb33a2acc7c/transformed/firebase-firestore-24.6.0/AndroidManifest.xml:16:9-22:19
+MERGED from [com.google.firebase:firebase-messaging-ktx:23.1.2] /Users/denizyetik/.gradle/caches/transforms-3/8ea34a5c769fb7d00068316d00febe91/transformed/firebase-messaging-ktx-23.1.2/AndroidManifest.xml:25:9-31:19
+MERGED from [com.google.firebase:firebase-messaging-ktx:23.1.2] /Users/denizyetik/.gradle/caches/transforms-3/8ea34a5c769fb7d00068316d00febe91/transformed/firebase-messaging-ktx-23.1.2/AndroidManifest.xml:25:9-31:19
+MERGED from [com.google.firebase:firebase-messaging:23.1.2] /Users/denizyetik/.gradle/caches/transforms-3/27a11c9f2ed48ce7a59f7d3aae37e5a4/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:52:9-58:19
+MERGED from [com.google.firebase:firebase-messaging:23.1.2] /Users/denizyetik/.gradle/caches/transforms-3/27a11c9f2ed48ce7a59f7d3aae37e5a4/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:52:9-58:19
+MERGED from [com.google.firebase:firebase-auth-ktx:22.0.0] /Users/denizyetik/.gradle/caches/transforms-3/69fb1c51c90021fbe946e786203626b8/transformed/firebase-auth-ktx-22.0.0/AndroidManifest.xml:8:9-14:19
+MERGED from [com.google.firebase:firebase-auth-ktx:22.0.0] /Users/denizyetik/.gradle/caches/transforms-3/69fb1c51c90021fbe946e786203626b8/transformed/firebase-auth-ktx-22.0.0/AndroidManifest.xml:8:9-14:19
+MERGED from [com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-3/463932f0f41b444f1d821ceb80f82e19/transformed/firebase-auth-22.0.0/AndroidManifest.xml:66:9-72:19
+MERGED from [com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-3/463932f0f41b444f1d821ceb80f82e19/transformed/firebase-auth-22.0.0/AndroidManifest.xml:66:9-72:19
+MERGED from [com.google.firebase:firebase-common-ktx:20.3.2] /Users/denizyetik/.gradle/caches/transforms-3/fe611ff84d5f013d7e98c1fb21cb2bab/transformed/firebase-common-ktx-20.3.2/AndroidManifest.xml:11:9-17:19
+MERGED from [com.google.firebase:firebase-common-ktx:20.3.2] /Users/denizyetik/.gradle/caches/transforms-3/fe611ff84d5f013d7e98c1fb21cb2bab/transformed/firebase-common-ktx-20.3.2/AndroidManifest.xml:11:9-17:19
+MERGED from [com.google.firebase:firebase-datatransport:18.1.7] /Users/denizyetik/.gradle/caches/transforms-3/89e1d92e45b126bd1f4cae950815756c/transformed/firebase-datatransport-18.1.7/AndroidManifest.xml:24:9-30:19
+MERGED from [com.google.firebase:firebase-datatransport:18.1.7] /Users/denizyetik/.gradle/caches/transforms-3/89e1d92e45b126bd1f4cae950815756c/transformed/firebase-datatransport-18.1.7/AndroidManifest.xml:24:9-30:19
+MERGED from [com.google.firebase:firebase-installations:17.1.3] /Users/denizyetik/.gradle/caches/transforms-3/ddecafea92fc72c72e6be1bc2e33607c/transformed/firebase-installations-17.1.3/AndroidManifest.xml:14:9-20:19
+MERGED from [com.google.firebase:firebase-installations:17.1.3] /Users/denizyetik/.gradle/caches/transforms-3/ddecafea92fc72c72e6be1bc2e33607c/transformed/firebase-installations-17.1.3/AndroidManifest.xml:14:9-20:19
+MERGED from [com.google.firebase:firebase-common:20.3.2] /Users/denizyetik/.gradle/caches/transforms-3/e54c263e2787faee6b5b867b6028f330/transformed/firebase-common-20.3.2/AndroidManifest.xml:32:9-36:35
+MERGED from [com.google.firebase:firebase-common:20.3.2] /Users/denizyetik/.gradle/caches/transforms-3/e54c263e2787faee6b5b867b6028f330/transformed/firebase-common-20.3.2/AndroidManifest.xml:32:9-36:35
+	android:exported
+		ADDED from [com.google.firebase:firebase-storage-ktx:20.2.0] /Users/denizyetik/.gradle/caches/transforms-3/ae3a87286c0e39746468cc80826fdc7d/transformed/firebase-storage-ktx-20.2.0/AndroidManifest.xml:13:13-37
+	tools:targetApi
+		ADDED from [com.google.firebase:firebase-common:20.3.2] /Users/denizyetik/.gradle/caches/transforms-3/e54c263e2787faee6b5b867b6028f330/transformed/firebase-common-20.3.2/AndroidManifest.xml:36:13-32
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:20.3.2] /Users/denizyetik/.gradle/caches/transforms-3/e54c263e2787faee6b5b867b6028f330/transformed/firebase-common-20.3.2/AndroidManifest.xml:34:13-43
+	android:name
+		ADDED from [com.google.firebase:firebase-storage-ktx:20.2.0] /Users/denizyetik/.gradle/caches/transforms-3/ae3a87286c0e39746468cc80826fdc7d/transformed/firebase-storage-ktx-20.2.0/AndroidManifest.xml:12:13-84
+meta-data#com.google.firebase.components:com.google.firebase.storage.ktx.FirebaseStorageKtxRegistrar
+ADDED from [com.google.firebase:firebase-storage-ktx:20.2.0] /Users/denizyetik/.gradle/caches/transforms-3/ae3a87286c0e39746468cc80826fdc7d/transformed/firebase-storage-ktx-20.2.0/AndroidManifest.xml:14:13-16:85
+	android:value
+		ADDED from [com.google.firebase:firebase-storage-ktx:20.2.0] /Users/denizyetik/.gradle/caches/transforms-3/ae3a87286c0e39746468cc80826fdc7d/transformed/firebase-storage-ktx-20.2.0/AndroidManifest.xml:16:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-storage-ktx:20.2.0] /Users/denizyetik/.gradle/caches/transforms-3/ae3a87286c0e39746468cc80826fdc7d/transformed/firebase-storage-ktx-20.2.0/AndroidManifest.xml:15:17-122
+meta-data#com.google.firebase.components:com.google.firebase.storage.StorageRegistrar
+ADDED from [com.google.firebase:firebase-storage:20.2.0] /Users/denizyetik/.gradle/caches/transforms-3/ecbba366544b8fcacfe60cbb7ed6604e/transformed/firebase-storage-20.2.0/AndroidManifest.xml:32:13-34:85
+	android:value
+		ADDED from [com.google.firebase:firebase-storage:20.2.0] /Users/denizyetik/.gradle/caches/transforms-3/ecbba366544b8fcacfe60cbb7ed6604e/transformed/firebase-storage-20.2.0/AndroidManifest.xml:34:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-storage:20.2.0] /Users/denizyetik/.gradle/caches/transforms-3/ecbba366544b8fcacfe60cbb7ed6604e/transformed/firebase-storage-20.2.0/AndroidManifest.xml:33:17-107
+meta-data#com.google.firebase.components:com.google.firebase.firestore.ktx.FirebaseFirestoreKtxRegistrar
+ADDED from [com.google.firebase:firebase-firestore-ktx:24.6.0] /Users/denizyetik/.gradle/caches/transforms-3/492618f379572f6414f7e143aeedfac7/transformed/firebase-firestore-ktx-24.6.0/AndroidManifest.xml:14:13-16:85
+	android:value
+		ADDED from [com.google.firebase:firebase-firestore-ktx:24.6.0] /Users/denizyetik/.gradle/caches/transforms-3/492618f379572f6414f7e143aeedfac7/transformed/firebase-firestore-ktx-24.6.0/AndroidManifest.xml:16:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-firestore-ktx:24.6.0] /Users/denizyetik/.gradle/caches/transforms-3/492618f379572f6414f7e143aeedfac7/transformed/firebase-firestore-ktx-24.6.0/AndroidManifest.xml:15:17-126
+meta-data#com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar
+ADDED from [com.google.firebase:firebase-firestore:24.6.0] /Users/denizyetik/.gradle/caches/transforms-3/3080b8267f53b135f5d5fdb33a2acc7c/transformed/firebase-firestore-24.6.0/AndroidManifest.xml:19:13-21:85
+	android:value
+		ADDED from [com.google.firebase:firebase-firestore:24.6.0] /Users/denizyetik/.gradle/caches/transforms-3/3080b8267f53b135f5d5fdb33a2acc7c/transformed/firebase-firestore-24.6.0/AndroidManifest.xml:21:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-firestore:24.6.0] /Users/denizyetik/.gradle/caches/transforms-3/3080b8267f53b135f5d5fdb33a2acc7c/transformed/firebase-firestore-24.6.0/AndroidManifest.xml:20:17-111
+meta-data#com.google.firebase.components:com.google.firebase.messaging.ktx.FirebaseMessagingKtxRegistrar
+ADDED from [com.google.firebase:firebase-messaging-ktx:23.1.2] /Users/denizyetik/.gradle/caches/transforms-3/8ea34a5c769fb7d00068316d00febe91/transformed/firebase-messaging-ktx-23.1.2/AndroidManifest.xml:28:13-30:85
+	android:value
+		ADDED from [com.google.firebase:firebase-messaging-ktx:23.1.2] /Users/denizyetik/.gradle/caches/transforms-3/8ea34a5c769fb7d00068316d00febe91/transformed/firebase-messaging-ktx-23.1.2/AndroidManifest.xml:30:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging-ktx:23.1.2] /Users/denizyetik/.gradle/caches/transforms-3/8ea34a5c769fb7d00068316d00febe91/transformed/firebase-messaging-ktx-23.1.2/AndroidManifest.xml:29:17-126
+uses-permission#android.permission.POST_NOTIFICATIONS
+ADDED from [com.google.firebase:firebase-messaging:23.1.2] /Users/denizyetik/.gradle/caches/transforms-3/27a11c9f2ed48ce7a59f7d3aae37e5a4/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:25:5-77
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:23.1.2] /Users/denizyetik/.gradle/caches/transforms-3/27a11c9f2ed48ce7a59f7d3aae37e5a4/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:25:22-74
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from [com.google.firebase:firebase-messaging:23.1.2] /Users/denizyetik/.gradle/caches/transforms-3/27a11c9f2ed48ce7a59f7d3aae37e5a4/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:28:5-82
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] /Users/denizyetik/.gradle/caches/transforms-3/5c1b7a684518ce5062611854a0913af0/transformed/play-services-cloud-messaging-17.0.1/AndroidManifest.xml:11:5-82
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] /Users/denizyetik/.gradle/caches/transforms-3/5c1b7a684518ce5062611854a0913af0/transformed/play-services-cloud-messaging-17.0.1/AndroidManifest.xml:11:5-82
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:23.1.2] /Users/denizyetik/.gradle/caches/transforms-3/27a11c9f2ed48ce7a59f7d3aae37e5a4/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:28:22-79
+receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
+ADDED from [com.google.firebase:firebase-messaging:23.1.2] /Users/denizyetik/.gradle/caches/transforms-3/27a11c9f2ed48ce7a59f7d3aae37e5a4/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:31:9-38:20
+	android:exported
+		ADDED from [com.google.firebase:firebase-messaging:23.1.2] /Users/denizyetik/.gradle/caches/transforms-3/27a11c9f2ed48ce7a59f7d3aae37e5a4/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:33:13-36
+	android:permission
+		ADDED from [com.google.firebase:firebase-messaging:23.1.2] /Users/denizyetik/.gradle/caches/transforms-3/27a11c9f2ed48ce7a59f7d3aae37e5a4/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:34:13-73
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:23.1.2] /Users/denizyetik/.gradle/caches/transforms-3/27a11c9f2ed48ce7a59f7d3aae37e5a4/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:32:13-78
+intent-filter#action:name:com.google.android.c2dm.intent.RECEIVE
+ADDED from [com.google.firebase:firebase-messaging:23.1.2] /Users/denizyetik/.gradle/caches/transforms-3/27a11c9f2ed48ce7a59f7d3aae37e5a4/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:35:13-37:29
+action#com.google.android.c2dm.intent.RECEIVE
+ADDED from [com.google.firebase:firebase-messaging:23.1.2] /Users/denizyetik/.gradle/caches/transforms-3/27a11c9f2ed48ce7a59f7d3aae37e5a4/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:36:17-81
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:23.1.2] /Users/denizyetik/.gradle/caches/transforms-3/27a11c9f2ed48ce7a59f7d3aae37e5a4/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:36:25-78
+service#com.google.firebase.messaging.FirebaseMessagingService
+ADDED from [com.google.firebase:firebase-messaging:23.1.2] /Users/denizyetik/.gradle/caches/transforms-3/27a11c9f2ed48ce7a59f7d3aae37e5a4/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:44:9-51:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-messaging:23.1.2] /Users/denizyetik/.gradle/caches/transforms-3/27a11c9f2ed48ce7a59f7d3aae37e5a4/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:47:13-37
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-messaging:23.1.2] /Users/denizyetik/.gradle/caches/transforms-3/27a11c9f2ed48ce7a59f7d3aae37e5a4/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:46:13-43
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:23.1.2] /Users/denizyetik/.gradle/caches/transforms-3/27a11c9f2ed48ce7a59f7d3aae37e5a4/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:45:13-82
+meta-data#com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar
+ADDED from [com.google.firebase:firebase-messaging:23.1.2] /Users/denizyetik/.gradle/caches/transforms-3/27a11c9f2ed48ce7a59f7d3aae37e5a4/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:55:13-57:85
+	android:value
+		ADDED from [com.google.firebase:firebase-messaging:23.1.2] /Users/denizyetik/.gradle/caches/transforms-3/27a11c9f2ed48ce7a59f7d3aae37e5a4/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:57:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:23.1.2] /Users/denizyetik/.gradle/caches/transforms-3/27a11c9f2ed48ce7a59f7d3aae37e5a4/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:56:17-119
+meta-data#com.google.firebase.components:com.google.firebase.auth.ktx.FirebaseAuthKtxRegistrar
+ADDED from [com.google.firebase:firebase-auth-ktx:22.0.0] /Users/denizyetik/.gradle/caches/transforms-3/69fb1c51c90021fbe946e786203626b8/transformed/firebase-auth-ktx-22.0.0/AndroidManifest.xml:11:13-13:85
+	android:value
+		ADDED from [com.google.firebase:firebase-auth-ktx:22.0.0] /Users/denizyetik/.gradle/caches/transforms-3/69fb1c51c90021fbe946e786203626b8/transformed/firebase-auth-ktx-22.0.0/AndroidManifest.xml:13:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-auth-ktx:22.0.0] /Users/denizyetik/.gradle/caches/transforms-3/69fb1c51c90021fbe946e786203626b8/transformed/firebase-auth-ktx-22.0.0/AndroidManifest.xml:12:17-116
+activity#com.google.firebase.auth.internal.GenericIdpActivity
+ADDED from [com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-3/463932f0f41b444f1d821ceb80f82e19/transformed/firebase-auth-22.0.0/AndroidManifest.xml:29:9-46:20
+	android:excludeFromRecents
+		ADDED from [com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-3/463932f0f41b444f1d821ceb80f82e19/transformed/firebase-auth-22.0.0/AndroidManifest.xml:31:13-46
+	android:launchMode
+		ADDED from [com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-3/463932f0f41b444f1d821ceb80f82e19/transformed/firebase-auth-22.0.0/AndroidManifest.xml:33:13-44
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-3/463932f0f41b444f1d821ceb80f82e19/transformed/firebase-auth-22.0.0/AndroidManifest.xml:32:13-36
+	android:theme
+		ADDED from [com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-3/463932f0f41b444f1d821ceb80f82e19/transformed/firebase-auth-22.0.0/AndroidManifest.xml:34:13-72
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-3/463932f0f41b444f1d821ceb80f82e19/transformed/firebase-auth-22.0.0/AndroidManifest.xml:30:13-80
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:firebase.auth+data:path:/+data:scheme:genericidp
+ADDED from [com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-3/463932f0f41b444f1d821ceb80f82e19/transformed/firebase-auth-22.0.0/AndroidManifest.xml:35:13-45:29
+action#android.intent.action.VIEW
+ADDED from [com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-3/463932f0f41b444f1d821ceb80f82e19/transformed/firebase-auth-22.0.0/AndroidManifest.xml:36:17-69
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-3/463932f0f41b444f1d821ceb80f82e19/transformed/firebase-auth-22.0.0/AndroidManifest.xml:36:25-66
+category#android.intent.category.DEFAULT
+ADDED from [com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-3/463932f0f41b444f1d821ceb80f82e19/transformed/firebase-auth-22.0.0/AndroidManifest.xml:38:17-76
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-3/463932f0f41b444f1d821ceb80f82e19/transformed/firebase-auth-22.0.0/AndroidManifest.xml:38:27-73
+category#android.intent.category.BROWSABLE
+ADDED from [com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-3/463932f0f41b444f1d821ceb80f82e19/transformed/firebase-auth-22.0.0/AndroidManifest.xml:39:17-78
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-3/463932f0f41b444f1d821ceb80f82e19/transformed/firebase-auth-22.0.0/AndroidManifest.xml:39:27-75
+data
+ADDED from [com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-3/463932f0f41b444f1d821ceb80f82e19/transformed/firebase-auth-22.0.0/AndroidManifest.xml:41:17-44:51
+	android:path
+		ADDED from [com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-3/463932f0f41b444f1d821ceb80f82e19/transformed/firebase-auth-22.0.0/AndroidManifest.xml:43:21-37
+	android:host
+		ADDED from [com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-3/463932f0f41b444f1d821ceb80f82e19/transformed/firebase-auth-22.0.0/AndroidManifest.xml:42:21-49
+	android:scheme
+		ADDED from [com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-3/463932f0f41b444f1d821ceb80f82e19/transformed/firebase-auth-22.0.0/AndroidManifest.xml:44:21-48
+activity#com.google.firebase.auth.internal.RecaptchaActivity
+ADDED from [com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-3/463932f0f41b444f1d821ceb80f82e19/transformed/firebase-auth-22.0.0/AndroidManifest.xml:47:9-64:20
+	android:excludeFromRecents
+		ADDED from [com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-3/463932f0f41b444f1d821ceb80f82e19/transformed/firebase-auth-22.0.0/AndroidManifest.xml:49:13-46
+	android:launchMode
+		ADDED from [com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-3/463932f0f41b444f1d821ceb80f82e19/transformed/firebase-auth-22.0.0/AndroidManifest.xml:51:13-44
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-3/463932f0f41b444f1d821ceb80f82e19/transformed/firebase-auth-22.0.0/AndroidManifest.xml:50:13-36
+	android:theme
+		ADDED from [com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-3/463932f0f41b444f1d821ceb80f82e19/transformed/firebase-auth-22.0.0/AndroidManifest.xml:52:13-72
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-3/463932f0f41b444f1d821ceb80f82e19/transformed/firebase-auth-22.0.0/AndroidManifest.xml:48:13-79
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:firebase.auth+data:path:/+data:scheme:recaptcha
+ADDED from [com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-3/463932f0f41b444f1d821ceb80f82e19/transformed/firebase-auth-22.0.0/AndroidManifest.xml:53:13-63:29
+meta-data#com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar
+ADDED from [com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-3/463932f0f41b444f1d821ceb80f82e19/transformed/firebase-auth-22.0.0/AndroidManifest.xml:69:13-71:85
+	android:value
+		ADDED from [com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-3/463932f0f41b444f1d821ceb80f82e19/transformed/firebase-auth-22.0.0/AndroidManifest.xml:71:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-3/463932f0f41b444f1d821ceb80f82e19/transformed/firebase-auth-22.0.0/AndroidManifest.xml:70:17-109
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:18.0.1] /Users/denizyetik/.gradle/caches/transforms-3/cf4ad96e877f8edaf56c0307db57eb41/transformed/play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:18.0.1] /Users/denizyetik/.gradle/caches/transforms-3/cf4ad96e877f8edaf56c0307db57eb41/transformed/play-services-base-18.0.1/AndroidManifest.xml:22:19-43
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:18.0.1] /Users/denizyetik/.gradle/caches/transforms-3/cf4ad96e877f8edaf56c0307db57eb41/transformed/play-services-base-18.0.1/AndroidManifest.xml:21:19-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:18.0.1] /Users/denizyetik/.gradle/caches/transforms-3/cf4ad96e877f8edaf56c0307db57eb41/transformed/play-services-base-18.0.1/AndroidManifest.xml:20:19-85
+meta-data#com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonKtxRegistrar
+ADDED from [com.google.firebase:firebase-common-ktx:20.3.2] /Users/denizyetik/.gradle/caches/transforms-3/fe611ff84d5f013d7e98c1fb21cb2bab/transformed/firebase-common-ktx-20.3.2/AndroidManifest.xml:14:13-16:85
+	android:value
+		ADDED from [com.google.firebase:firebase-common-ktx:20.3.2] /Users/denizyetik/.gradle/caches/transforms-3/fe611ff84d5f013d7e98c1fb21cb2bab/transformed/firebase-common-ktx-20.3.2/AndroidManifest.xml:16:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-common-ktx:20.3.2] /Users/denizyetik/.gradle/caches/transforms-3/fe611ff84d5f013d7e98c1fb21cb2bab/transformed/firebase-common-ktx-20.3.2/AndroidManifest.xml:15:17-113
+meta-data#com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar
+ADDED from [com.google.firebase:firebase-datatransport:18.1.7] /Users/denizyetik/.gradle/caches/transforms-3/89e1d92e45b126bd1f4cae950815756c/transformed/firebase-datatransport-18.1.7/AndroidManifest.xml:27:13-29:85
+	android:value
+		ADDED from [com.google.firebase:firebase-datatransport:18.1.7] /Users/denizyetik/.gradle/caches/transforms-3/89e1d92e45b126bd1f4cae950815756c/transformed/firebase-datatransport-18.1.7/AndroidManifest.xml:29:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-datatransport:18.1.7] /Users/denizyetik/.gradle/caches/transforms-3/89e1d92e45b126bd1f4cae950815756c/transformed/firebase-datatransport-18.1.7/AndroidManifest.xml:28:17-115
+meta-data#com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar
+ADDED from [com.google.firebase:firebase-installations:17.1.3] /Users/denizyetik/.gradle/caches/transforms-3/ddecafea92fc72c72e6be1bc2e33607c/transformed/firebase-installations-17.1.3/AndroidManifest.xml:17:13-19:85
+	android:value
+		ADDED from [com.google.firebase:firebase-installations:17.1.3] /Users/denizyetik/.gradle/caches/transforms-3/ddecafea92fc72c72e6be1bc2e33607c/transformed/firebase-installations-17.1.3/AndroidManifest.xml:19:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-installations:17.1.3] /Users/denizyetik/.gradle/caches/transforms-3/ddecafea92fc72c72e6be1bc2e33607c/transformed/firebase-installations-17.1.3/AndroidManifest.xml:18:17-127
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:20.3.2] /Users/denizyetik/.gradle/caches/transforms-3/e54c263e2787faee6b5b867b6028f330/transformed/firebase-common-20.3.2/AndroidManifest.xml:25:9-30:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:20.3.2] /Users/denizyetik/.gradle/caches/transforms-3/e54c263e2787faee6b5b867b6028f330/transformed/firebase-common-20.3.2/AndroidManifest.xml:27:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:20.3.2] /Users/denizyetik/.gradle/caches/transforms-3/e54c263e2787faee6b5b867b6028f330/transformed/firebase-common-20.3.2/AndroidManifest.xml:29:13-37
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:20.3.2] /Users/denizyetik/.gradle/caches/transforms-3/e54c263e2787faee6b5b867b6028f330/transformed/firebase-common-20.3.2/AndroidManifest.xml:28:13-43
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:20.3.2] /Users/denizyetik/.gradle/caches/transforms-3/e54c263e2787faee6b5b867b6028f330/transformed/firebase-common-20.3.2/AndroidManifest.xml:30:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-common:20.3.2] /Users/denizyetik/.gradle/caches/transforms-3/e54c263e2787faee6b5b867b6028f330/transformed/firebase-common-20.3.2/AndroidManifest.xml:26:13-77
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:18.1.0] /Users/denizyetik/.gradle/caches/transforms-3/f2ec65d68fb6866c5e97883f468ceb34/transformed/play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:18.1.0] /Users/denizyetik/.gradle/caches/transforms-3/f2ec65d68fb6866c5e97883f468ceb34/transformed/play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:18.1.0] /Users/denizyetik/.gradle/caches/transforms-3/f2ec65d68fb6866c5e97883f468ceb34/transformed/play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/denizyetik/.gradle/caches/transforms-3/5b78097da924ba1c79cb152a05628d3c/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/denizyetik/.gradle/caches/transforms-3/6cdff91770b2dfcfab4aba52475948ed/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/denizyetik/.gradle/caches/transforms-3/6cdff91770b2dfcfab4aba52475948ed/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/denizyetik/.gradle/caches/transforms-3/50ede56ed15f4f7955f3f7a5442a476b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/denizyetik/.gradle/caches/transforms-3/50ede56ed15f4f7955f3f7a5442a476b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/denizyetik/.gradle/caches/transforms-3/66a26e09c648ff04ddf1d2c8681e4fea/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/denizyetik/.gradle/caches/transforms-3/66a26e09c648ff04ddf1d2c8681e4fea/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/denizyetik/.gradle/caches/transforms-3/5b78097da924ba1c79cb152a05628d3c/transformed/emoji2-1.2.0/AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/denizyetik/.gradle/caches/transforms-3/5b78097da924ba1c79cb152a05628d3c/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/denizyetik/.gradle/caches/transforms-3/5b78097da924ba1c79cb152a05628d3c/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/denizyetik/.gradle/caches/transforms-3/5b78097da924ba1c79cb152a05628d3c/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/denizyetik/.gradle/caches/transforms-3/5b78097da924ba1c79cb152a05628d3c/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/denizyetik/.gradle/caches/transforms-3/5b78097da924ba1c79cb152a05628d3c/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/denizyetik/.gradle/caches/transforms-3/5b78097da924ba1c79cb152a05628d3c/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/denizyetik/.gradle/caches/transforms-3/6cdff91770b2dfcfab4aba52475948ed/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/denizyetik/.gradle/caches/transforms-3/6cdff91770b2dfcfab4aba52475948ed/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.6.1] /Users/denizyetik/.gradle/caches/transforms-3/6cdff91770b2dfcfab4aba52475948ed/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:30:17-78
+uses-library#androidx.window.extensions
+ADDED from [androidx.window:window:1.0.0] /Users/denizyetik/.gradle/caches/transforms-3/fc4d45bbf5af0a5b9332d2f6ce2510c3/transformed/window-1.0.0/AndroidManifest.xml:25:9-27:40
+	android:required
+		ADDED from [androidx.window:window:1.0.0] /Users/denizyetik/.gradle/caches/transforms-3/fc4d45bbf5af0a5b9332d2f6ce2510c3/transformed/window-1.0.0/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.window:window:1.0.0] /Users/denizyetik/.gradle/caches/transforms-3/fc4d45bbf5af0a5b9332d2f6ce2510c3/transformed/window-1.0.0/AndroidManifest.xml:26:13-54
+uses-library#androidx.window.sidecar
+ADDED from [androidx.window:window:1.0.0] /Users/denizyetik/.gradle/caches/transforms-3/fc4d45bbf5af0a5b9332d2f6ce2510c3/transformed/window-1.0.0/AndroidManifest.xml:28:9-30:40
+	android:required
+		ADDED from [androidx.window:window:1.0.0] /Users/denizyetik/.gradle/caches/transforms-3/fc4d45bbf5af0a5b9332d2f6ce2510c3/transformed/window-1.0.0/AndroidManifest.xml:30:13-37
+	android:name
+		ADDED from [androidx.window:window:1.0.0] /Users/denizyetik/.gradle/caches/transforms-3/fc4d45bbf5af0a5b9332d2f6ce2510c3/transformed/window-1.0.0/AndroidManifest.xml:29:13-51
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] /Users/denizyetik/.gradle/caches/transforms-3/a3edcc05acab73ba05c1f4ac01657d95/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.9.0] /Users/denizyetik/.gradle/caches/transforms-3/a3edcc05acab73ba05c1f4ac01657d95/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.9.0] /Users/denizyetik/.gradle/caches/transforms-3/a3edcc05acab73ba05c1f4ac01657d95/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+permission#com.intercomapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] /Users/denizyetik/.gradle/caches/transforms-3/a3edcc05acab73ba05c1f4ac01657d95/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.9.0] /Users/denizyetik/.gradle/caches/transforms-3/a3edcc05acab73ba05c1f4ac01657d95/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.9.0] /Users/denizyetik/.gradle/caches/transforms-3/a3edcc05acab73ba05c1f4ac01657d95/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] /Users/denizyetik/.gradle/caches/transforms-3/a3edcc05acab73ba05c1f4ac01657d95/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.9.0] /Users/denizyetik/.gradle/caches/transforms-3/a3edcc05acab73ba05c1f4ac01657d95/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+uses-permission#com.intercomapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] /Users/denizyetik/.gradle/caches/transforms-3/a3edcc05acab73ba05c1f4ac01657d95/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.9.0] /Users/denizyetik/.gradle/caches/transforms-3/a3edcc05acab73ba05c1f4ac01657d95/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+service#com.google.android.datatransport.runtime.backends.TransportBackendDiscovery
+ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/denizyetik/.gradle/caches/transforms-3/0eb65909892bd0fee2d73f011e20b1f7/transformed/transport-backend-cct-3.1.8/AndroidManifest.xml:28:9-34:19
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/denizyetik/.gradle/caches/transforms-3/a4f415202b9ba192b87d3ec8eac74d59/transformed/transport-runtime-3.1.8/AndroidManifest.xml:36:9-38:40
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/denizyetik/.gradle/caches/transforms-3/a4f415202b9ba192b87d3ec8eac74d59/transformed/transport-runtime-3.1.8/AndroidManifest.xml:36:9-38:40
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/denizyetik/.gradle/caches/transforms-3/0eb65909892bd0fee2d73f011e20b1f7/transformed/transport-backend-cct-3.1.8/AndroidManifest.xml:30:13-37
+	android:name
+		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/denizyetik/.gradle/caches/transforms-3/0eb65909892bd0fee2d73f011e20b1f7/transformed/transport-backend-cct-3.1.8/AndroidManifest.xml:29:13-103
+meta-data#backend:com.google.android.datatransport.cct.CctBackendFactory
+ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/denizyetik/.gradle/caches/transforms-3/0eb65909892bd0fee2d73f011e20b1f7/transformed/transport-backend-cct-3.1.8/AndroidManifest.xml:31:13-33:39
+	android:value
+		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/denizyetik/.gradle/caches/transforms-3/0eb65909892bd0fee2d73f011e20b1f7/transformed/transport-backend-cct-3.1.8/AndroidManifest.xml:33:17-36
+	android:name
+		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/denizyetik/.gradle/caches/transforms-3/0eb65909892bd0fee2d73f011e20b1f7/transformed/transport-backend-cct-3.1.8/AndroidManifest.xml:32:17-94
+service#com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService
+ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/denizyetik/.gradle/caches/transforms-3/a4f415202b9ba192b87d3ec8eac74d59/transformed/transport-runtime-3.1.8/AndroidManifest.xml:26:9-30:19
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/denizyetik/.gradle/caches/transforms-3/a4f415202b9ba192b87d3ec8eac74d59/transformed/transport-runtime-3.1.8/AndroidManifest.xml:28:13-37
+	android:permission
+		ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/denizyetik/.gradle/caches/transforms-3/a4f415202b9ba192b87d3ec8eac74d59/transformed/transport-runtime-3.1.8/AndroidManifest.xml:29:13-69
+	android:name
+		ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/denizyetik/.gradle/caches/transforms-3/a4f415202b9ba192b87d3ec8eac74d59/transformed/transport-runtime-3.1.8/AndroidManifest.xml:27:13-117
+receiver#com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver
+ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/denizyetik/.gradle/caches/transforms-3/a4f415202b9ba192b87d3ec8eac74d59/transformed/transport-runtime-3.1.8/AndroidManifest.xml:32:9-34:40
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/denizyetik/.gradle/caches/transforms-3/a4f415202b9ba192b87d3ec8eac74d59/transformed/transport-runtime-3.1.8/AndroidManifest.xml:34:13-37
+	android:name
+		ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/denizyetik/.gradle/caches/transforms-3/a4f415202b9ba192b87d3ec8eac74d59/transformed/transport-runtime-3.1.8/AndroidManifest.xml:33:13-132
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/denizyetik/.gradle/caches/transforms-3/50ede56ed15f4f7955f3f7a5442a476b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/denizyetik/.gradle/caches/transforms-3/50ede56ed15f4f7955f3f7a5442a476b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/denizyetik/.gradle/caches/transforms-3/50ede56ed15f4f7955f3f7a5442a476b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/denizyetik/.gradle/caches/transforms-3/50ede56ed15f4f7955f3f7a5442a476b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/denizyetik/.gradle/caches/transforms-3/50ede56ed15f4f7955f3f7a5442a476b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/denizyetik/.gradle/caches/transforms-3/50ede56ed15f4f7955f3f7a5442a476b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/denizyetik/.gradle/caches/transforms-3/50ede56ed15f4f7955f3f7a5442a476b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/denizyetik/.gradle/caches/transforms-3/50ede56ed15f4f7955f3f7a5442a476b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/denizyetik/.gradle/caches/transforms-3/50ede56ed15f4f7955f3f7a5442a476b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
+intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/denizyetik/.gradle/caches/transforms-3/50ede56ed15f4f7955f3f7a5442a476b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
+action#androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/denizyetik/.gradle/caches/transforms-3/50ede56ed15f4f7955f3f7a5442a476b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/denizyetik/.gradle/caches/transforms-3/50ede56ed15f4f7955f3f7a5442a476b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
+intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/denizyetik/.gradle/caches/transforms-3/50ede56ed15f4f7955f3f7a5442a476b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
+action#androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/denizyetik/.gradle/caches/transforms-3/50ede56ed15f4f7955f3f7a5442a476b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/denizyetik/.gradle/caches/transforms-3/50ede56ed15f4f7955f3f7a5442a476b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
+intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/denizyetik/.gradle/caches/transforms-3/50ede56ed15f4f7955f3f7a5442a476b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
+action#androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/denizyetik/.gradle/caches/transforms-3/50ede56ed15f4f7955f3f7a5442a476b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/denizyetik/.gradle/caches/transforms-3/50ede56ed15f4f7955f3f7a5442a476b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/denizyetik/.gradle/caches/transforms-3/50ede56ed15f4f7955f3f7a5442a476b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
+action#androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/denizyetik/.gradle/caches/transforms-3/50ede56ed15f4f7955f3f7a5442a476b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/denizyetik/.gradle/caches/transforms-3/50ede56ed15f4f7955f3f7a5442a476b/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:25-92

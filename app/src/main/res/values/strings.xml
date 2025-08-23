@@ -1,0 +1,90 @@
+<resources>
+    <string name="app_name">Intercom App</string>
+    
+    <!-- Auth -->
+    <string name="login">Giriş Yap</string>
+    <string name="register">Kayıt Ol</string>
+    <string name="email">E-posta</string>
+    <string name="password">Şifre</string>
+    <string name="confirm_password">Şifre Tekrar</string>
+    <string name="name">Ad Soyad</string>
+    <string name="phone">Telefon</string>
+    <string name="forgot_password">Şifremi Unuttum</string>
+    <string name="dont_have_account">Hesabınız yok mu?</string>
+    <string name="already_have_account">Zaten hesabınız var mı?</string>
+    
+    <!-- Main -->
+    <string name="home">Ana Sayfa</string>
+    <string name="contacts">Kişiler</string>
+    <string name="groups">Gruplar</string>
+    <string name="profile">Profil</string>
+    <string name="settings">Ayarlar</string>
+    
+    <!-- Intercom -->
+    <string name="connect">Bağlan</string>
+    <string name="disconnect">Bağlantıyı Kes</string>
+    <string name="mute">Sustur</string>
+    <string name="unmute">Susturmayı Kaldır</string>
+    <string name="start_music">Müzik Başlat</string>
+    <string name="stop_music">Müziği Durdur</string>
+    <string name="volume_up">Ses Aç</string>
+    <string name="volume_down">Ses Kıs</string>
+    
+    <!-- Groups -->
+    <string name="create_group">Grup Oluştur</string>
+    <string name="join_group">Gruba Katıl</string>
+    <string name="leave_group">Gruptan Ayrıl</string>
+    <string name="group_name">Grup Adı</string>
+    <string name="group_description">Grup Açıklaması</string>
+    <string name="invite_members">Üye Davet Et</string>
+    
+    <!-- Voice Commands -->
+    <string name="voice_command_connect">bağlan</string>
+    <string name="voice_command_disconnect">kapat</string>
+    <string name="voice_command_music">müzik</string>
+    <string name="voice_command_volume">ses</string>
+    <string name="voice_command_mute">sustur</string>
+    
+    <!-- Messages -->
+    <string name="connecting">Bağlanıyor...</string>
+    <string name="connected">Bağlandı</string>
+    <string name="disconnected">Bağlantı Kesildi</string>
+    <string name="muted">Susturuldu</string>
+    <string name="unmuted">Susturma Kaldırıldı</string>
+    <string name="music_playing">Müzik Çalıyor</string>
+    <string name="music_stopped">Müzik Durduruldu</string>
+    <string name="permission_required">İzin Gerekli</string>
+    <string name="permission_denied">İzin Reddedildi</string>
+    <string name="error_occurred">Hata Oluştu</string>
+    <string name="try_again">Tekrar Dene</string>
+    <string name="cancel">İptal</string>
+    <string name="ok">Tamam</string>
+    <string name="yes">Evet</string>
+    <string name="no">Hayır</string>
+    
+    <!-- Permissions -->
+    <string name="permission_microphone">Mikrofon izni gerekli</string>
+    <string name="permission_bluetooth">Bluetooth izni gerekli</string>
+    <string name="permission_location">Konum izni gerekli</string>
+    <string name="permission_storage">Depolama izni gerekli</string>
+    
+    <!-- Settings -->
+    <string name="audio_quality">Ses Kalitesi</string>
+    <string name="noise_reduction">Gürültü Azaltma</string>
+    <string name="auto_connect">Otomatik Bağlan</string>
+    <string name="voice_commands">Sesli Komutlar</string>
+    <string name="notifications">Bildirimler</string>
+    <string name="about">Hakkında</string>
+    <string name="logout">Çıkış Yap</string>
+    
+    <!-- Quality -->
+    <string name="quality_low">Düşük</string>
+    <string name="quality_medium">Orta</string>
+    <string name="quality_high">Yüksek</string>
+    
+    <!-- Status -->
+    <string name="status_online">Çevrimiçi</string>
+    <string name="status_offline">Çevrimdışı</string>
+    <string name="status_busy">Meşgul</string>
+    <string name="status_away">Uzakta</string>
+</resources>

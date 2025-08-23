@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data-extraction-rules>
+    <cloud-backup>
+        <!-- Exclude specific files or directories from cloud backup -->
+        <exclude domain="sharedpref" path="firebase_messaging_auto_init_enabled.xml"/>
+        <exclude domain="sharedpref" path="firebase_analytics_collection_enabled.xml"/>
+    </cloud-backup>
+    <device-transfer>
+        <!-- Exclude specific files or directories from device transfer -->
+        <exclude domain="sharedpref" path="firebase_messaging_auto_init_enabled.xml"/>
+        <exclude domain="sharedpref" path="firebase_analytics_collection_enabled.xml"/>
+    </device-transfer>
+</data-extraction-rules>

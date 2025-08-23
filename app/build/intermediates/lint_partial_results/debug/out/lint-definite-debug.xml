@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.1.0" type="incidents">
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set contentDescription"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="contentDescription"
+                value="TODO"
+                dot="4"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAccessibility=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAccessibility"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_auth.xml"
+            line="15"
+            column="10"
+            startOffset="560"
+            endLine="15"
+            endColumn="19"
+            endOffset="569"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Intercom App&apos;e Hoş Geldiniz&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_auth.xml"
+            line="31"
+            column="13"
+            startOffset="1197"
+            endLine="31"
+            endColumn="55"
+            endOffset="1239"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Motorcular için intercom sistemi&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_auth.xml"
+            line="44"
+            column="13"
+            startOffset="1756"
+            endLine="44"
+            endColumn="60"
+            endOffset="1803"/>
+    </incident>
+
+    <incident
+        id="ContentDescription"
+        severity="warning"
+        message="Missing `contentDescription` attribute on image">
+        <fix-alternatives>
+            <fix-attribute
+                description="Set contentDescription"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="contentDescription"
+                value="TODO"
+                dot="4"
+                mark="0"/>
+            <fix-attribute
+                description="Set importantForAccessibility=&quot;no&quot;"
+                namespace="http://schemas.android.com/apk/res/android"
+                attribute="importantForAccessibility"
+                value="no"/>
+        </fix-alternatives>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_splash.xml"
+            line="10"
+            column="6"
+            startOffset="430"
+            endLine="10"
+            endColumn="15"
+            endOffset="439"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Motorcular için Intercom Sistemi&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_splash.xml"
+            line="41"
+            column="9"
+            startOffset="1643"
+            endLine="41"
+            endColumn="56"
+            endOffset="1690"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Kişiler&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/fragment_contacts.xml"
+            line="12"
+            column="9"
+            startOffset="467"
+            endLine="12"
+            endColumn="31"
+            endOffset="489"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Gruplar&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/fragment_groups.xml"
+            line="12"
+            column="9"
+            startOffset="467"
+            endLine="12"
+            endColumn="31"
+            endOffset="489"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Durum&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/fragment_home.xml"
+            line="36"
+            column="21"
+            startOffset="1444"
+            endLine="36"
+            endColumn="41"
+            endOffset="1464"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Bağlantı Kontrolleri&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/fragment_home.xml"
+            line="75"
+            column="21"
+            startOffset="3031"
+            endLine="75"
+            endColumn="56"
+            endOffset="3066"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Müzik Kontrolleri&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/fragment_home.xml"
+            line="121"
+            column="21"
+            startOffset="4962"
+            endLine="121"
+            endColumn="53"
+            endOffset="4994"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Ses Kontrolleri&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/fragment_home.xml"
+            line="186"
+            column="21"
+            startOffset="7740"
+            endLine="186"
+            endColumn="51"
+            endOffset="7770"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Sesli Komutlar&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/fragment_home.xml"
+            line="244"
+            column="21"
+            startOffset="10209"
+            endLine="244"
+            endColumn="50"
+            endOffset="10238"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Sesli komutları kullanarak uygulamayı kontrol edebilirsiniz&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/fragment_home.xml"
+            line="253"
+            column="21"
+            startOffset="10602"
+            endLine="253"
+            endColumn="95"
+            endOffset="10676"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Sesli Komutları Aç/Kapat&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/fragment_home.xml"
+            line="262"
+            column="21"
+            startOffset="11087"
+            endLine="262"
+            endColumn="60"
+            endOffset="11126"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Profil&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/fragment_profile.xml"
+            line="12"
+            column="9"
+            startOffset="469"
+            endLine="12"
+            endColumn="30"
+            endOffset="490"/>
+    </incident>
+
+    <incident
+        id="TypographyEllipsis"
+        severity="warning"
+        message="Replace &quot;...&quot; with ellipsis character (…, &amp;#8230;) ?">
+        <fix-replace
+            description="Replace with …"
+            oldString="..."
+            replacement="…"/>
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="49"
+            column="31"
+            startOffset="1974"
+            endLine="49"
+            endColumn="44"
+            endOffset="1987"/>
+    </incident>
+
+    <incident
+        id="SwitchIntDef"
+        severity="warning"
+        message="Switch statement on an `int` with known associated constant missing case `SpeechRecognizer.ERROR_AUDIO`, `SpeechRecognizer.ERROR_CANNOT_CHECK_SUPPORT`, `SpeechRecognizer.ERROR_CLIENT`, `SpeechRecognizer.ERROR_INSUFFICIENT_PERMISSIONS`, `SpeechRecognizer.ERROR_LANGUAGE_NOT_SUPPORTED`, `SpeechRecognizer.ERROR_LANGUAGE_UNAVAILABLE`, `SpeechRecognizer.ERROR_NETWORK`, `SpeechRecognizer.ERROR_NETWORK_TIMEOUT`, `SpeechRecognizer.ERROR_RECOGNIZER_BUSY`, `SpeechRecognizer.ERROR_SERVER`, `SpeechRecognizer.ERROR_SERVER_DISCONNECTED`, `SpeechRecognizer.ERROR_TOO_MANY_REQUESTS`">
+        <fix-data cases="android.speech.SpeechRecognizer.ERROR_AUDIO, android.speech.SpeechRecognizer.ERROR_CANNOT_CHECK_SUPPORT, android.speech.SpeechRecognizer.ERROR_CLIENT, android.speech.SpeechRecognizer.ERROR_INSUFFICIENT_PERMISSIONS, android.speech.SpeechRecognizer.ERROR_LANGUAGE_NOT_SUPPORTED, android.speech.SpeechRecognizer.ERROR_LANGUAGE_UNAVAILABLE, android.speech.SpeechRecognizer.ERROR_NETWORK, android.speech.SpeechRecognizer.ERROR_NETWORK_TIMEOUT, android.speech.SpeechRecognizer.ERROR_RECOGNIZER_BUSY, android.speech.SpeechRecognizer.ERROR_SERVER, android.speech.SpeechRecognizer.ERROR_SERVER_DISCONNECTED, android.speech.SpeechRecognizer.ERROR_TOO_MANY_REQUESTS"/>
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/intercomapp/communication/VoiceCommandManager.kt"
+            line="89"
+            column="17"
+            startOffset="3072"
+            endLine="89"
+            endColumn="21"
+            endOffset="3076"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/intercomapp/ui/contacts/ContactsFragment.kt"
+            line="28"
+            column="39"
+            startOffset="888"
+            endLine="28"
+            endColumn="70"
+            endOffset="919"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/intercomapp/ui/groups/GroupsFragment.kt"
+            line="28"
+            column="39"
+            startOffset="876"
+            endLine="28"
+            endColumn="70"
+            endOffset="907"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/intercomapp/ui/home/HomeFragment.kt"
+            line="136"
+            column="45"
+            startOffset="4923"
+            endLine="136"
+            endColumn="70"
+            endOffset="4948"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/intercomapp/ui/home/HomeFragment.kt"
+            line="139"
+            column="45"
+            startOffset="5124"
+            endLine="139"
+            endColumn="69"
+            endOffset="5148"/>
+    </incident>
+
+    <incident
+        id="StaticFieldLeak"
+        severity="warning"
+        message="This field leaks a context object">
+        <location
+            file="${:app*debug*sourceProvider*0*javaDir*0}/com/intercomapp/ui/home/HomeViewModel.kt"
+            line="28"
+            column="5"
+            startOffset="935"
+            endLine="28"
+            endColumn="57"
+            endOffset="987"/>
+    </incident>
+
+    <incident
+        id="OldTargetApi"
+        severity="warning"
+        message="Not targeting the latest versions of Android; compatibility modes apply. Consider testing and updating this version. Consult the android.os.Build.VERSION_CODES javadoc for details.">
+        <fix-replace
+            description="Update targetSdkVersion to 36"
+            oldString="33"
+            replacement="36"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="15"
+            column="9"
+            startOffset="278"
+            endLine="15"
+            endColumn="21"
+            endOffset="290"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.core:core-ktx than 1.9.0 is available: 1.17.0">
+        <fix-replace
+            description="Change to 1.17.0"
+            family="Update versions"
+            oldString="1.9.0"
+            replacement="1.17.0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="44"
+            column="20"
+            startOffset="896"
+            endLine="44"
+            endColumn="50"
+            endOffset="926"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.appcompat:appcompat than 1.6.1 is available: 1.7.1">
+        <fix-replace
+            description="Change to 1.7.1"
+            family="Update versions"
+            oldString="1.6.1"
+            replacement="1.7.1"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="45"
+            column="20"
+            startOffset="946"
+            endLine="45"
+            endColumn="56"
+            endOffset="982"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of com.google.android.material:material than 1.8.0 is available: 1.12.0">
+        <fix-replace
+            description="Change to 1.12.0"
+            family="Update versions"
+            oldString="1.8.0"
+            replacement="1.12.0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="46"
+            column="20"
+            startOffset="1002"
+            endLine="46"
+            endColumn="64"
+            endOffset="1046"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.constraintlayout:constraintlayout than 2.1.4 is available: 2.2.1">
+        <fix-replace
+            description="Change to 2.2.1"
+            family="Update versions"
+            oldString="2.1.4"
+            replacement="2.2.1"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="47"
+            column="20"
+            startOffset="1066"
+            endLine="47"
+            endColumn="70"
+            endOffset="1116"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.lifecycle:lifecycle-viewmodel-ktx than 2.6.1 is available: 2.9.2">
+        <fix-replace
+            description="Change to 2.9.2"
+            family="Update versions"
+            oldString="2.6.1"
+            replacement="2.9.2"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="48"
+            column="20"
+            startOffset="1136"
+            endLine="48"
+            endColumn="70"
+            endOffset="1186"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.lifecycle:lifecycle-livedata-ktx than 2.6.1 is available: 2.9.2">
+        <fix-replace
+            description="Change to 2.9.2"
+            family="Update versions"
+            oldString="2.6.1"
+            replacement="2.9.2"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="49"
+            column="20"
+            startOffset="1206"
+            endLine="49"
+            endColumn="69"
+            endOffset="1255"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.navigation:navigation-fragment-ktx than 2.5.3 is available: 2.9.3">
+        <fix-replace
+            description="Change to 2.9.3"
+            family="Update versions"
+            oldString="2.5.3"
+            replacement="2.9.3"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="50"
+            column="20"
+            startOffset="1275"
+            endLine="50"
+            endColumn="71"
+            endOffset="1326"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.navigation:navigation-ui-ktx than 2.5.3 is available: 2.9.3">
+        <fix-replace
+            description="Change to 2.9.3"
+            family="Update versions"
+            oldString="2.5.3"
+            replacement="2.9.3"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="51"
+            column="20"
+            startOffset="1346"
+            endLine="51"
+            endColumn="65"
+            endOffset="1391"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of com.google.firebase:firebase-bom than 32.0.0 is available: 34.1.0">
+        <fix-replace
+            description="Change to 34.1.0"
+            family="Update versions"
+            oldString="32.0.0"
+            replacement="34.1.0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="57"
+            column="29"
+            startOffset="1567"
+            endLine="57"
+            endColumn="70"
+            endOffset="1608"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of com.google.android.gms:play-services-nearby than 18.5.0 is available: 19.3.0">
+        <fix-replace
+            description="Change to 19.3.0"
+            family="Update versions"
+            oldString="18.5.0"
+            replacement="19.3.0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="67"
+            column="20"
+            startOffset="2049"
+            endLine="67"
+            endColumn="72"
+            endOffset="2101"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of com.google.android.exoplayer:exoplayer than 2.18.7 is available: 2.19.1">
+        <fix-replace
+            description="Change to 2.19.1"
+            family="Update versions"
+            oldString="2.18.7"
+            replacement="2.19.1"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="70"
+            column="20"
+            startOffset="2150"
+            endLine="70"
+            endColumn="67"
+            endOffset="2197"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of com.squareup.okhttp3:okhttp than 4.10.0 is available: 4.12.0">
+        <fix-replace
+            description="Change to 4.12.0"
+            family="Update versions"
+            oldString="4.10.0"
+            replacement="4.12.0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="75"
+            column="20"
+            startOffset="2361"
+            endLine="75"
+            endColumn="56"
+            endOffset="2397"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of com.squareup.okhttp3:logging-interceptor than 4.10.0 is available: 4.12.0">
+        <fix-replace
+            description="Change to 4.12.0"
+            family="Update versions"
+            oldString="4.10.0"
+            replacement="4.12.0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="76"
+            column="20"
+            startOffset="2417"
+            endLine="76"
+            endColumn="69"
+            endOffset="2466"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of com.github.bumptech.glide:glide than 4.15.1 is available: 4.16.0">
+        <fix-replace
+            description="Change to 4.16.0"
+            family="Update versions"
+            oldString="4.15.1"
+            replacement="4.16.0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="79"
+            column="20"
+            startOffset="2501"
+            endLine="79"
+            endColumn="60"
+            endOffset="2541"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.test.ext:junit than 1.1.5 is available: 1.3.0">
+        <fix-replace
+            description="Change to 1.3.0"
+            family="Update versions"
+            oldString="1.1.5"
+            replacement="1.3.0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="90"
+            column="31"
+            startOffset="2918"
+            endLine="90"
+            endColumn="62"
+            endOffset="2949"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.test.espresso:espresso-core than 3.5.1 is available: 3.7.0">
+        <fix-replace
+            description="Change to 3.7.0"
+            family="Update versions"
+            oldString="3.5.1"
+            replacement="3.7.0"/>
+        <location
+            file="${:app*projectDir}/build.gradle"
+            line="91"
+            column="31"
+            startOffset="2980"
+            endLine="91"
+            endColumn="75"
+            endOffset="3024"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `@color/primary` with a theme that also paints a background (inferred theme is `@style/Theme_IntercomApp_NoActionBar`)">
+        <location
+            file="${:app*debug*sourceProvider*0*resDir*0}/layout/activity_splash.xml"
+            line="7"
+            column="5"
+            startOffset="341"
+            endLine="7"
+            endColumn="40"
+            endOffset="376"/>
+    </incident>
+
+</incidents>

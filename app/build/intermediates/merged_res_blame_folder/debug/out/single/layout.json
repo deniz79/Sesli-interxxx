@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "/Users/denizyetik/.gradle/daemon/8.5/com.intercomapp-mergeDebugResources-59:/layout/fragment_profile.xml",
+        "source": "/Users/denizyetik/.gradle/daemon/8.5/com.intercomapp-main-62:/layout/fragment_profile.xml"
+    },
+    {
+        "merged": "/Users/denizyetik/.gradle/daemon/8.5/com.intercomapp-mergeDebugResources-59:/layout/activity_main.xml",
+        "source": "/Users/denizyetik/.gradle/daemon/8.5/com.intercomapp-main-62:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.intercomapp-mergeDebugResources-59:/layout/fragment_home.xml",
+        "source": "com.intercomapp-main-62:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "/Users/denizyetik/.gradle/daemon/8.5/com.intercomapp-mergeDebugResources-59:/layout/fragment_home.xml",
+        "source": "/Users/denizyetik/.gradle/daemon/8.5/com.intercomapp-main-62:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "/Users/denizyetik/.gradle/daemon/8.5/com.intercomapp-mergeDebugResources-59:/layout/fragment_contacts.xml",
+        "source": "/Users/denizyetik/.gradle/daemon/8.5/com.intercomapp-main-62:/layout/fragment_contacts.xml"
+    },
+    {
+        "merged": "/Users/denizyetik/.gradle/daemon/8.5/com.intercomapp-mergeDebugResources-59:/layout/activity_auth.xml",
+        "source": "/Users/denizyetik/.gradle/daemon/8.5/com.intercomapp-main-62:/layout/activity_auth.xml"
+    },
+    {
+        "merged": "/Users/denizyetik/.gradle/daemon/8.5/com.intercomapp-mergeDebugResources-59:/layout/activity_splash.xml",
+        "source": "/Users/denizyetik/.gradle/daemon/8.5/com.intercomapp-main-62:/layout/activity_splash.xml"
+    },
+    {
+        "merged": "/Users/denizyetik/.gradle/daemon/8.5/com.intercomapp-mergeDebugResources-59:/layout/fragment_groups.xml",
+        "source": "/Users/denizyetik/.gradle/daemon/8.5/com.intercomapp-main-62:/layout/fragment_groups.xml"
+    }
+]
