@@ -108,6 +108,7 @@ class WebRTCManager {
         }
         
         Log.i(TAG, "✅ Ses bağlantısı oluşturuldu: $peerId")
+        Log.i(TAG, "🎵 Aktif ses akışları: ${audioStreams.keys.joinToString()}")
         return peerId
     }
     
@@ -182,6 +183,22 @@ class WebRTCManager {
         // Send audio message through connection manager
         connectionManager?.sendMessage(peerId, audioMessage)
         Log.d(TAG, "Audio message sent to $peerId: ${audioMessage.length} chars")
+    }
+    
+    // Add method to create peer connection by room ID
+    fun createPeerConnectionByRoomId(roomId: String, endpointId: String) {
+        Log.d(TAG, "Creating audio connection for room $roomId via endpoint $endpointId")
+        
+        // Create audio stream for this endpoint
+        audioStreams[endpointId] = AudioStream(endpointId, true)
+        
+        // Start audio streaming if not already started
+        if (!isRecording) {
+            startAudioStreaming()
+        }
+        
+        Log.i(TAG, "✅ Ses bağlantısı oluşturuldu: Room $roomId -> Endpoint $endpointId")
+        Log.i(TAG, "🎵 Aktif ses akışları: ${audioStreams.keys.joinToString()}")
     }
     
     fun disconnect(peerId: String) {

@@ -32,6 +32,9 @@ public final class FragmentVoiceRoomBinding implements ViewBinding {
   public final MaterialButton btnMute;
 
   @NonNull
+  public final MaterialButton btnTestAudio;
+
+  @NonNull
   public final CardView cardControls;
 
   @NonNull
@@ -81,17 +84,19 @@ public final class FragmentVoiceRoomBinding implements ViewBinding {
 
   private FragmentVoiceRoomBinding(@NonNull ConstraintLayout rootView,
       @NonNull MaterialButton btnCopyRoomId, @NonNull MaterialButton btnDisconnect,
-      @NonNull MaterialButton btnMute, @NonNull CardView cardControls, @NonNull CardView cardHeader,
-      @NonNull CardView cardMyUser, @NonNull CardView cardOtherUser, @NonNull CardView cardUsers,
-      @NonNull ImageView ivMyAvatar, @NonNull ImageView ivMyMicStatus,
-      @NonNull ImageView ivOtherAvatar, @NonNull ImageView ivOtherMicStatus,
-      @NonNull TextView tvConnectionStatus, @NonNull TextView tvMyName,
-      @NonNull TextView tvMyStatus, @NonNull TextView tvOtherName, @NonNull TextView tvOtherStatus,
-      @NonNull TextView tvParticipantsTitle, @NonNull TextView tvRoomId) {
+      @NonNull MaterialButton btnMute, @NonNull MaterialButton btnTestAudio,
+      @NonNull CardView cardControls, @NonNull CardView cardHeader, @NonNull CardView cardMyUser,
+      @NonNull CardView cardOtherUser, @NonNull CardView cardUsers, @NonNull ImageView ivMyAvatar,
+      @NonNull ImageView ivMyMicStatus, @NonNull ImageView ivOtherAvatar,
+      @NonNull ImageView ivOtherMicStatus, @NonNull TextView tvConnectionStatus,
+      @NonNull TextView tvMyName, @NonNull TextView tvMyStatus, @NonNull TextView tvOtherName,
+      @NonNull TextView tvOtherStatus, @NonNull TextView tvParticipantsTitle,
+      @NonNull TextView tvRoomId) {
     this.rootView = rootView;
     this.btnCopyRoomId = btnCopyRoomId;
     this.btnDisconnect = btnDisconnect;
     this.btnMute = btnMute;
+    this.btnTestAudio = btnTestAudio;
     this.cardControls = cardControls;
     this.cardHeader = cardHeader;
     this.cardMyUser = cardMyUser;
@@ -152,6 +157,12 @@ public final class FragmentVoiceRoomBinding implements ViewBinding {
       id = R.id.btn_mute;
       MaterialButton btnMute = ViewBindings.findChildViewById(rootView, id);
       if (btnMute == null) {
+        break missingId;
+      }
+
+      id = R.id.btn_test_audio;
+      MaterialButton btnTestAudio = ViewBindings.findChildViewById(rootView, id);
+      if (btnTestAudio == null) {
         break missingId;
       }
 
@@ -252,9 +263,9 @@ public final class FragmentVoiceRoomBinding implements ViewBinding {
       }
 
       return new FragmentVoiceRoomBinding((ConstraintLayout) rootView, btnCopyRoomId, btnDisconnect,
-          btnMute, cardControls, cardHeader, cardMyUser, cardOtherUser, cardUsers, ivMyAvatar,
-          ivMyMicStatus, ivOtherAvatar, ivOtherMicStatus, tvConnectionStatus, tvMyName, tvMyStatus,
-          tvOtherName, tvOtherStatus, tvParticipantsTitle, tvRoomId);
+          btnMute, btnTestAudio, cardControls, cardHeader, cardMyUser, cardOtherUser, cardUsers,
+          ivMyAvatar, ivMyMicStatus, ivOtherAvatar, ivOtherMicStatus, tvConnectionStatus, tvMyName,
+          tvMyStatus, tvOtherName, tvOtherStatus, tvParticipantsTitle, tvRoomId);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

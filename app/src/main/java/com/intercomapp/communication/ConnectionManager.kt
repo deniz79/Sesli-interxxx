@@ -18,6 +18,10 @@ class ConnectionManager(private val context: Context) {
     private val discoveredPeers = ConcurrentHashMap<String, Endpoint>()
     private val connectedPeers = ConcurrentHashMap<String, Endpoint>()
     
+    // Add mapping for room ID to endpoint ID
+    private val roomToEndpointMapping = ConcurrentHashMap<String, String>()
+    private val endpointToRoomMapping = ConcurrentHashMap<String, String>()
+    
     private var isDiscovering = false
     private var isAdvertising = false
     private var userId: String? = null
@@ -37,6 +41,16 @@ class ConnectionManager(private val context: Context) {
             ConnectionsStatusCodes.STATUS_OK -> {
                 Log.d(TAG, "Connection successful with: $endpointId")
                 connectedPeers[endpointId] = discoveredPeers[endpointId] ?: return
+                
+                // Map endpoint ID to room ID (assuming room ID is in endpoint name)
+                val endpoint = discoveredPeers[endpointId]
+                val roomId = endpoint?.name?.substringAfter("ROOM_") ?: ""
+                if (roomId.isNotEmpty()) {
+                    roomToEndpointMapping[roomId] = endpointId
+                    endpointToRoomMapping[endpointId] = roomId
+                    Log.d(TAG, "Mapped room $roomId to endpoint $endpointId")
+                }
+                
                 // Notify that connection is established
                 Log.i(TAG, "✅ Bağlantı başarıyla kuruldu: $endpointId")
                 
@@ -123,19 +137,20 @@ class ConnectionManager(private val context: Context) {
         discoveredPeers.clear()
     }
     
-    fun startAdvertising(userId: String, userName: String) {
+    fun startAdvertising(userId: String, userName: String, roomId: String? = null) {
         if (isAdvertising) return
         
         this.userId = userId
-        Log.d(TAG, "Starting advertising as: $userName")
+        val advertisingName = if (roomId != null) "${userName}ROOM_${roomId}" else userName
+        Log.d(TAG, "Starting advertising as: $advertisingName")
         isAdvertising = true
         
         val advertisingOptions = AdvertisingOptions.Builder()
             .build()
         
-        connectionsClient.startAdvertising(userName, SERVICE_ID, connectionLifecycleCallback, advertisingOptions)
+        connectionsClient.startAdvertising(advertisingName, SERVICE_ID, connectionLifecycleCallback, advertisingOptions)
             .addOnSuccessListener {
-                Log.d(TAG, "Advertising started successfully")
+                Log.d(TAG, "Advertising started successfully as: $advertisingName")
             }
             .addOnFailureListener { exception ->
                 Log.e(TAG, "Failed to start advertising", exception)
@@ -188,6 +203,22 @@ class ConnectionManager(private val context: Context) {
         } catch (e: Exception) {
             Log.e(TAG, "❌ Failed to send message to $endpointId", e)
         }
+    }
+    
+    // Add method to send message by room ID
+    fun sendMessageByRoomId(roomId: String, message: String) {
+        val endpointId = roomToEndpointMapping[roomId]
+        if (endpointId != null) {
+            sendMessage(endpointId, message)
+            Log.d(TAG, "📤 Message sent to room $roomId via endpoint $endpointId: $message")
+        } else {
+            Log.w(TAG, "⚠️ No endpoint found for room $roomId")
+        }
+    }
+    
+    // Add method to get endpoint ID from room ID
+    fun getEndpointIdForRoom(roomId: String): String? {
+        return roomToEndpointMapping[roomId]
     }
     
     fun sendAudioStream(endpointId: String, audioData: ByteArray) {
@@ -268,7 +299,10 @@ class ConnectionManager(private val context: Context) {
         
         // Check if this audio is from ourselves to avoid echo
         val currentUserId = userId ?: ""
-        if (endpointId == currentUserId) {
+        val senderEndpoint = connectedPeers[endpointId]
+        val senderUserId = senderEndpoint?.name?.substringBefore("ROOM_") ?: ""
+        
+        if (senderUserId == currentUserId) {
             Log.d(TAG, "🔄 Ignoring own audio to prevent echo")
             return
         }
@@ -276,7 +310,7 @@ class ConnectionManager(private val context: Context) {
         // Convert base64 audio data back to bytes and play
         try {
             val audioBytes = android.util.Base64.decode(audioData, android.util.Base64.DEFAULT)
-            Log.d(TAG, "🔊 Decoded audio: ${audioBytes.size} bytes")
+            Log.d(TAG, "🔊 Decoded audio: ${audioBytes.size} bytes from $senderUserId")
             
             // Play audio immediately in a separate coroutine to avoid blocking
             CoroutineScope(Dispatchers.IO).launch {
@@ -347,8 +381,15 @@ class ConnectionManager(private val context: Context) {
     private fun startAudioStreaming(endpointId: String) {
         Log.i(TAG, "🎵 Ses akışı başlatılıyor: $endpointId")
         
+        // Get room ID for this endpoint
+        val roomId = endpointToRoomMapping[endpointId] ?: ""
+        
         // Create audio connection with the peer
-        webRTCManager?.createPeerConnection(endpointId)
+        if (roomId.isNotEmpty()) {
+            webRTCManager?.createPeerConnectionByRoomId(roomId, endpointId)
+        } else {
+            webRTCManager?.createPeerConnection(endpointId)
+        }
         
         // Enable audio streaming
         webRTCManager?.setMuted(false)
@@ -357,7 +398,7 @@ class ConnectionManager(private val context: Context) {
         sendMessage(endpointId, "AUDIO_CONNECTED:${userId ?: "unknown"}")
         
         // Notify UI that audio is active
-        Log.i(TAG, "✅ Ses iletişimi aktif: $endpointId")
+        Log.i(TAG, "✅ Ses iletişimi aktif: $endpointId (Room: $roomId)")
     }
     
     private fun handleCallMessage(endpointId: String, message: String) {

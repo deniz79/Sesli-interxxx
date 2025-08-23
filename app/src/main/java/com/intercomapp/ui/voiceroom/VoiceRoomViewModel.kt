@@ -119,7 +119,7 @@ class VoiceRoomViewModel : ViewModel() {
         intercomService?.let { service ->
             val currentUserId = authRepository.currentUser?.uid ?: "unknown"
             val currentRoomId = _roomId.value ?: ""
-            service.connectionManager?.sendMessage(currentRoomId, "ROOM_JOINED:$currentUserId")
+            service.connectionManager?.sendMessageByRoomId(currentRoomId, "ROOM_JOINED:$currentUserId")
         }
         
         _message.value = "Odaya bağlandı"
@@ -131,16 +131,23 @@ class VoiceRoomViewModel : ViewModel() {
     private fun startAudioConnection() {
         otherUserId?.let { userId ->
             intercomService?.let { service ->
-                // Create WebRTC connection
-                service.webRTCManager?.createPeerConnection(userId)
+                val currentRoomId = _roomId.value ?: ""
+                val endpointId = service.connectionManager?.getEndpointIdForRoom(currentRoomId)
                 
-                // Update connection status to waiting
-                _connectionStatus.value = ConnectionStatus(
-                    message = "Karşı taraf bekleniyor...",
-                    color = R.color.warning
-                )
-                
-                _message.value = "Ses bağlantısı başlatıldı"
+                if (endpointId != null) {
+                    // Create WebRTC connection using endpoint ID
+                    service.webRTCManager?.createPeerConnectionByRoomId(currentRoomId, endpointId)
+                    
+                    // Update connection status to waiting
+                    _connectionStatus.value = ConnectionStatus(
+                        message = "Karşı taraf bekleniyor...",
+                        color = R.color.warning
+                    )
+                    
+                    _message.value = "Ses bağlantısı başlatıldı"
+                } else {
+                    _message.value = "Endpoint bulunamadı, bağlantı bekleniyor..."
+                }
             }
         }
     }
@@ -214,11 +221,10 @@ class VoiceRoomViewModel : ViewModel() {
         }
         
         // Send microphone status to other user
-        otherUserId?.let { userId ->
-            intercomService?.let { service ->
-                val micStatus = if (isMuted) "MUTED" else "UNMUTED"
-                service.connectionManager?.sendMessage(userId, "MIC_STATUS:$micStatus")
-            }
+        intercomService?.let { service ->
+            val currentRoomId = _roomId.value ?: ""
+            val micStatus = if (isMuted) "MUTED" else "UNMUTED"
+            service.connectionManager?.sendMessageByRoomId(currentRoomId, "MIC_STATUS:$micStatus")
         }
         
         // Show message
@@ -226,51 +232,63 @@ class VoiceRoomViewModel : ViewModel() {
     }
     
     fun disconnect() {
-        otherUserId?.let { userId ->
-            intercomService?.let { service ->
+        intercomService?.let { service ->
+            val currentRoomId = _roomId.value ?: ""
+            val endpointId = service.connectionManager?.getEndpointIdForRoom(currentRoomId)
+            
+            if (endpointId != null) {
                 // Disconnect WebRTC
-                service.webRTCManager?.disconnect(userId)
-                
-                // Update connection status
-                _connectionStatus.value = ConnectionStatus(
-                    message = "Bağlantı kesildi",
-                    color = R.color.error
-                )
-                
-                _message.value = "Ses odasından ayrıldınız"
+                service.webRTCManager?.disconnect(endpointId)
             }
+            
+            // Update connection status
+            _connectionStatus.value = ConnectionStatus(
+                message = "Bağlantı kesildi",
+                color = R.color.error
+            )
+            
+            _message.value = "Ses odasından ayrıldınız"
         }
     }
     
     private fun updateConnectionStatus() {
         // Update connection status based on current state
-        val isConnected = intercomService?.webRTCManager?.isPeerConnected(otherUserId ?: "") == true
-        
-        _connectionStatus.value = ConnectionStatus(
-            message = if (isConnected) "Ses bağlantısı kuruldu" else "Bağlantı bekleniyor...",
-            color = if (isConnected) R.color.success else R.color.warning
-        )
+        intercomService?.let { service ->
+            val currentRoomId = _roomId.value ?: ""
+            val endpointId = service.connectionManager?.getEndpointIdForRoom(currentRoomId)
+            val isConnected = endpointId != null && service.webRTCManager?.isPeerConnected(endpointId) == true
+            
+            _connectionStatus.value = ConnectionStatus(
+                message = if (isConnected) "Ses bağlantısı kuruldu" else "Bağlantı bekleniyor...",
+                color = if (isConnected) R.color.success else R.color.warning
+            )
+        }
     }
     
     private fun startConnectionCheck() {
         // Check connection status every 2 seconds
         CoroutineScope(Dispatchers.Main).launch {
-            while (true) {
+            var shouldContinue = true
+            while (shouldContinue) {
                 delay(2000)
                 
-                val isConnected = intercomService?.webRTCManager?.isPeerConnected(otherUserId ?: "") == true
-                
-                if (isConnected) {
-                    _connectionStatus.value = ConnectionStatus(
-                        message = "Ses bağlantısı kuruldu",
-                        color = R.color.success
-                    )
-                    break
-                } else {
-                    _connectionStatus.value = ConnectionStatus(
-                        message = "Karşı taraf bekleniyor...",
-                        color = R.color.warning
-                    )
+                intercomService?.let { service ->
+                    val currentRoomId = _roomId.value ?: ""
+                    val endpointId = service.connectionManager?.getEndpointIdForRoom(currentRoomId)
+                    val isConnected = endpointId != null && service.webRTCManager?.isPeerConnected(endpointId) == true
+                    
+                    if (isConnected) {
+                        _connectionStatus.value = ConnectionStatus(
+                            message = "Ses bağlantısı kuruldu",
+                            color = R.color.success
+                        )
+                        shouldContinue = false
+                    } else {
+                        _connectionStatus.value = ConnectionStatus(
+                            message = "Karşı taraf bekleniyor...",
+                            color = R.color.warning
+                        )
+                    }
                 }
             }
         }

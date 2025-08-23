@@ -49,6 +49,7 @@ drawable ic_person
 drawable ic_person_add
 drawable ic_profile
 drawable ic_stop
+drawable ic_volume_up
 drawable rounded_background
 id bottom_navigation
 id btn_add_friend
@@ -64,6 +65,7 @@ id btn_mute
 id btn_register
 id btn_start_music
 id btn_stop_music
+id btn_test_audio
 id btn_voice_command
 id btn_volume_down
 id btn_volume_up
