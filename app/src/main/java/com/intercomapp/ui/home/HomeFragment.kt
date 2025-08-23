@@ -48,16 +48,24 @@ class HomeFragment : Fragment() {
             viewModel.copyUserIdToClipboard()
         }
         
-        // Connect by ID button
-        binding.btnConnectById.setOnClickListener {
-            val targetId = binding.etTargetId.text.toString().trim()
-            if (targetId.isNotEmpty()) {
-                viewModel.connectToUserId(targetId)
-                binding.etTargetId.text?.clear()
-                // Navigate to voice room
-                navigateToVoiceRoom(targetId)
+        // Create room button
+        binding.btnCreateRoom.setOnClickListener {
+            val roomId = viewModel.createRoom()
+            // Navigate to voice room as creator
+            navigateToVoiceRoom(roomId, null)
+        }
+        
+        // Join room button
+        binding.btnJoinRoom.setOnClickListener {
+            val roomId = binding.etRoomId.text.toString().trim()
+            if (roomId.isNotEmpty()) {
+                if (viewModel.joinRoom(roomId)) {
+                    // Navigate to voice room as participant
+                    navigateToVoiceRoom(roomId, null)
+                    binding.etRoomId.text?.clear()
+                }
             } else {
-                Toast.makeText(context, "Lütfen bir ID girin", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "Lütfen bir oda ID'si girin", Toast.LENGTH_SHORT).show()
             }
         }
         
@@ -184,17 +192,9 @@ class HomeFragment : Fragment() {
         }
     }
     
-    private fun navigateToVoiceRoom(otherUserId: String) {
-        // Create room ID (combination of both user IDs)
-        val currentUserId = viewModel.getUserId() ?: "unknown"
-        val roomId = if (currentUserId < otherUserId) {
-            "${currentUserId}_${otherUserId}"
-        } else {
-            "${otherUserId}_${currentUserId}"
-        }
-        
+    private fun navigateToVoiceRoom(roomId: String, otherUserId: String?) {
         // Navigate to voice room
-        val voiceRoomFragment = com.intercomapp.ui.voiceroom.VoiceRoomFragment.newInstance(roomId, otherUserId)
+        val voiceRoomFragment = com.intercomapp.ui.voiceroom.VoiceRoomFragment.newInstance(roomId, otherUserId ?: "")
         
         parentFragmentManager.beginTransaction()
             .replace(com.intercomapp.R.id.fragment_container, voiceRoomFragment)

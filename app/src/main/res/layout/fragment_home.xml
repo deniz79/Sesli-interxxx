@@ -111,9 +111,9 @@
 
         </com.google.android.material.card.MaterialCardView>
 
-        <!-- Connect by ID Card -->
+        <!-- Room Management Card -->
         <com.google.android.material.card.MaterialCardView
-            android:id="@+id/card_connect_id"
+            android:id="@+id/card_room_management"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
@@ -132,36 +132,82 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="ID ile Bağlan"
+                    android:text="Ses Odası Yönetimi"
                     android:textColor="@color/text_primary"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/til_target_id"
+                <!-- Create Room Section -->
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:hint="Karşı tarafın ID'sini girin"
-                    app:boxStrokeColor="@color/primary"
-                    app:hintTextColor="@color/text_secondary">
+                    android:layout_marginTop="16dp"
+                    android:orientation="vertical">
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/et_target_id"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Oda Oluştur"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_create_room"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Yeni Oda Oluştur"
+                        android:textSize="16sp"
+                        app:icon="@drawable/ic_add"
+                        app:iconGravity="textStart" />
+
+                </LinearLayout>
+
+                <!-- Join Room Section -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Odaya Katıl"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_room_id"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:fontFamily="monospace"
-                        android:inputType="textNoSuggestions" />
+                        android:layout_marginTop="8dp"
+                        android:hint="Oda ID'sini girin"
+                        app:boxStrokeColor="@color/primary"
+                        app:hintTextColor="@color/text_secondary">
 
-                </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/et_room_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
+                            android:inputType="textNoSuggestions" />
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/btn_connect_by_id"
-                    android:layout_width="match_parent"
-                    android:layout_height="56dp"
-                    android:layout_marginTop="16dp"
-                    android:text="ID ile Bağlan"
-                    android:textSize="16sp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_join_room"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Odaya Katıl"
+                        android:textSize="16sp"
+                        app:icon="@drawable/ic_join"
+                        app:iconGravity="textStart" />
+
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -177,7 +223,7 @@
             app:cardElevation="4dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/card_connect_id">
+            app:layout_constraintTop_toBottomOf="@+id/card_room_management">
 
             <LinearLayout
                 android:layout_width="match_parent"

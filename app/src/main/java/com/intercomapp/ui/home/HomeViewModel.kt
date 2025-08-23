@@ -65,25 +65,35 @@ class HomeViewModel : ViewModel() {
         }
     }
     
-    fun connectToUserId(targetId: String) {
-        if (targetId.isEmpty()) {
-            _message.value = "Lütfen geçerli bir ID girin"
-            return
+    fun createRoom(): String {
+        val currentUserId = getUserId() ?: "unknown"
+        val roomId = "ROOM_${currentUserId}_${System.currentTimeMillis()}"
+        
+        _message.value = "Oda oluşturuldu: ${roomId.take(12)}..."
+        
+        // Copy room ID to clipboard
+        context?.let { ctx ->
+            val clipboard = ctx.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+            val clip = ClipData.newPlainText("Room ID", roomId)
+            clipboard.setPrimaryClip(clip)
         }
         
-        if (targetId == getUserId()) {
-            _message.value = "Kendi ID'nizle bağlantı kuramazsınız"
-            return
+        return roomId
+    }
+    
+    fun joinRoom(roomId: String): Boolean {
+        if (roomId.isEmpty()) {
+            _message.value = "Lütfen geçerli bir oda ID'si girin"
+            return false
         }
         
-        intercomService?.let { service ->
-            service.connectToSpecificUser(targetId)
-            _message.value = "Bağlantı kuruluyor: ${targetId.take(8)}..."
-            // Bağlantı durumunu güncelle
-            _connectionState.value = true
-        } ?: run {
-            _message.value = "Servis bağlantısı bulunamadı"
+        if (!roomId.startsWith("ROOM_")) {
+            _message.value = "Geçersiz oda ID formatı"
+            return false
         }
+        
+        _message.value = "Odaya katılınıyor: ${roomId.take(12)}..."
+        return true
     }
     
     private fun updateStates() {

@@ -72,7 +72,7 @@ class VoiceRoomViewModel : ViewModel() {
         otherUserId = userId
         _otherUserInfo.value = UserInfo(
             id = userId,
-            name = "Kullanıcı ${userId.take(8)}...",
+            name = "Oda Katılımcısı",
             isMuted = false
         )
         
@@ -85,10 +85,11 @@ class VoiceRoomViewModel : ViewModel() {
         // Start audio connection immediately
         startAudioConnection()
         
-        // Send room join notification to other user
+        // Send room join notification to other users in the room
         intercomService?.let { service ->
             val currentUserId = authRepository.currentUser?.uid ?: "unknown"
-            service.connectionManager?.sendMessage(userId, "ROOM_JOINED:$currentUserId")
+            val currentRoomId = _roomId.value ?: ""
+            service.connectionManager?.sendMessage(currentRoomId, "ROOM_JOINED:$currentUserId")
         }
         
         _message.value = "Ses odasına bağlandı"

@@ -43,6 +43,7 @@
         android:fullBackupContent="@xml/backup_rules"
         android:label="@string/app_name"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/Theme.IntercomApp" >
         <activity
             android:name="com.intercomapp.ui.splash.SplashActivity"
