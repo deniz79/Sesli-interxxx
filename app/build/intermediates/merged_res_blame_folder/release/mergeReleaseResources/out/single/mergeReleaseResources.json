@@ -1,0 +1,134 @@
+[
+    {
+        "merged": "com.intercomapp-release-60:/drawable_rounded_background.xml.flat",
+        "source": "com.intercomapp-main-61:/drawable/rounded_background.xml"
+    },
+    {
+        "merged": "com.intercomapp-release-60:/drawable_ic_person_add.xml.flat",
+        "source": "com.intercomapp-main-61:/drawable/ic_person_add.xml"
+    },
+    {
+        "merged": "com.intercomapp-release-60:/layout_fragment_friends.xml.flat",
+        "source": "com.intercomapp-main-61:/layout/fragment_friends.xml"
+    },
+    {
+        "merged": "com.intercomapp-release-60:/drawable_ic_home.xml.flat",
+        "source": "com.intercomapp-main-61:/drawable/ic_home.xml"
+    },
+    {
+        "merged": "com.intercomapp-release-60:/layout_activity_main.xml.flat",
+        "source": "com.intercomapp-main-61:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.intercomapp-release-60:/xml_data_extraction_rules.xml.flat",
+        "source": "com.intercomapp-main-61:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.intercomapp-release-60:/drawable_ic_stop.xml.flat",
+        "source": "com.intercomapp-main-61:/drawable/ic_stop.xml"
+    },
+    {
+        "merged": "com.intercomapp-release-60:/layout_item_friend.xml.flat",
+        "source": "com.intercomapp-main-61:/layout/item_friend.xml"
+    },
+    {
+        "merged": "com.intercomapp-release-60:/xml_backup_rules.xml.flat",
+        "source": "com.intercomapp-main-61:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.intercomapp-release-60:/layout_activity_auth.xml.flat",
+        "source": "com.intercomapp-main-61:/layout/activity_auth.xml"
+    },
+    {
+        "merged": "com.intercomapp-release-60:/layout_fragment_groups.xml.flat",
+        "source": "com.intercomapp-main-61:/layout/fragment_groups.xml"
+    },
+    {
+        "merged": "com.intercomapp-release-60:/drawable_ic_groups.xml.flat",
+        "source": "com.intercomapp-main-61:/drawable/ic_groups.xml"
+    },
+    {
+        "merged": "com.intercomapp-release-60:/drawable_ic_contacts.xml.flat",
+        "source": "com.intercomapp-main-61:/drawable/ic_contacts.xml"
+    },
+    {
+        "merged": "com.intercomapp-release-60:/drawable_ic_mic_off.xml.flat",
+        "source": "com.intercomapp-main-61:/drawable/ic_mic_off.xml"
+    },
+    {
+        "merged": "com.intercomapp-release-60:/layout_activity_splash.xml.flat",
+        "source": "com.intercomapp-main-61:/layout/activity_splash.xml"
+    },
+    {
+        "merged": "com.intercomapp-release-60:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.intercomapp-main-61:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.intercomapp-release-60:/drawable_circle_background.xml.flat",
+        "source": "com.intercomapp-main-61:/drawable/circle_background.xml"
+    },
+    {
+        "merged": "com.intercomapp-release-60:/layout_fragment_home.xml.flat",
+        "source": "com.intercomapp-main-61:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "com.intercomapp-release-60:/drawable_ic_mic_on.xml.flat",
+        "source": "com.intercomapp-main-61:/drawable/ic_mic_on.xml"
+    },
+    {
+        "merged": "com.intercomapp-release-60:/drawable_circle_background_secondary.xml.flat",
+        "source": "com.intercomapp-main-61:/drawable/circle_background_secondary.xml"
+    },
+    {
+        "merged": "com.intercomapp-release-60:/drawable_ic_call_end.xml.flat",
+        "source": "com.intercomapp-main-61:/drawable/ic_call_end.xml"
+    },
+    {
+        "merged": "com.intercomapp-release-60:/layout_fragment_voice_room.xml.flat",
+        "source": "com.intercomapp-main-61:/layout/fragment_voice_room.xml"
+    },
+    {
+        "merged": "com.intercomapp-release-60:/drawable_ic_launcher_simple.xml.flat",
+        "source": "com.intercomapp-main-61:/drawable/ic_launcher_simple.xml"
+    },
+    {
+        "merged": "com.intercomapp-release-60:/layout_fragment_profile.xml.flat",
+        "source": "com.intercomapp-main-61:/layout/fragment_profile.xml"
+    },
+    {
+        "merged": "com.intercomapp-release-60:/drawable_ic_group.xml.flat",
+        "source": "com.intercomapp-main-61:/drawable/ic_group.xml"
+    },
+    {
+        "merged": "com.intercomapp-release-60:/menu_bottom_navigation_menu.xml.flat",
+        "source": "com.intercomapp-main-61:/menu/bottom_navigation_menu.xml"
+    },
+    {
+        "merged": "com.intercomapp-release-60:/color_bottom_nav_color.xml.flat",
+        "source": "com.intercomapp-main-61:/color/bottom_nav_color.xml"
+    },
+    {
+        "merged": "com.intercomapp-release-60:/drawable_ic_notification.xml.flat",
+        "source": "com.intercomapp-main-61:/drawable/ic_notification.xml"
+    },
+    {
+        "merged": "com.intercomapp-release-60:/drawable_ic_call.xml.flat",
+        "source": "com.intercomapp-main-61:/drawable/ic_call.xml"
+    },
+    {
+        "merged": "com.intercomapp-release-60:/drawable_ic_person.xml.flat",
+        "source": "com.intercomapp-main-61:/drawable/ic_person.xml"
+    },
+    {
+        "merged": "com.intercomapp-release-60:/drawable_ic_profile.xml.flat",
+        "source": "com.intercomapp-main-61:/drawable/ic_profile.xml"
+    },
+    {
+        "merged": "com.intercomapp-release-60:/drawable_ic_people.xml.flat",
+        "source": "com.intercomapp-main-61:/drawable/ic_people.xml"
+    },
+    {
+        "merged": "com.intercomapp-release-60:/drawable_ic_logo.xml.flat",
+        "source": "com.intercomapp-main-61:/drawable/ic_logo.xml"
+    }
+]

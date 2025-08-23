@@ -1,0 +1,491 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.intercomapp"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+9        android:targetSdkVersion="33" />
+10
+11    <!-- Permissions -->
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:6:5-67
+12-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:6:22-64
+13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+13-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:7:5-79
+13-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:7:22-76
+14    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+14-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:8:5-71
+14-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:8:22-68
+15    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+15-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:9:5-80
+15-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:9:22-77
+16    <uses-permission android:name="android.permission.BLUETOOTH" />
+16-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:10:5-68
+16-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:10:22-65
+17    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+17-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:11:5-74
+17-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:11:22-71
+18    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+18-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:12:5-76
+18-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:12:22-73
+19    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+19-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:13:5-73
+19-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:13:22-70
+20    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+20-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:14:5-79
+20-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:14:22-76
+21    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+21-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:15:5-81
+21-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:15:22-78
+22    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+22-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:16:5-75
+22-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:16:22-72
+23    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+23-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:17:5-80
+23-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:17:22-77
+24    <uses-permission android:name="android.permission.WAKE_LOCK" />
+24-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:18:5-68
+24-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:18:22-65
+25    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+25-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:19:5-77
+25-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:19:22-74
+26    <uses-permission android:name="android.permission.VIBRATE" />
+26-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:20:5-66
+26-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:20:22-63
+27    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+27-->[com.google.firebase:firebase-messaging:23.1.2] /Users/denizyetik/.gradle/caches/transforms-4/d96563af221f0fe9ffd334b4bfc9c8c1/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:25:5-77
+27-->[com.google.firebase:firebase-messaging:23.1.2] /Users/denizyetik/.gradle/caches/transforms-4/d96563af221f0fe9ffd334b4bfc9c8c1/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:25:22-74
+28    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+28-->[com.google.firebase:firebase-messaging:23.1.2] /Users/denizyetik/.gradle/caches/transforms-4/d96563af221f0fe9ffd334b4bfc9c8c1/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:28:5-82
+28-->[com.google.firebase:firebase-messaging:23.1.2] /Users/denizyetik/.gradle/caches/transforms-4/d96563af221f0fe9ffd334b4bfc9c8c1/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:28:22-79
+29
+30    <permission
+30-->[androidx.core:core:1.9.0] /Users/denizyetik/.gradle/caches/transforms-4/3e30de929a841d70957b4197d428117a/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+31        android:name="com.intercomapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+31-->[androidx.core:core:1.9.0] /Users/denizyetik/.gradle/caches/transforms-4/3e30de929a841d70957b4197d428117a/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+32        android:protectionLevel="signature" />
+32-->[androidx.core:core:1.9.0] /Users/denizyetik/.gradle/caches/transforms-4/3e30de929a841d70957b4197d428117a/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+33
+34    <uses-permission android:name="com.intercomapp.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+34-->[androidx.core:core:1.9.0] /Users/denizyetik/.gradle/caches/transforms-4/3e30de929a841d70957b4197d428117a/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+34-->[androidx.core:core:1.9.0] /Users/denizyetik/.gradle/caches/transforms-4/3e30de929a841d70957b4197d428117a/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+35
+36    <application
+36-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:22:5-67:19
+37        android:name="com.intercomapp.IntercomApplication"
+37-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:23:9-44
+38        android:allowBackup="true"
+38-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:24:9-35
+39        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+39-->[androidx.core:core:1.9.0] /Users/denizyetik/.gradle/caches/transforms-4/3e30de929a841d70957b4197d428117a/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
+40        android:dataExtractionRules="@xml/data_extraction_rules"
+40-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:25:9-65
+41        android:debuggable="true"
+42        android:extractNativeLibs="false"
+43        android:fullBackupContent="@xml/backup_rules"
+43-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:26:9-54
+44        android:label="@string/app_name"
+44-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:27:9-41
+45        android:supportsRtl="true"
+45-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:28:9-35
+46        android:theme="@style/Theme.IntercomApp" >
+46-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:29:9-49
+47        <activity
+47-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:32:9-40:20
+48            android:name="com.intercomapp.ui.splash.SplashActivity"
+48-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:33:13-53
+49            android:exported="true"
+49-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:34:13-36
+50            android:theme="@style/Theme.IntercomApp.NoActionBar" >
+50-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:35:13-65
+51            <intent-filter>
+51-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:36:13-39:29
+52                <action android:name="android.intent.action.MAIN" />
+52-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:37:17-69
+52-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:37:25-66
+53
+54                <category android:name="android.intent.category.LAUNCHER" />
+54-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:38:17-77
+54-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:38:27-74
+55            </intent-filter>
+56        </activity>
+57        <activity
+57-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:42:9-45:68
+58            android:name="com.intercomapp.ui.auth.AuthActivity"
+58-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:43:13-49
+59            android:exported="false"
+59-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:44:13-37
+60            android:theme="@style/Theme.IntercomApp.NoActionBar" />
+60-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:45:13-65
+61        <activity
+61-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:47:9-51:68
+62            android:name="com.intercomapp.ui.main.MainActivity"
+62-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:48:13-49
+63            android:exported="false"
+63-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:49:13-37
+64            android:launchMode="singleTop"
+64-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:50:13-43
+65            android:theme="@style/Theme.IntercomApp.NoActionBar" />
+65-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:51:13-65
+66
+67        <service
+67-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:53:9-57:58
+68            android:name="com.intercomapp.service.IntercomService"
+68-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:54:13-52
+69            android:enabled="true"
+69-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:55:13-35
+70            android:exported="false"
+70-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:56:13-37
+71            android:foregroundServiceType="microphone" />
+71-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:57:13-55
+72        <service
+72-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:59:9-65:19
+73            android:name="com.intercomapp.service.FirebaseMessagingService"
+73-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:60:13-61
+74            android:exported="false" >
+74-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:61:13-37
+75            <intent-filter>
+75-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:62:13-64:29
+76                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+76-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:63:17-78
+76-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:63:25-75
+77            </intent-filter>
+78        </service>
+79
+80        <activity
+80-->[com.karumi:dexter:6.2.3] /Users/denizyetik/.gradle/caches/transforms-4/a08f41cb22714e2a23670f453ca35615/transformed/dexter-6.2.3/AndroidManifest.xml:27:9-29:72
+81            android:name="com.karumi.dexter.DexterActivity"
+81-->[com.karumi:dexter:6.2.3] /Users/denizyetik/.gradle/caches/transforms-4/a08f41cb22714e2a23670f453ca35615/transformed/dexter-6.2.3/AndroidManifest.xml:28:13-60
+82            android:theme="@style/Dexter.Internal.Theme.Transparent" />
+82-->[com.karumi:dexter:6.2.3] /Users/denizyetik/.gradle/caches/transforms-4/a08f41cb22714e2a23670f453ca35615/transformed/dexter-6.2.3/AndroidManifest.xml:29:13-69
+83
+84        <service
+84-->[com.google.android.gms:play-services-nearby:18.5.0] /Users/denizyetik/.gradle/caches/transforms-4/3534d5789653d4c4c99fb99673e68847/transformed/play-services-nearby-18.5.0/AndroidManifest.xml:10:9-13:105
+85            android:name="com.google.android.gms.nearby.exposurenotification.WakeUpService"
+85-->[com.google.android.gms:play-services-nearby:18.5.0] /Users/denizyetik/.gradle/caches/transforms-4/3534d5789653d4c4c99fb99673e68847/transformed/play-services-nearby-18.5.0/AndroidManifest.xml:11:13-92
+86            android:exported="true"
+86-->[com.google.android.gms:play-services-nearby:18.5.0] /Users/denizyetik/.gradle/caches/transforms-4/3534d5789653d4c4c99fb99673e68847/transformed/play-services-nearby-18.5.0/AndroidManifest.xml:12:13-36
+87            android:permission="com.google.android.gms.nearby.exposurenotification.EXPOSURE_CALLBACK" />
+87-->[com.google.android.gms:play-services-nearby:18.5.0] /Users/denizyetik/.gradle/caches/transforms-4/3534d5789653d4c4c99fb99673e68847/transformed/play-services-nearby-18.5.0/AndroidManifest.xml:13:13-102
+88        <service
+88-->[com.google.firebase:firebase-storage-ktx:20.2.0] /Users/denizyetik/.gradle/caches/transforms-4/054a0a60ac56c9cae5f668b131b4d3b3/transformed/firebase-storage-ktx-20.2.0/AndroidManifest.xml:11:9-17:19
+89            android:name="com.google.firebase.components.ComponentDiscoveryService"
+89-->[com.google.firebase:firebase-storage-ktx:20.2.0] /Users/denizyetik/.gradle/caches/transforms-4/054a0a60ac56c9cae5f668b131b4d3b3/transformed/firebase-storage-ktx-20.2.0/AndroidManifest.xml:12:13-84
+90            android:directBootAware="true"
+90-->[com.google.firebase:firebase-common:20.3.2] /Users/denizyetik/.gradle/caches/transforms-4/69164f0fc34fda935bc19e87e86274ef/transformed/firebase-common-20.3.2/AndroidManifest.xml:34:13-43
+91            android:exported="false" >
+91-->[com.google.firebase:firebase-storage-ktx:20.2.0] /Users/denizyetik/.gradle/caches/transforms-4/054a0a60ac56c9cae5f668b131b4d3b3/transformed/firebase-storage-ktx-20.2.0/AndroidManifest.xml:13:13-37
+92            <meta-data
+92-->[com.google.firebase:firebase-storage-ktx:20.2.0] /Users/denizyetik/.gradle/caches/transforms-4/054a0a60ac56c9cae5f668b131b4d3b3/transformed/firebase-storage-ktx-20.2.0/AndroidManifest.xml:14:13-16:85
+93                android:name="com.google.firebase.components:com.google.firebase.storage.ktx.FirebaseStorageKtxRegistrar"
+93-->[com.google.firebase:firebase-storage-ktx:20.2.0] /Users/denizyetik/.gradle/caches/transforms-4/054a0a60ac56c9cae5f668b131b4d3b3/transformed/firebase-storage-ktx-20.2.0/AndroidManifest.xml:15:17-122
+94                android:value="com.google.firebase.components.ComponentRegistrar" />
+94-->[com.google.firebase:firebase-storage-ktx:20.2.0] /Users/denizyetik/.gradle/caches/transforms-4/054a0a60ac56c9cae5f668b131b4d3b3/transformed/firebase-storage-ktx-20.2.0/AndroidManifest.xml:16:17-82
+95            <meta-data
+95-->[com.google.firebase:firebase-storage:20.2.0] /Users/denizyetik/.gradle/caches/transforms-4/695f291b9d41fe30aa15f97a17f83ae1/transformed/firebase-storage-20.2.0/AndroidManifest.xml:32:13-34:85
+96                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+96-->[com.google.firebase:firebase-storage:20.2.0] /Users/denizyetik/.gradle/caches/transforms-4/695f291b9d41fe30aa15f97a17f83ae1/transformed/firebase-storage-20.2.0/AndroidManifest.xml:33:17-107
+97                android:value="com.google.firebase.components.ComponentRegistrar" />
+97-->[com.google.firebase:firebase-storage:20.2.0] /Users/denizyetik/.gradle/caches/transforms-4/695f291b9d41fe30aa15f97a17f83ae1/transformed/firebase-storage-20.2.0/AndroidManifest.xml:34:17-82
+98            <meta-data
+98-->[com.google.firebase:firebase-firestore-ktx:24.6.0] /Users/denizyetik/.gradle/caches/transforms-4/6fcb922a3d81cd14e4c6b8edfdf7bf7f/transformed/firebase-firestore-ktx-24.6.0/AndroidManifest.xml:14:13-16:85
+99                android:name="com.google.firebase.components:com.google.firebase.firestore.ktx.FirebaseFirestoreKtxRegistrar"
+99-->[com.google.firebase:firebase-firestore-ktx:24.6.0] /Users/denizyetik/.gradle/caches/transforms-4/6fcb922a3d81cd14e4c6b8edfdf7bf7f/transformed/firebase-firestore-ktx-24.6.0/AndroidManifest.xml:15:17-126
+100                android:value="com.google.firebase.components.ComponentRegistrar" />
+100-->[com.google.firebase:firebase-firestore-ktx:24.6.0] /Users/denizyetik/.gradle/caches/transforms-4/6fcb922a3d81cd14e4c6b8edfdf7bf7f/transformed/firebase-firestore-ktx-24.6.0/AndroidManifest.xml:16:17-82
+101            <meta-data
+101-->[com.google.firebase:firebase-firestore:24.6.0] /Users/denizyetik/.gradle/caches/transforms-4/3977571dd318082da241915dece43dfc/transformed/firebase-firestore-24.6.0/AndroidManifest.xml:19:13-21:85
+102                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+102-->[com.google.firebase:firebase-firestore:24.6.0] /Users/denizyetik/.gradle/caches/transforms-4/3977571dd318082da241915dece43dfc/transformed/firebase-firestore-24.6.0/AndroidManifest.xml:20:17-111
+103                android:value="com.google.firebase.components.ComponentRegistrar" />
+103-->[com.google.firebase:firebase-firestore:24.6.0] /Users/denizyetik/.gradle/caches/transforms-4/3977571dd318082da241915dece43dfc/transformed/firebase-firestore-24.6.0/AndroidManifest.xml:21:17-82
+104            <meta-data
+104-->[com.google.firebase:firebase-messaging-ktx:23.1.2] /Users/denizyetik/.gradle/caches/transforms-4/b06bb5e1d882aa541601d5abd1755fcf/transformed/firebase-messaging-ktx-23.1.2/AndroidManifest.xml:28:13-30:85
+105                android:name="com.google.firebase.components:com.google.firebase.messaging.ktx.FirebaseMessagingKtxRegistrar"
+105-->[com.google.firebase:firebase-messaging-ktx:23.1.2] /Users/denizyetik/.gradle/caches/transforms-4/b06bb5e1d882aa541601d5abd1755fcf/transformed/firebase-messaging-ktx-23.1.2/AndroidManifest.xml:29:17-126
+106                android:value="com.google.firebase.components.ComponentRegistrar" />
+106-->[com.google.firebase:firebase-messaging-ktx:23.1.2] /Users/denizyetik/.gradle/caches/transforms-4/b06bb5e1d882aa541601d5abd1755fcf/transformed/firebase-messaging-ktx-23.1.2/AndroidManifest.xml:30:17-82
+107            <meta-data
+107-->[com.google.firebase:firebase-messaging:23.1.2] /Users/denizyetik/.gradle/caches/transforms-4/d96563af221f0fe9ffd334b4bfc9c8c1/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:55:13-57:85
+108                android:name="com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar"
+108-->[com.google.firebase:firebase-messaging:23.1.2] /Users/denizyetik/.gradle/caches/transforms-4/d96563af221f0fe9ffd334b4bfc9c8c1/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:56:17-119
+109                android:value="com.google.firebase.components.ComponentRegistrar" />
+109-->[com.google.firebase:firebase-messaging:23.1.2] /Users/denizyetik/.gradle/caches/transforms-4/d96563af221f0fe9ffd334b4bfc9c8c1/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:57:17-82
+110            <meta-data
+110-->[com.google.firebase:firebase-auth-ktx:22.0.0] /Users/denizyetik/.gradle/caches/transforms-4/42a8eeee83a6f0d8eb2826552cb4f221/transformed/firebase-auth-ktx-22.0.0/AndroidManifest.xml:11:13-13:85
+111                android:name="com.google.firebase.components:com.google.firebase.auth.ktx.FirebaseAuthKtxRegistrar"
+111-->[com.google.firebase:firebase-auth-ktx:22.0.0] /Users/denizyetik/.gradle/caches/transforms-4/42a8eeee83a6f0d8eb2826552cb4f221/transformed/firebase-auth-ktx-22.0.0/AndroidManifest.xml:12:17-116
+112                android:value="com.google.firebase.components.ComponentRegistrar" />
+112-->[com.google.firebase:firebase-auth-ktx:22.0.0] /Users/denizyetik/.gradle/caches/transforms-4/42a8eeee83a6f0d8eb2826552cb4f221/transformed/firebase-auth-ktx-22.0.0/AndroidManifest.xml:13:17-82
+113            <meta-data
+113-->[com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-4/127918154e1b7350671d725077f56532/transformed/firebase-auth-22.0.0/AndroidManifest.xml:69:13-71:85
+114                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+114-->[com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-4/127918154e1b7350671d725077f56532/transformed/firebase-auth-22.0.0/AndroidManifest.xml:70:17-109
+115                android:value="com.google.firebase.components.ComponentRegistrar" />
+115-->[com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-4/127918154e1b7350671d725077f56532/transformed/firebase-auth-22.0.0/AndroidManifest.xml:71:17-82
+116            <meta-data
+116-->[com.google.firebase:firebase-common-ktx:20.3.2] /Users/denizyetik/.gradle/caches/transforms-4/ea1ee073576e8589c0b82367848c1e95/transformed/firebase-common-ktx-20.3.2/AndroidManifest.xml:14:13-16:85
+117                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonKtxRegistrar"
+117-->[com.google.firebase:firebase-common-ktx:20.3.2] /Users/denizyetik/.gradle/caches/transforms-4/ea1ee073576e8589c0b82367848c1e95/transformed/firebase-common-ktx-20.3.2/AndroidManifest.xml:15:17-113
+118                android:value="com.google.firebase.components.ComponentRegistrar" />
+118-->[com.google.firebase:firebase-common-ktx:20.3.2] /Users/denizyetik/.gradle/caches/transforms-4/ea1ee073576e8589c0b82367848c1e95/transformed/firebase-common-ktx-20.3.2/AndroidManifest.xml:16:17-82
+119            <meta-data
+119-->[com.google.firebase:firebase-datatransport:18.1.7] /Users/denizyetik/.gradle/caches/transforms-4/42bb2b81e642ceac60ddc5a3ec7b005e/transformed/firebase-datatransport-18.1.7/AndroidManifest.xml:27:13-29:85
+120                android:name="com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar"
+120-->[com.google.firebase:firebase-datatransport:18.1.7] /Users/denizyetik/.gradle/caches/transforms-4/42bb2b81e642ceac60ddc5a3ec7b005e/transformed/firebase-datatransport-18.1.7/AndroidManifest.xml:28:17-115
+121                android:value="com.google.firebase.components.ComponentRegistrar" />
+121-->[com.google.firebase:firebase-datatransport:18.1.7] /Users/denizyetik/.gradle/caches/transforms-4/42bb2b81e642ceac60ddc5a3ec7b005e/transformed/firebase-datatransport-18.1.7/AndroidManifest.xml:29:17-82
+122            <meta-data
+122-->[com.google.firebase:firebase-installations:17.1.3] /Users/denizyetik/.gradle/caches/transforms-4/d8abf6fd4265bef193ab200e58cf3107/transformed/firebase-installations-17.1.3/AndroidManifest.xml:17:13-19:85
+123                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+123-->[com.google.firebase:firebase-installations:17.1.3] /Users/denizyetik/.gradle/caches/transforms-4/d8abf6fd4265bef193ab200e58cf3107/transformed/firebase-installations-17.1.3/AndroidManifest.xml:18:17-127
+124                android:value="com.google.firebase.components.ComponentRegistrar" />
+124-->[com.google.firebase:firebase-installations:17.1.3] /Users/denizyetik/.gradle/caches/transforms-4/d8abf6fd4265bef193ab200e58cf3107/transformed/firebase-installations-17.1.3/AndroidManifest.xml:19:17-82
+125        </service>
+126
+127        <receiver
+127-->[com.google.firebase:firebase-messaging:23.1.2] /Users/denizyetik/.gradle/caches/transforms-4/d96563af221f0fe9ffd334b4bfc9c8c1/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:31:9-38:20
+128            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+128-->[com.google.firebase:firebase-messaging:23.1.2] /Users/denizyetik/.gradle/caches/transforms-4/d96563af221f0fe9ffd334b4bfc9c8c1/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:32:13-78
+129            android:exported="true"
+129-->[com.google.firebase:firebase-messaging:23.1.2] /Users/denizyetik/.gradle/caches/transforms-4/d96563af221f0fe9ffd334b4bfc9c8c1/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:33:13-36
+130            android:permission="com.google.android.c2dm.permission.SEND" >
+130-->[com.google.firebase:firebase-messaging:23.1.2] /Users/denizyetik/.gradle/caches/transforms-4/d96563af221f0fe9ffd334b4bfc9c8c1/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:34:13-73
+131            <intent-filter>
+131-->[com.google.firebase:firebase-messaging:23.1.2] /Users/denizyetik/.gradle/caches/transforms-4/d96563af221f0fe9ffd334b4bfc9c8c1/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:35:13-37:29
+132                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+132-->[com.google.firebase:firebase-messaging:23.1.2] /Users/denizyetik/.gradle/caches/transforms-4/d96563af221f0fe9ffd334b4bfc9c8c1/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:36:17-81
+132-->[com.google.firebase:firebase-messaging:23.1.2] /Users/denizyetik/.gradle/caches/transforms-4/d96563af221f0fe9ffd334b4bfc9c8c1/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:36:25-78
+133            </intent-filter>
+134        </receiver>
+135        <!--
+136             FirebaseMessagingService performs security checks at runtime,
+137             but set to not exported to explicitly avoid allowing another app to call it.
+138        -->
+139        <service
+139-->[com.google.firebase:firebase-messaging:23.1.2] /Users/denizyetik/.gradle/caches/transforms-4/d96563af221f0fe9ffd334b4bfc9c8c1/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:44:9-51:19
+140            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+140-->[com.google.firebase:firebase-messaging:23.1.2] /Users/denizyetik/.gradle/caches/transforms-4/d96563af221f0fe9ffd334b4bfc9c8c1/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:45:13-82
+141            android:directBootAware="true"
+141-->[com.google.firebase:firebase-messaging:23.1.2] /Users/denizyetik/.gradle/caches/transforms-4/d96563af221f0fe9ffd334b4bfc9c8c1/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:46:13-43
+142            android:exported="false" >
+142-->[com.google.firebase:firebase-messaging:23.1.2] /Users/denizyetik/.gradle/caches/transforms-4/d96563af221f0fe9ffd334b4bfc9c8c1/transformed/firebase-messaging-23.1.2/AndroidManifest.xml:47:13-37
+143            <intent-filter android:priority="-500" >
+143-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:62:13-64:29
+144                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+144-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:63:17-78
+144-->/Users/denizyetik/Desktop/sesli proje 3/app/src/main/AndroidManifest.xml:63:25-75
+145            </intent-filter>
+146        </service>
+147
+148        <activity
+148-->[com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-4/127918154e1b7350671d725077f56532/transformed/firebase-auth-22.0.0/AndroidManifest.xml:29:9-46:20
+149            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+149-->[com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-4/127918154e1b7350671d725077f56532/transformed/firebase-auth-22.0.0/AndroidManifest.xml:30:13-80
+150            android:excludeFromRecents="true"
+150-->[com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-4/127918154e1b7350671d725077f56532/transformed/firebase-auth-22.0.0/AndroidManifest.xml:31:13-46
+151            android:exported="true"
+151-->[com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-4/127918154e1b7350671d725077f56532/transformed/firebase-auth-22.0.0/AndroidManifest.xml:32:13-36
+152            android:launchMode="singleTask"
+152-->[com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-4/127918154e1b7350671d725077f56532/transformed/firebase-auth-22.0.0/AndroidManifest.xml:33:13-44
+153            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+153-->[com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-4/127918154e1b7350671d725077f56532/transformed/firebase-auth-22.0.0/AndroidManifest.xml:34:13-72
+154            <intent-filter>
+154-->[com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-4/127918154e1b7350671d725077f56532/transformed/firebase-auth-22.0.0/AndroidManifest.xml:35:13-45:29
+155                <action android:name="android.intent.action.VIEW" />
+155-->[com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-4/127918154e1b7350671d725077f56532/transformed/firebase-auth-22.0.0/AndroidManifest.xml:36:17-69
+155-->[com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-4/127918154e1b7350671d725077f56532/transformed/firebase-auth-22.0.0/AndroidManifest.xml:36:25-66
+156
+157                <category android:name="android.intent.category.DEFAULT" />
+157-->[com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-4/127918154e1b7350671d725077f56532/transformed/firebase-auth-22.0.0/AndroidManifest.xml:38:17-76
+157-->[com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-4/127918154e1b7350671d725077f56532/transformed/firebase-auth-22.0.0/AndroidManifest.xml:38:27-73
+158                <category android:name="android.intent.category.BROWSABLE" />
+158-->[com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-4/127918154e1b7350671d725077f56532/transformed/firebase-auth-22.0.0/AndroidManifest.xml:39:17-78
+158-->[com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-4/127918154e1b7350671d725077f56532/transformed/firebase-auth-22.0.0/AndroidManifest.xml:39:27-75
+159
+160                <data
+160-->[com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-4/127918154e1b7350671d725077f56532/transformed/firebase-auth-22.0.0/AndroidManifest.xml:41:17-44:51
+161                    android:host="firebase.auth"
+161-->[com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-4/127918154e1b7350671d725077f56532/transformed/firebase-auth-22.0.0/AndroidManifest.xml:42:21-49
+162                    android:path="/"
+162-->[com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-4/127918154e1b7350671d725077f56532/transformed/firebase-auth-22.0.0/AndroidManifest.xml:43:21-37
+163                    android:scheme="genericidp" />
+163-->[com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-4/127918154e1b7350671d725077f56532/transformed/firebase-auth-22.0.0/AndroidManifest.xml:44:21-48
+164            </intent-filter>
+165        </activity>
+166        <activity
+166-->[com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-4/127918154e1b7350671d725077f56532/transformed/firebase-auth-22.0.0/AndroidManifest.xml:47:9-64:20
+167            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+167-->[com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-4/127918154e1b7350671d725077f56532/transformed/firebase-auth-22.0.0/AndroidManifest.xml:48:13-79
+168            android:excludeFromRecents="true"
+168-->[com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-4/127918154e1b7350671d725077f56532/transformed/firebase-auth-22.0.0/AndroidManifest.xml:49:13-46
+169            android:exported="true"
+169-->[com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-4/127918154e1b7350671d725077f56532/transformed/firebase-auth-22.0.0/AndroidManifest.xml:50:13-36
+170            android:launchMode="singleTask"
+170-->[com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-4/127918154e1b7350671d725077f56532/transformed/firebase-auth-22.0.0/AndroidManifest.xml:51:13-44
+171            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+171-->[com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-4/127918154e1b7350671d725077f56532/transformed/firebase-auth-22.0.0/AndroidManifest.xml:52:13-72
+172            <intent-filter>
+172-->[com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-4/127918154e1b7350671d725077f56532/transformed/firebase-auth-22.0.0/AndroidManifest.xml:53:13-63:29
+173                <action android:name="android.intent.action.VIEW" />
+173-->[com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-4/127918154e1b7350671d725077f56532/transformed/firebase-auth-22.0.0/AndroidManifest.xml:36:17-69
+173-->[com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-4/127918154e1b7350671d725077f56532/transformed/firebase-auth-22.0.0/AndroidManifest.xml:36:25-66
+174
+175                <category android:name="android.intent.category.DEFAULT" />
+175-->[com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-4/127918154e1b7350671d725077f56532/transformed/firebase-auth-22.0.0/AndroidManifest.xml:38:17-76
+175-->[com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-4/127918154e1b7350671d725077f56532/transformed/firebase-auth-22.0.0/AndroidManifest.xml:38:27-73
+176                <category android:name="android.intent.category.BROWSABLE" />
+176-->[com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-4/127918154e1b7350671d725077f56532/transformed/firebase-auth-22.0.0/AndroidManifest.xml:39:17-78
+176-->[com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-4/127918154e1b7350671d725077f56532/transformed/firebase-auth-22.0.0/AndroidManifest.xml:39:27-75
+177
+178                <data
+178-->[com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-4/127918154e1b7350671d725077f56532/transformed/firebase-auth-22.0.0/AndroidManifest.xml:41:17-44:51
+179                    android:host="firebase.auth"
+179-->[com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-4/127918154e1b7350671d725077f56532/transformed/firebase-auth-22.0.0/AndroidManifest.xml:42:21-49
+180                    android:path="/"
+180-->[com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-4/127918154e1b7350671d725077f56532/transformed/firebase-auth-22.0.0/AndroidManifest.xml:43:21-37
+181                    android:scheme="recaptcha" />
+181-->[com.google.firebase:firebase-auth:22.0.0] /Users/denizyetik/.gradle/caches/transforms-4/127918154e1b7350671d725077f56532/transformed/firebase-auth-22.0.0/AndroidManifest.xml:44:21-48
+182            </intent-filter>
+183        </activity>
+184        <activity
+184-->[com.google.android.gms:play-services-base:18.0.1] /Users/denizyetik/.gradle/caches/transforms-4/dfb2896d6453d957267e9d7b52e7930a/transformed/play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
+185            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+185-->[com.google.android.gms:play-services-base:18.0.1] /Users/denizyetik/.gradle/caches/transforms-4/dfb2896d6453d957267e9d7b52e7930a/transformed/play-services-base-18.0.1/AndroidManifest.xml:20:19-85
+186            android:exported="false"
+186-->[com.google.android.gms:play-services-base:18.0.1] /Users/denizyetik/.gradle/caches/transforms-4/dfb2896d6453d957267e9d7b52e7930a/transformed/play-services-base-18.0.1/AndroidManifest.xml:22:19-43
+187            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+187-->[com.google.android.gms:play-services-base:18.0.1] /Users/denizyetik/.gradle/caches/transforms-4/dfb2896d6453d957267e9d7b52e7930a/transformed/play-services-base-18.0.1/AndroidManifest.xml:21:19-78
+188
+189        <provider
+189-->[com.google.firebase:firebase-common:20.3.2] /Users/denizyetik/.gradle/caches/transforms-4/69164f0fc34fda935bc19e87e86274ef/transformed/firebase-common-20.3.2/AndroidManifest.xml:25:9-30:39
+190            android:name="com.google.firebase.provider.FirebaseInitProvider"
+190-->[com.google.firebase:firebase-common:20.3.2] /Users/denizyetik/.gradle/caches/transforms-4/69164f0fc34fda935bc19e87e86274ef/transformed/firebase-common-20.3.2/AndroidManifest.xml:26:13-77
+191            android:authorities="com.intercomapp.firebaseinitprovider"
+191-->[com.google.firebase:firebase-common:20.3.2] /Users/denizyetik/.gradle/caches/transforms-4/69164f0fc34fda935bc19e87e86274ef/transformed/firebase-common-20.3.2/AndroidManifest.xml:27:13-72
+192            android:directBootAware="true"
+192-->[com.google.firebase:firebase-common:20.3.2] /Users/denizyetik/.gradle/caches/transforms-4/69164f0fc34fda935bc19e87e86274ef/transformed/firebase-common-20.3.2/AndroidManifest.xml:28:13-43
+193            android:exported="false"
+193-->[com.google.firebase:firebase-common:20.3.2] /Users/denizyetik/.gradle/caches/transforms-4/69164f0fc34fda935bc19e87e86274ef/transformed/firebase-common-20.3.2/AndroidManifest.xml:29:13-37
+194            android:initOrder="100" />
+194-->[com.google.firebase:firebase-common:20.3.2] /Users/denizyetik/.gradle/caches/transforms-4/69164f0fc34fda935bc19e87e86274ef/transformed/firebase-common-20.3.2/AndroidManifest.xml:30:13-36
+195
+196        <meta-data
+196-->[com.google.android.gms:play-services-basement:18.1.0] /Users/denizyetik/.gradle/caches/transforms-4/2c77b6fb3811fa2a8278ba6c7fdbf250/transformed/play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
+197            android:name="com.google.android.gms.version"
+197-->[com.google.android.gms:play-services-basement:18.1.0] /Users/denizyetik/.gradle/caches/transforms-4/2c77b6fb3811fa2a8278ba6c7fdbf250/transformed/play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
+198            android:value="@integer/google_play_services_version" />
+198-->[com.google.android.gms:play-services-basement:18.1.0] /Users/denizyetik/.gradle/caches/transforms-4/2c77b6fb3811fa2a8278ba6c7fdbf250/transformed/play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
+199
+200        <provider
+200-->[androidx.emoji2:emoji2:1.2.0] /Users/denizyetik/.gradle/caches/transforms-4/f8f9f61b301204b4edf611d5aa5fb4fa/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+201            android:name="androidx.startup.InitializationProvider"
+201-->[androidx.emoji2:emoji2:1.2.0] /Users/denizyetik/.gradle/caches/transforms-4/f8f9f61b301204b4edf611d5aa5fb4fa/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+202            android:authorities="com.intercomapp.androidx-startup"
+202-->[androidx.emoji2:emoji2:1.2.0] /Users/denizyetik/.gradle/caches/transforms-4/f8f9f61b301204b4edf611d5aa5fb4fa/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+203            android:exported="false" >
+203-->[androidx.emoji2:emoji2:1.2.0] /Users/denizyetik/.gradle/caches/transforms-4/f8f9f61b301204b4edf611d5aa5fb4fa/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+204            <meta-data
+204-->[androidx.emoji2:emoji2:1.2.0] /Users/denizyetik/.gradle/caches/transforms-4/f8f9f61b301204b4edf611d5aa5fb4fa/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+205                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+205-->[androidx.emoji2:emoji2:1.2.0] /Users/denizyetik/.gradle/caches/transforms-4/f8f9f61b301204b4edf611d5aa5fb4fa/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+206                android:value="androidx.startup" />
+206-->[androidx.emoji2:emoji2:1.2.0] /Users/denizyetik/.gradle/caches/transforms-4/f8f9f61b301204b4edf611d5aa5fb4fa/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+207            <meta-data
+207-->[androidx.lifecycle:lifecycle-process:2.6.1] /Users/denizyetik/.gradle/caches/transforms-4/553128c3285e169dc8880eb3b92f277b/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:29:13-31:52
+208                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+208-->[androidx.lifecycle:lifecycle-process:2.6.1] /Users/denizyetik/.gradle/caches/transforms-4/553128c3285e169dc8880eb3b92f277b/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:30:17-78
+209                android:value="androidx.startup" />
+209-->[androidx.lifecycle:lifecycle-process:2.6.1] /Users/denizyetik/.gradle/caches/transforms-4/553128c3285e169dc8880eb3b92f277b/transformed/lifecycle-process-2.6.1/AndroidManifest.xml:31:17-49
+210            <meta-data
+210-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/denizyetik/.gradle/caches/transforms-4/3d83380327c19bd13b6e86ee0cf33201/transformed/profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
+211                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+211-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/denizyetik/.gradle/caches/transforms-4/3d83380327c19bd13b6e86ee0cf33201/transformed/profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
+212                android:value="androidx.startup" />
+212-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/denizyetik/.gradle/caches/transforms-4/3d83380327c19bd13b6e86ee0cf33201/transformed/profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
+213        </provider>
+214
+215        <uses-library
+215-->[androidx.window:window:1.0.0] /Users/denizyetik/.gradle/caches/transforms-4/73b6f6bc8479dde166983614cf32f06d/transformed/window-1.0.0/AndroidManifest.xml:25:9-27:40
+216            android:name="androidx.window.extensions"
+216-->[androidx.window:window:1.0.0] /Users/denizyetik/.gradle/caches/transforms-4/73b6f6bc8479dde166983614cf32f06d/transformed/window-1.0.0/AndroidManifest.xml:26:13-54
+217            android:required="false" />
+217-->[androidx.window:window:1.0.0] /Users/denizyetik/.gradle/caches/transforms-4/73b6f6bc8479dde166983614cf32f06d/transformed/window-1.0.0/AndroidManifest.xml:27:13-37
+218        <uses-library
+218-->[androidx.window:window:1.0.0] /Users/denizyetik/.gradle/caches/transforms-4/73b6f6bc8479dde166983614cf32f06d/transformed/window-1.0.0/AndroidManifest.xml:28:9-30:40
+219            android:name="androidx.window.sidecar"
+219-->[androidx.window:window:1.0.0] /Users/denizyetik/.gradle/caches/transforms-4/73b6f6bc8479dde166983614cf32f06d/transformed/window-1.0.0/AndroidManifest.xml:29:13-51
+220            android:required="false" />
+220-->[androidx.window:window:1.0.0] /Users/denizyetik/.gradle/caches/transforms-4/73b6f6bc8479dde166983614cf32f06d/transformed/window-1.0.0/AndroidManifest.xml:30:13-37
+221
+222        <service
+222-->[com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/denizyetik/.gradle/caches/transforms-4/aeddbff9d0399547e36e20c0d94abfe5/transformed/transport-backend-cct-3.1.8/AndroidManifest.xml:28:9-34:19
+223            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+223-->[com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/denizyetik/.gradle/caches/transforms-4/aeddbff9d0399547e36e20c0d94abfe5/transformed/transport-backend-cct-3.1.8/AndroidManifest.xml:29:13-103
+224            android:exported="false" >
+224-->[com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/denizyetik/.gradle/caches/transforms-4/aeddbff9d0399547e36e20c0d94abfe5/transformed/transport-backend-cct-3.1.8/AndroidManifest.xml:30:13-37
+225            <meta-data
+225-->[com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/denizyetik/.gradle/caches/transforms-4/aeddbff9d0399547e36e20c0d94abfe5/transformed/transport-backend-cct-3.1.8/AndroidManifest.xml:31:13-33:39
+226                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+226-->[com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/denizyetik/.gradle/caches/transforms-4/aeddbff9d0399547e36e20c0d94abfe5/transformed/transport-backend-cct-3.1.8/AndroidManifest.xml:32:17-94
+227                android:value="cct" />
+227-->[com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/denizyetik/.gradle/caches/transforms-4/aeddbff9d0399547e36e20c0d94abfe5/transformed/transport-backend-cct-3.1.8/AndroidManifest.xml:33:17-36
+228        </service>
+229        <service
+229-->[com.google.android.datatransport:transport-runtime:3.1.8] /Users/denizyetik/.gradle/caches/transforms-4/aa2eebac81e829bd7476c3a672ab456e/transformed/transport-runtime-3.1.8/AndroidManifest.xml:26:9-30:19
+230            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+230-->[com.google.android.datatransport:transport-runtime:3.1.8] /Users/denizyetik/.gradle/caches/transforms-4/aa2eebac81e829bd7476c3a672ab456e/transformed/transport-runtime-3.1.8/AndroidManifest.xml:27:13-117
+231            android:exported="false"
+231-->[com.google.android.datatransport:transport-runtime:3.1.8] /Users/denizyetik/.gradle/caches/transforms-4/aa2eebac81e829bd7476c3a672ab456e/transformed/transport-runtime-3.1.8/AndroidManifest.xml:28:13-37
+232            android:permission="android.permission.BIND_JOB_SERVICE" >
+232-->[com.google.android.datatransport:transport-runtime:3.1.8] /Users/denizyetik/.gradle/caches/transforms-4/aa2eebac81e829bd7476c3a672ab456e/transformed/transport-runtime-3.1.8/AndroidManifest.xml:29:13-69
+233        </service>
+234
+235        <receiver
+235-->[com.google.android.datatransport:transport-runtime:3.1.8] /Users/denizyetik/.gradle/caches/transforms-4/aa2eebac81e829bd7476c3a672ab456e/transformed/transport-runtime-3.1.8/AndroidManifest.xml:32:9-34:40
+236            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+236-->[com.google.android.datatransport:transport-runtime:3.1.8] /Users/denizyetik/.gradle/caches/transforms-4/aa2eebac81e829bd7476c3a672ab456e/transformed/transport-runtime-3.1.8/AndroidManifest.xml:33:13-132
+237            android:exported="false" />
+237-->[com.google.android.datatransport:transport-runtime:3.1.8] /Users/denizyetik/.gradle/caches/transforms-4/aa2eebac81e829bd7476c3a672ab456e/transformed/transport-runtime-3.1.8/AndroidManifest.xml:34:13-37
+238        <receiver
+238-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/denizyetik/.gradle/caches/transforms-4/3d83380327c19bd13b6e86ee0cf33201/transformed/profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
+239            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+239-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/denizyetik/.gradle/caches/transforms-4/3d83380327c19bd13b6e86ee0cf33201/transformed/profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
+240            android:directBootAware="false"
+240-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/denizyetik/.gradle/caches/transforms-4/3d83380327c19bd13b6e86ee0cf33201/transformed/profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+241            android:enabled="true"
+241-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/denizyetik/.gradle/caches/transforms-4/3d83380327c19bd13b6e86ee0cf33201/transformed/profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
+242            android:exported="true"
+242-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/denizyetik/.gradle/caches/transforms-4/3d83380327c19bd13b6e86ee0cf33201/transformed/profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
+243            android:permission="android.permission.DUMP" >
+243-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/denizyetik/.gradle/caches/transforms-4/3d83380327c19bd13b6e86ee0cf33201/transformed/profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+244            <intent-filter>
+244-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/denizyetik/.gradle/caches/transforms-4/3d83380327c19bd13b6e86ee0cf33201/transformed/profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
+245                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+245-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/denizyetik/.gradle/caches/transforms-4/3d83380327c19bd13b6e86ee0cf33201/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
+245-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/denizyetik/.gradle/caches/transforms-4/3d83380327c19bd13b6e86ee0cf33201/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
+246            </intent-filter>
+247            <intent-filter>
+247-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/denizyetik/.gradle/caches/transforms-4/3d83380327c19bd13b6e86ee0cf33201/transformed/profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
+248                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+248-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/denizyetik/.gradle/caches/transforms-4/3d83380327c19bd13b6e86ee0cf33201/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
+248-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/denizyetik/.gradle/caches/transforms-4/3d83380327c19bd13b6e86ee0cf33201/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
+249            </intent-filter>
+250            <intent-filter>
+250-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/denizyetik/.gradle/caches/transforms-4/3d83380327c19bd13b6e86ee0cf33201/transformed/profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
+251                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+251-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/denizyetik/.gradle/caches/transforms-4/3d83380327c19bd13b6e86ee0cf33201/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
+251-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/denizyetik/.gradle/caches/transforms-4/3d83380327c19bd13b6e86ee0cf33201/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+252            </intent-filter>
+253            <intent-filter>
+253-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/denizyetik/.gradle/caches/transforms-4/3d83380327c19bd13b6e86ee0cf33201/transformed/profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
+254                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+254-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/denizyetik/.gradle/caches/transforms-4/3d83380327c19bd13b6e86ee0cf33201/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
+254-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/denizyetik/.gradle/caches/transforms-4/3d83380327c19bd13b6e86ee0cf33201/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
+255            </intent-filter>
+256        </receiver>
+257    </application>
+258
+259</manifest>

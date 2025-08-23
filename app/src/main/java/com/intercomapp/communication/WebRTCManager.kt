@@ -129,7 +129,7 @@ class WebRTCManager {
                         Log.v(TAG, "Ses gönderildi: $bytesRead bytes")
                     }
                     
-                    delay(20) // Increased delay for better performance
+                    delay(10) // Reduced delay for better real-time performance
                 }
                 
                 audioRecord?.stop()
@@ -250,15 +250,20 @@ class WebRTCManager {
     }
     
     fun playReceivedAudio(audioBytes: ByteArray) {
-        Log.d(TAG, "Playing received audio: ${audioBytes.size} bytes")
-        
-        // Make sure AudioTrack is playing
-        if (audioTrack?.playState != AudioTrack.PLAYSTATE_PLAYING) {
-            audioTrack?.play()
+        try {
+            Log.d(TAG, "Playing received audio: ${audioBytes.size} bytes")
+            
+            // Make sure AudioTrack is playing
+            if (audioTrack?.playState != AudioTrack.PLAYSTATE_PLAYING) {
+                audioTrack?.play()
+                Log.d(TAG, "🎵 Audio track started playing")
+            }
+            
+            // Play the received audio through AudioTrack
+            val bytesWritten = audioTrack?.write(audioBytes, 0, audioBytes.size) ?: 0
+            Log.i(TAG, "🎵 Alınan ses oynatılıyor: ${audioBytes.size} bytes, yazılan: $bytesWritten")
+        } catch (e: Exception) {
+            Log.e(TAG, "❌ Error playing received audio", e)
         }
-        
-        // Play the received audio through AudioTrack
-        val bytesWritten = audioTrack?.write(audioBytes, 0, audioBytes.size) ?: 0
-        Log.i(TAG, "🎵 Alınan ses oynatılıyor: ${audioBytes.size} bytes, yazılan: $bytesWritten")
     }
 }

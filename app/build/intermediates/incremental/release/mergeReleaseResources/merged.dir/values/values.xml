@@ -695,6 +695,7 @@
     <color name="androidx_core_ripple_material_light">#1f000000</color>
     <color name="androidx_core_secondary_text_default_material_light">#8a000000</color>
     <color name="background">#F5F5F5</color>
+    <color name="background_dark">#FF121212</color>
     <color name="background_floating_material_dark">@color/material_grey_800</color>
     <color name="background_floating_material_light">@android:color/white</color>
     <color name="background_material_dark">@color/material_grey_850</color>
@@ -985,12 +986,14 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="ripple_material_dark">#33ffffff</color>
     <color name="ripple_material_light">#1f000000</color>
+    <color name="secondary">#FF9C27B0</color>
     <color name="secondary_text_default_material_dark">#b3ffffff</color>
     <color name="secondary_text_default_material_light">#8a000000</color>
     <color name="secondary_text_disabled_material_dark">#36ffffff</color>
     <color name="secondary_text_disabled_material_light">#24000000</color>
     <color name="success">#4CAF50</color>
     <color name="surface">#FFFFFF</color>
+    <color name="surface_light">#FF2D2D2D</color>
     <color name="switch_thumb_disabled_material_dark">#ff616161</color>
     <color name="switch_thumb_disabled_material_light">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_dark">#ffbdbdbd</color>
@@ -2094,8 +2097,10 @@
     <string name="connect">Bağlan</string>
     <string name="connected">Bağlandı</string>
     <string name="connecting">Bağlanıyor...</string>
+    <string name="connection_established">Bağlantı Kuruldu</string>
     <string name="contacts">Kişiler</string>
     <string name="copy_toast_msg">Link copied to clipboard</string>
+    <string name="create_connection">Bağlantı Oluştur</string>
     <string name="create_group">Grup Oluştur</string>
     <string name="disconnect">Bağlantıyı Kes</string>
     <string name="disconnected">Bağlantı Kesildi</string>
@@ -2167,6 +2172,7 @@
     <string name="fallback_menu_item_share_link">Share link</string>
     <string name="fcm_fallback_notification_channel_label">Miscellaneous</string>
     <string name="forgot_password">Şifremi Unuttum</string>
+    <string name="friends">Arkadaşlar</string>
     <string name="gcm_defaultSenderId" translatable="false">866493880421</string>
     <string name="google_api_key" translatable="false">AIzaSyAhsZnuEpw889T-woo2GeBE_sdODnjt-lY</string>
     <string name="google_app_id" translatable="false">1:866493880421:android:9c13c06dd2f81b44378e8c</string>
@@ -2315,6 +2321,7 @@
     <string name="quality_high">Yüksek</string>
     <string name="quality_low">Düşük</string>
     <string name="quality_medium">Orta</string>
+    <string name="ready_to_connect">Bağlantıya Hazır</string>
     <string name="register">Kayıt Ol</string>
     <string name="search_menu_title">Search</string>
     <string name="searchbar_scrolling_view_behavior" translatable="false">
@@ -2326,6 +2333,7 @@
     <string description="Title of the side sheet&apos;s accessibility pane that is spoken by TalkBack when the side sheet appears on screen. [CHAR_LIMIT=NONE]" name="side_sheet_accessibility_pane_title">Side Sheet</string>
     <string name="side_sheet_behavior" translatable="false">com.google.android.material.sidesheet.SideSheetBehavior</string>
     <string name="signaling_server_url">ws://10.0.2.2:3000</string>
+    <string name="start_connection">Bağlantıyı Başlat</string>
     <string name="start_music">Müzik Başlat</string>
     <string name="status_away">Uzakta</string>
     <string name="status_bar_notification_info_overflow">999+</string>
@@ -2344,6 +2352,7 @@
     <string name="voice_commands">Sesli Komutlar</string>
     <string name="volume_down">Ses Kıs</string>
     <string name="volume_up">Ses Aç</string>
+    <string name="waiting_for_connection">Bağlantı Bekleniyor...</string>
     <string name="yes">Evet</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>

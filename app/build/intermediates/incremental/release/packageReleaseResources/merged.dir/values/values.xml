@@ -3,6 +3,7 @@
     <color name="accent">#FF4081</color>
     <color name="accent_dark">#F50057</color>
     <color name="background">#F5F5F5</color>
+    <color name="background_dark">#FF121212</color>
     <color name="background_secondary">#FAFAFA</color>
     <color name="black">#FF000000</color>
     <color name="divider">#BDBDBD</color>
@@ -15,8 +16,10 @@
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
+    <color name="secondary">#FF9C27B0</color>
     <color name="success">#4CAF50</color>
     <color name="surface">#FFFFFF</color>
+    <color name="surface_light">#FF2D2D2D</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="text_primary">#212121</color>
@@ -33,7 +36,9 @@
     <string name="connect">Bağlan</string>
     <string name="connected">Bağlandı</string>
     <string name="connecting">Bağlanıyor...</string>
+    <string name="connection_established">Bağlantı Kuruldu</string>
     <string name="contacts">Kişiler</string>
+    <string name="create_connection">Bağlantı Oluştur</string>
     <string name="create_group">Grup Oluştur</string>
     <string name="disconnect">Bağlantıyı Kes</string>
     <string name="disconnected">Bağlantı Kesildi</string>
@@ -41,6 +46,7 @@
     <string name="email">E-posta</string>
     <string name="error_occurred">Hata Oluştu</string>
     <string name="forgot_password">Şifremi Unuttum</string>
+    <string name="friends">Arkadaşlar</string>
     <string name="gcm_defaultSenderId" translatable="false">866493880421</string>
     <string name="google_api_key" translatable="false">AIzaSyAhsZnuEpw889T-woo2GeBE_sdODnjt-lY</string>
     <string name="google_app_id" translatable="false">1:866493880421:android:9c13c06dd2f81b44378e8c</string>
@@ -78,9 +84,11 @@
     <string name="quality_high">Yüksek</string>
     <string name="quality_low">Düşük</string>
     <string name="quality_medium">Orta</string>
+    <string name="ready_to_connect">Bağlantıya Hazır</string>
     <string name="register">Kayıt Ol</string>
     <string name="settings">Ayarlar</string>
     <string name="signaling_server_url">ws://10.0.2.2:3000</string>
+    <string name="start_connection">Bağlantıyı Başlat</string>
     <string name="start_music">Müzik Başlat</string>
     <string name="status_away">Uzakta</string>
     <string name="status_busy">Meşgul</string>
@@ -98,6 +106,7 @@
     <string name="voice_commands">Sesli Komutlar</string>
     <string name="volume_down">Ses Kıs</string>
     <string name="volume_up">Ses Aç</string>
+    <string name="waiting_for_connection">Bağlantı Bekleniyor...</string>
     <string name="yes">Evet</string>
     <style name="Theme.IntercomApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         

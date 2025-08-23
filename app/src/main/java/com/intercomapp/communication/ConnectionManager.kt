@@ -270,7 +270,11 @@ class ConnectionManager(private val context: Context) {
         try {
             val audioBytes = android.util.Base64.decode(audioData, android.util.Base64.DEFAULT)
             Log.d(TAG, "🔊 Decoded audio: ${audioBytes.size} bytes")
-            playAudioData(audioBytes)
+            
+            // Play audio immediately in a separate coroutine to avoid blocking
+            CoroutineScope(Dispatchers.IO).launch {
+                playAudioData(audioBytes)
+            }
         } catch (e: Exception) {
             Log.e(TAG, "❌ Failed to decode audio data", e)
         }

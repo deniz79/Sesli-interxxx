@@ -7,6 +7,10 @@ import com.intercomapp.R
 import com.intercomapp.data.repository.AuthRepository
 import com.intercomapp.service.IntercomService
 import com.intercomapp.communication.WebRTCManager
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class VoiceRoomViewModel : ViewModel() {
     
@@ -88,6 +92,9 @@ class VoiceRoomViewModel : ViewModel() {
         }
         
         _message.value = "Ses odasına bağlandı"
+        
+        // Start checking for real connection
+        startConnectionCheck()
     }
     
     private fun startAudioConnection() {
@@ -177,10 +184,37 @@ class VoiceRoomViewModel : ViewModel() {
     }
     
     private fun updateConnectionStatus() {
+        // Update connection status based on current state
+        val isConnected = intercomService?.webRTCManager?.isPeerConnected(otherUserId ?: "") == true
+        
         _connectionStatus.value = ConnectionStatus(
-            message = "Bağlantı kuruldu",
-            color = R.color.success
+            message = if (isConnected) "Ses bağlantısı kuruldu" else "Bağlantı bekleniyor...",
+            color = if (isConnected) R.color.success else R.color.warning
         )
+    }
+    
+    private fun startConnectionCheck() {
+        // Check connection status every 2 seconds
+        CoroutineScope(Dispatchers.Main).launch {
+            while (true) {
+                delay(2000)
+                
+                val isConnected = intercomService?.webRTCManager?.isPeerConnected(otherUserId ?: "") == true
+                
+                if (isConnected) {
+                    _connectionStatus.value = ConnectionStatus(
+                        message = "Ses bağlantısı kuruldu",
+                        color = R.color.success
+                    )
+                    break
+                } else {
+                    _connectionStatus.value = ConnectionStatus(
+                        message = "Karşı taraf bekleniyor...",
+                        color = R.color.warning
+                    )
+                }
+            }
+        }
     }
     
     // Update other user's mute status (called when receiving status updates)
