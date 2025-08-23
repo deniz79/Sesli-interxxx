@@ -55,6 +55,8 @@ class MainActivity : AppCompatActivity() {
             val binder = service as IntercomService.IntercomBinder
             intercomService = binder.getService()
             isServiceBound = true
+            // Notify fragments that service is ready
+            notifyServiceReady()
         }
         
         override fun onServiceDisconnected(name: ComponentName?) {
@@ -155,4 +157,12 @@ class MainActivity : AppCompatActivity() {
     
     // Public method to get service
     fun getIntercomService(): IntercomService? = intercomService
+    
+    private fun notifyServiceReady() {
+        // Notify current fragment that service is ready
+        val currentFragment = supportFragmentManager.findFragmentById(R.id.fragment_container)
+        if (currentFragment is HomeFragment) {
+            currentFragment.onServiceReady()
+        }
+    }
 }

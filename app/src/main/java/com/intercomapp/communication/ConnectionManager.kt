@@ -59,11 +59,13 @@ class ConnectionManager(private val context: Context) {
     private val endpointDiscoveryCallback = object : EndpointDiscoveryCallback() {
         override fun onEndpointFound(endpointId: String, info: DiscoveredEndpointInfo) {
             Log.d(TAG, "Found endpoint: $endpointId")
+            Log.i(TAG, "🔍 Cihaz bulundu: $endpointId (${info.endpointName})")
             discoveredPeers[endpointId] = Endpoint(endpointId, info.endpointName)
         }
         
         override fun onEndpointLost(endpointId: String) {
             Log.d(TAG, "Lost endpoint: $endpointId")
+            Log.w(TAG, "❌ Cihaz kayboldu: $endpointId")
             discoveredPeers.remove(endpointId)
         }
     }

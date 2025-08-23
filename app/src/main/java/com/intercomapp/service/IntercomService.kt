@@ -147,41 +147,43 @@ class IntercomService : Service() {
         voiceCommandManager.clearCommand()
     }
     
-    fun connect() {
-        if (isConnected) {
-            Log.d(TAG, "Already connected")
-            return
-        }
-        
-        serviceScope.launch {
-            try {
-                // Start discovery and advertising
-                connectionManager.startDiscovery()
-                connectionManager.startAdvertising(
-                    authRepository.currentUser?.uid ?: "unknown",
-                    authRepository.currentUser?.displayName ?: "Unknown User"
-                )
-                
-                // Update user status
-                val currentUser = authRepository.currentUser
-                if (currentUser != null) {
-                    authRepository.updateUserStatus(
-                        currentUser.uid,
-                        "ONLINE",
-                        true
-                    )
+                    fun connect() {
+                    if (isConnected) {
+                        Log.d(TAG, "Already connected")
+                        return
+                    }
+
+                    serviceScope.launch {
+                        try {
+                            // Start discovery and advertising
+                            connectionManager.startDiscovery()
+                            connectionManager.startAdvertising(
+                                authRepository.currentUser?.uid ?: "unknown",
+                                authRepository.currentUser?.displayName ?: "Unknown User"
+                            )
+
+                            // Update user status
+                            val currentUser = authRepository.currentUser
+                            if (currentUser != null) {
+                                authRepository.updateUserStatus(
+                                    currentUser.uid,
+                                    "ONLINE",
+                                    true
+                                )
+                            }
+
+                            isConnected = true
+                            updateNotification()
+
+                            Log.d(TAG, "Connected successfully")
+                            Log.i(TAG, "✅ Bağlantı başarıyla kuruldu")
+
+                        } catch (e: Exception) {
+                            Log.e(TAG, "Failed to connect", e)
+                            Log.e(TAG, "❌ Bağlantı hatası: ${e.message}")
+                        }
+                    }
                 }
-                
-                isConnected = true
-                updateNotification()
-                
-                Log.d(TAG, "Connected successfully")
-                
-            } catch (e: Exception) {
-                Log.e(TAG, "Failed to connect", e)
-            }
-        }
-    }
     
     fun disconnect() {
         if (!isConnected) {

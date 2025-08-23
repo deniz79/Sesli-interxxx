@@ -35,7 +35,12 @@ class HomeViewModel : ViewModel() {
     
     fun setIntercomService(service: IntercomService?) {
         intercomService = service
-        updateStates()
+        if (service != null) {
+            _message.value = "Servis bağlantısı kuruldu"
+            updateStates()
+        } else {
+            _message.value = "Servis bağlantısı bulunamadı"
+        }
     }
     
     fun setContext(context: Context) {

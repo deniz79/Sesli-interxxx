@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.intercomapp.databinding.FragmentHomeBinding
+import com.intercomapp.ui.main.MainActivity
 // import dagger.hilt.android.AndroidEntryPoint
 
 // @AndroidEntryPoint
@@ -26,14 +27,19 @@ class HomeFragment : Fragment() {
         return binding.root
     }
     
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        
+
         viewModel = ViewModelProvider(this)[HomeViewModel::class.java]
         viewModel.setContext(requireContext())
-        
+
         setupViews()
         observeViewModel()
+        
+        // Get service from MainActivity
+        (activity as? MainActivity)?.let { mainActivity ->
+            viewModel.setIntercomService(mainActivity.getIntercomService())
+        }
     }
     
     private fun setupViews() {
@@ -166,6 +172,13 @@ class HomeFragment : Fragment() {
         } else {
             binding.btnVoiceCommand.text = "Sesli Komutları Aç/Kapat"
             binding.btnVoiceCommand.setBackgroundColor(resources.getColor(com.intercomapp.R.color.primary, null))
+        }
+    }
+    
+    fun onServiceReady() {
+        // Get service from MainActivity when service is ready
+        (activity as? MainActivity)?.let { mainActivity ->
+            viewModel.setIntercomService(mainActivity.getIntercomService())
         }
     }
     
