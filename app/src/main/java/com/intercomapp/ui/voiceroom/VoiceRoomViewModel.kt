@@ -90,15 +90,25 @@ class VoiceRoomViewModel : ViewModel() {
                 // Create WebRTC connection
                 service.webRTCManager?.createPeerConnection(userId)
                 
-                // Update connection status
+                // Update connection status to waiting
                 _connectionStatus.value = ConnectionStatus(
-                    message = "Ses bağlantısı kuruldu",
-                    color = R.color.success
+                    message = "Karşı taraf bekleniyor...",
+                    color = R.color.warning
                 )
                 
-                _message.value = "Ses iletişimi başlatıldı"
+                _message.value = "Ses bağlantısı başlatıldı"
             }
         }
+    }
+    
+    fun onAudioConnected() {
+        // Called when the other party connects
+        _connectionStatus.value = ConnectionStatus(
+            message = "Ses bağlantısı kuruldu",
+            color = R.color.success
+        )
+        
+        _message.value = "Ses iletişimi aktif"
     }
     
 

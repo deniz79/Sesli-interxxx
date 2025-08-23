@@ -114,20 +114,22 @@ class WebRTCManager {
                 
                 val buffer = ByteArray(BUFFER_SIZE)
                 
+                // Start recording and playing
                 audioRecord?.startRecording()
                 audioTrack?.play()
                 
-                Log.i(TAG, "🎵 Ses akışı başlatıldı")
+                Log.i(TAG, "🎵 Ses akışı başlatıldı - Recording: ${audioRecord?.state}, Playing: ${audioTrack?.playState}")
                 
                 while (isRecording && isActive) {
                     val bytesRead = audioRecord?.read(buffer, 0, buffer.size) ?: 0
                     
                     if (bytesRead > 0 && !isMuted) {
-                        // Send audio data to connected peers (but don't play our own audio)
+                        // Send audio data to connected peers
                         sendAudioToPeers(buffer.copyOf(bytesRead))
+                        Log.v(TAG, "Ses gönderildi: $bytesRead bytes")
                     }
                     
-                    delay(10) // Small delay to prevent blocking
+                    delay(20) // Increased delay for better performance
                 }
                 
                 audioRecord?.stop()
@@ -243,8 +245,13 @@ class WebRTCManager {
     fun playReceivedAudio(audioBytes: ByteArray) {
         Log.d(TAG, "Playing received audio: ${audioBytes.size} bytes")
         
+        // Make sure AudioTrack is playing
+        if (audioTrack?.playState != AudioTrack.PLAYSTATE_PLAYING) {
+            audioTrack?.play()
+        }
+        
         // Play the received audio through AudioTrack
-        audioTrack?.write(audioBytes, 0, audioBytes.size)
-        Log.i(TAG, "🎵 Alınan ses oynatılıyor: ${audioBytes.size} bytes")
+        val bytesWritten = audioTrack?.write(audioBytes, 0, audioBytes.size) ?: 0
+        Log.i(TAG, "🎵 Alınan ses oynatılıyor: ${audioBytes.size} bytes, yazılan: $bytesWritten")
     }
 }

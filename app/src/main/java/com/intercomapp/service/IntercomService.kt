@@ -339,6 +339,10 @@ class IntercomService : Service() {
                 // Both parties confirmed, audio connection is ready
                 Log.i(TAG, "✅ Ses bağlantısı hazır: $endpointId")
             }
+            "AUDIO_CONNECTED" -> {
+                // Audio connection established
+                Log.i(TAG, "🎵 Ses bağlantısı kuruldu: $endpointId")
+            }
         }
     }
     

@@ -230,6 +230,13 @@ class ConnectionManager(private val context: Context) {
                 // Handle call messages
                 handleCallMessage(endpointId, message)
             }
+            message.startsWith("AUDIO_CONNECTED:") -> {
+                // Handle audio connection confirmation
+                val connectedUserId = message.substringAfter("AUDIO_CONNECTED:")
+                Log.i(TAG, "✅ Ses bağlantısı onaylandı: $connectedUserId")
+                // Notify callback about audio connection
+                callCallback?.invoke("AUDIO_CONNECTED", endpointId)
+            }
             else -> {
                 // Handle other message types
             }
@@ -313,6 +320,9 @@ class ConnectionManager(private val context: Context) {
         
         // Enable audio streaming
         webRTCManager?.setMuted(false)
+        
+        // Send connection confirmation
+        sendMessage(endpointId, "AUDIO_CONNECTED:${userId ?: "unknown"}")
         
         // Notify UI that audio is active
         Log.i(TAG, "✅ Ses iletişimi aktif: $endpointId")
