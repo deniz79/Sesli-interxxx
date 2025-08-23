@@ -54,6 +54,8 @@ class HomeFragment : Fragment() {
             if (targetId.isNotEmpty()) {
                 viewModel.connectToUserId(targetId)
                 binding.etTargetId.text?.clear()
+                // Navigate to voice room
+                navigateToVoiceRoom(targetId)
             } else {
                 Toast.makeText(context, "Lütfen bir ID girin", Toast.LENGTH_SHORT).show()
             }
@@ -180,6 +182,24 @@ class HomeFragment : Fragment() {
         (activity as? MainActivity)?.let { mainActivity ->
             viewModel.setIntercomService(mainActivity.getIntercomService())
         }
+    }
+    
+    private fun navigateToVoiceRoom(otherUserId: String) {
+        // Create room ID (combination of both user IDs)
+        val currentUserId = viewModel.getUserId() ?: "unknown"
+        val roomId = if (currentUserId < otherUserId) {
+            "${currentUserId}_${otherUserId}"
+        } else {
+            "${otherUserId}_${currentUserId}"
+        }
+        
+        // Navigate to voice room
+        val voiceRoomFragment = com.intercomapp.ui.voiceroom.VoiceRoomFragment.newInstance(roomId, otherUserId)
+        
+        parentFragmentManager.beginTransaction()
+            .replace(com.intercomapp.R.id.fragment_container, voiceRoomFragment)
+            .addToBackStack(null)
+            .commit()
     }
     
     override fun onDestroyView() {

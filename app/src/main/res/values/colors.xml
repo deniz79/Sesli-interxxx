@@ -24,4 +24,9 @@
     <color name="text_primary">#212121</color>
     <color name="text_secondary">#757575</color>
     <color name="divider">#BDBDBD</color>
+    
+    <!-- Voice Room Colors -->
+    <color name="background_dark">#FF121212</color>
+    <color name="surface_light">#FF2D2D2D</color>
+    <color name="secondary">#FF9C27B0</color>
 </resources>

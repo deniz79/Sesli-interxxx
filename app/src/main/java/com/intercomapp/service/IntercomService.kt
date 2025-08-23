@@ -17,7 +17,7 @@ import kotlinx.coroutines.*
 
 class IntercomService : Service() {
     
-    private lateinit var webRTCManager: WebRTCManager
+    lateinit var webRTCManager: WebRTCManager
     private lateinit var voiceCommandManager: VoiceCommandManager
     private lateinit var authRepository: AuthRepository
     private lateinit var connectionManager: ConnectionManager
@@ -55,6 +55,8 @@ class IntercomService : Service() {
         
         // Connect to signaling server
         webRTCManager.connectToSignalingServer()
+        
+        Log.i(TAG, "✅ Ses iletişimi için WebRTC aktif")
         
         // Start voice command listening
         startVoiceCommandListening()
@@ -310,6 +312,12 @@ class IntercomService : Service() {
     fun getConnectionStatus(): Boolean = isConnected
     fun getMuteStatus(): Boolean = isMuted
     fun getMusicStatus(): Boolean = isMusicPlaying
+    
+    fun setMuted(muted: Boolean) {
+        isMuted = muted
+        webRTCManager.setMuted(muted)
+        updateNotification()
+    }
     
     override fun onDestroy() {
         super.onDestroy()
