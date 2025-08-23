@@ -74,6 +74,8 @@ class HomeViewModel : ViewModel() {
         intercomService?.let { service ->
             service.connectToSpecificUser(targetId)
             _message.value = "Bağlantı kuruluyor: ${targetId.take(8)}..."
+            // Bağlantı durumunu güncelle
+            _connectionState.value = true
         } ?: run {
             _message.value = "Servis bağlantısı bulunamadı"
         }
@@ -93,10 +95,12 @@ class HomeViewModel : ViewModel() {
                 // Disconnect
                 service.disconnect()
                 _message.value = "Bağlantı kesildi"
+                _connectionState.value = false
             } else {
                 // Connect
                 service.connect()
                 _message.value = "Bağlantı aranıyor..."
+                _connectionState.value = true
             }
             updateStates()
         } ?: run {

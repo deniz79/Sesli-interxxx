@@ -36,12 +36,15 @@ class ConnectionManager(private val context: Context) {
                     Log.d(TAG, "Connection successful with: $endpointId")
                     connectedPeers[endpointId] = discoveredPeers[endpointId] ?: return
                     // Notify that connection is established
+                    Log.i(TAG, "✅ Bağlantı başarıyla kuruldu: $endpointId")
                 }
                 ConnectionsStatusCodes.STATUS_CONNECTION_REJECTED -> {
                     Log.w(TAG, "Connection rejected by: $endpointId")
+                    Log.w(TAG, "❌ Bağlantı reddedildi: $endpointId")
                 }
                 ConnectionsStatusCodes.STATUS_ERROR -> {
                     Log.e(TAG, "Connection failed with: $endpointId")
+                    Log.e(TAG, "❌ Bağlantı hatası: $endpointId")
                 }
             }
         }

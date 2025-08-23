@@ -285,6 +285,10 @@ class IntercomService : Service() {
                     // Start discovery to find target user
                     connectionManager.startDiscovery()
                     
+                    // Set connection status to true when attempting to connect
+                    isConnected = true
+                    updateNotification()
+                    
                     // Store target user ID for connection
                     // In a real implementation, you'd use a signaling server
                     // For now, we'll use Nearby Connections discovery

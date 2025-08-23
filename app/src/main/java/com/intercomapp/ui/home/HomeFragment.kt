@@ -114,6 +114,10 @@ class HomeFragment : Fragment() {
         viewModel.message.observe(viewLifecycleOwner) { message ->
             message?.let {
                 Toast.makeText(context, it, Toast.LENGTH_SHORT).show()
+                // ID ile bağlantı kurulduğunda UI'ı güncelle
+                if (it.contains("Bağlantı kuruluyor")) {
+                    updateConnectionUI(true)
+                }
             }
         }
     }
@@ -125,10 +129,10 @@ class HomeFragment : Fragment() {
             binding.tvStatus.text = getString(com.intercomapp.R.string.connected)
             binding.tvStatus.setTextColor(resources.getColor(com.intercomapp.R.color.success, null))
         } else {
-            binding.btnConnect.text = getString(com.intercomapp.R.string.connect)
+            binding.btnConnect.text = getString(com.intercomapp.R.string.start_connection)
             binding.btnConnect.setBackgroundColor(resources.getColor(com.intercomapp.R.color.primary, null))
-            binding.tvStatus.text = getString(com.intercomapp.R.string.disconnected)
-            binding.tvStatus.setTextColor(resources.getColor(com.intercomapp.R.color.text_secondary, null))
+            binding.tvStatus.text = getString(com.intercomapp.R.string.ready_to_connect)
+            binding.tvStatus.setTextColor(resources.getColor(com.intercomapp.R.color.primary, null))
         }
     }
     

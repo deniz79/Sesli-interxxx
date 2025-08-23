@@ -49,6 +49,11 @@
     <string name="connecting">Bağlanıyor...</string>
     <string name="connected">Bağlandı</string>
     <string name="disconnected">Bağlantı Kesildi</string>
+    <string name="ready_to_connect">Bağlantıya Hazır</string>
+    <string name="start_connection">Bağlantıyı Başlat</string>
+    <string name="create_connection">Bağlantı Oluştur</string>
+    <string name="waiting_for_connection">Bağlantı Bekleniyor...</string>
+    <string name="connection_established">Bağlantı Kuruldu</string>
     <string name="muted">Susturuldu</string>
     <string name="unmuted">Susturma Kaldırıldı</string>
     <string name="music_playing">Müzik Çalıyor</string>
