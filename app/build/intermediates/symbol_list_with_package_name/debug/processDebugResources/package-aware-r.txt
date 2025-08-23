@@ -2993,6 +2993,7 @@ drawable exo_styled_controls_subtitle_on
 drawable exo_styled_controls_vr
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable ic_add
 drawable ic_arrow_back_black_24
 drawable ic_call
 drawable ic_call_end
@@ -3002,6 +3003,7 @@ drawable ic_contacts
 drawable ic_group
 drawable ic_groups
 drawable ic_home
+drawable ic_join
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_foreground
 drawable ic_launcher_simple
@@ -3208,9 +3210,10 @@ id browser_actions_menu_items
 id browser_actions_menu_view
 id btn_add_friend
 id btn_connect
-id btn_connect_by_id
 id btn_copy_id
+id btn_create_room
 id btn_disconnect
+id btn_join_room
 id btn_login
 id btn_logout
 id btn_mute
@@ -3226,13 +3229,13 @@ id callMeasure
 id cancel_action
 id cancel_button
 id card_add_friend
-id card_connect_id
 id card_connection
 id card_controls
 id card_header
 id card_music
 id card_my_user
 id card_other_user
+id card_room_management
 id card_status
 id card_user_id
 id card_users
@@ -3321,7 +3324,7 @@ id et_friend_id
 id et_name
 id et_password
 id et_phone
-id et_target_id
+id et_room_id
 id exitUntilCollapsed
 id exo_ad_overlay
 id exo_artwork
@@ -3686,7 +3689,7 @@ id til_email
 id til_name
 id til_password
 id til_phone
-id til_target_id
+id til_room_id
 id time
 id title
 id titleDividerNoCustom

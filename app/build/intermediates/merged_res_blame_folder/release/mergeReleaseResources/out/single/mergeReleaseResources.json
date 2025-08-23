@@ -8,12 +8,12 @@
         "source": "/Users/denizyetik/.gradle/daemon/8.6/com.intercomapp-main-61:/drawable/ic_home.xml"
     },
     {
-        "merged": "/Users/denizyetik/.gradle/daemon/8.6/com.intercomapp-release-60:/drawable_circle_background_secondary.xml.flat",
-        "source": "/Users/denizyetik/.gradle/daemon/8.6/com.intercomapp-main-61:/drawable/circle_background_secondary.xml"
-    },
-    {
         "merged": "/Users/denizyetik/.gradle/daemon/8.6/com.intercomapp-release-60:/drawable_ic_call_end.xml.flat",
         "source": "/Users/denizyetik/.gradle/daemon/8.6/com.intercomapp-main-61:/drawable/ic_call_end.xml"
+    },
+    {
+        "merged": "/Users/denizyetik/.gradle/daemon/8.6/com.intercomapp-release-60:/drawable_circle_background_secondary.xml.flat",
+        "source": "/Users/denizyetik/.gradle/daemon/8.6/com.intercomapp-main-61:/drawable/circle_background_secondary.xml"
     },
     {
         "merged": "/Users/denizyetik/.gradle/daemon/8.6/com.intercomapp-release-60:/layout_activity_auth.xml.flat",
@@ -26,6 +26,10 @@
     {
         "merged": "/Users/denizyetik/.gradle/daemon/8.6/com.intercomapp-release-60:/drawable_ic_launcher_foreground.xml.flat",
         "source": "/Users/denizyetik/.gradle/daemon/8.6/com.intercomapp-main-61:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.intercomapp-release-60:/drawable_ic_copy.xml.flat",
+        "source": "com.intercomapp-main-61:/drawable/ic_copy.xml"
     },
     {
         "merged": "/Users/denizyetik/.gradle/daemon/8.6/com.intercomapp-release-60:/drawable_ic_call.xml.flat",
@@ -72,10 +76,6 @@
         "source": "/Users/denizyetik/.gradle/daemon/8.6/com.intercomapp-main-61:/drawable/ic_people.xml"
     },
     {
-        "merged": "com.intercomapp-release-60:/layout_fragment_home.xml.flat",
-        "source": "com.intercomapp-main-61:/layout/fragment_home.xml"
-    },
-    {
         "merged": "/Users/denizyetik/.gradle/daemon/8.6/com.intercomapp-release-60:/layout_fragment_profile.xml.flat",
         "source": "/Users/denizyetik/.gradle/daemon/8.6/com.intercomapp-main-61:/layout/fragment_profile.xml"
     },
@@ -98,6 +98,10 @@
     {
         "merged": "/Users/denizyetik/.gradle/daemon/8.6/com.intercomapp-release-60:/layout_fragment_groups.xml.flat",
         "source": "/Users/denizyetik/.gradle/daemon/8.6/com.intercomapp-main-61:/layout/fragment_groups.xml"
+    },
+    {
+        "merged": "com.intercomapp-release-60:/layout_fragment_voice_room.xml.flat",
+        "source": "com.intercomapp-main-61:/layout/fragment_voice_room.xml"
     },
     {
         "merged": "/Users/denizyetik/.gradle/daemon/8.6/com.intercomapp-release-60:/layout_fragment_home.xml.flat",

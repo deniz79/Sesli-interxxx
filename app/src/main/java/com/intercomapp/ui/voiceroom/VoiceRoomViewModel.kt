@@ -1,5 +1,8 @@
 package com.intercomapp.ui.voiceroom
 
+import android.content.ClipData
+import android.content.ClipboardManager
+import android.content.Context
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -16,6 +19,7 @@ class VoiceRoomViewModel : ViewModel() {
     
     private var intercomService: IntercomService? = null
     private val authRepository = AuthRepository()
+    private var context: Context? = null
     
     // LiveData for UI updates
     private val _roomId = MutableLiveData<String>()
@@ -24,8 +28,8 @@ class VoiceRoomViewModel : ViewModel() {
     private val _myUserInfo = MutableLiveData<UserInfo>()
     val myUserInfo: LiveData<UserInfo> = _myUserInfo
     
-    private val _otherUserInfo = MutableLiveData<UserInfo>()
-    val otherUserInfo: LiveData<UserInfo> = _otherUserInfo
+    private val _otherUserInfo = MutableLiveData<UserInfo?>()
+    val otherUserInfo: LiveData<UserInfo?> = _otherUserInfo
     
     private val _connectionStatus = MutableLiveData<ConnectionStatus>()
     val connectionStatus: LiveData<ConnectionStatus> = _connectionStatus
@@ -36,6 +40,10 @@ class VoiceRoomViewModel : ViewModel() {
     // State variables
     private var isMuted = false
     private var otherUserId: String? = null
+    private var connectedParticipants = mutableSetOf<String>()
+    
+    private val _participantCount = MutableLiveData<Int>()
+    val participantCount: LiveData<Int> = _participantCount
 
     
     init {
@@ -52,6 +60,11 @@ class VoiceRoomViewModel : ViewModel() {
             message = "Arama bekleniyor...",
             color = R.color.warning
         )
+        
+        // Initialize participant count with just me
+        val currentUserId = currentUser?.uid ?: "unknown"
+        connectedParticipants.add(currentUserId)
+        _participantCount.value = connectedParticipants.size
     }
     
     fun setIntercomService(service: IntercomService?) {
@@ -68,13 +81,28 @@ class VoiceRoomViewModel : ViewModel() {
         _roomId.value = roomId
     }
     
+    fun setContext(context: Context) {
+        this.context = context
+    }
+    
+    fun copyRoomIdToClipboard() {
+        context?.let { ctx ->
+            val roomId = _roomId.value
+            if (roomId != null) {
+                val clipboard = ctx.getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+                val clip = ClipData.newPlainText("Room ID", roomId)
+                clipboard.setPrimaryClip(clip)
+                _message.value = "Oda ID'si kopyalandı: ${roomId.take(15)}..."
+            } else {
+                _message.value = "Oda ID'si bulunamadı"
+            }
+        }
+    }
+    
     fun setOtherUserId(userId: String) {
         otherUserId = userId
-        _otherUserInfo.value = UserInfo(
-            id = userId,
-            name = "Oda Katılımcısı",
-            isMuted = false
-        )
+        // Don't set other user info until someone actually joins
+        // _otherUserInfo.value will remain null initially
         
         // Update connection status
         _connectionStatus.value = ConnectionStatus(
@@ -127,12 +155,35 @@ class VoiceRoomViewModel : ViewModel() {
     
     fun onRoomJoined(peerId: String, joinedUserId: String) {
         // Called when someone joins the room
+        connectedParticipants.add(joinedUserId)
+        _participantCount.value = connectedParticipants.size
+        
+        // Set other user info when someone actually joins
+        _otherUserInfo.value = UserInfo(
+            id = joinedUserId,
+            name = "Katılımcı ${joinedUserId.take(8)}...",
+            isMuted = false
+        )
+        
         _connectionStatus.value = ConnectionStatus(
             message = "Katılımcı odaya girdi",
             color = R.color.success
         )
         
         _message.value = "Odaya katılım: $joinedUserId"
+    }
+    
+    fun onParticipantLeft(userId: String) {
+        // Called when someone leaves the room
+        connectedParticipants.remove(userId)
+        _participantCount.value = connectedParticipants.size
+        
+        // Hide other user if they left
+        if (_otherUserInfo.value?.id == userId) {
+            _otherUserInfo.value = null
+        }
+        
+        _message.value = "Katılımcı ayrıldı: $userId"
     }
     
     fun onMicrophoneStatusChanged(peerId: String, isMuted: Boolean) {

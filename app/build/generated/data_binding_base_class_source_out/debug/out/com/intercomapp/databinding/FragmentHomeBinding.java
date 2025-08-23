@@ -27,10 +27,13 @@ public final class FragmentHomeBinding implements ViewBinding {
   public final MaterialButton btnConnect;
 
   @NonNull
-  public final MaterialButton btnConnectById;
+  public final MaterialButton btnCopyId;
 
   @NonNull
-  public final MaterialButton btnCopyId;
+  public final MaterialButton btnCreateRoom;
+
+  @NonNull
+  public final MaterialButton btnJoinRoom;
 
   @NonNull
   public final MaterialButton btnMute;
@@ -51,13 +54,13 @@ public final class FragmentHomeBinding implements ViewBinding {
   public final MaterialButton btnVolumeUp;
 
   @NonNull
-  public final MaterialCardView cardConnectId;
-
-  @NonNull
   public final MaterialCardView cardConnection;
 
   @NonNull
   public final MaterialCardView cardMusic;
+
+  @NonNull
+  public final MaterialCardView cardRoomManagement;
 
   @NonNull
   public final MaterialCardView cardStatus;
@@ -72,10 +75,10 @@ public final class FragmentHomeBinding implements ViewBinding {
   public final MaterialCardView cardVolume;
 
   @NonNull
-  public final TextInputEditText etTargetId;
+  public final TextInputEditText etRoomId;
 
   @NonNull
-  public final TextInputLayout tilTargetId;
+  public final TextInputLayout tilRoomId;
 
   @NonNull
   public final TextView tvMusicStatus;
@@ -87,35 +90,36 @@ public final class FragmentHomeBinding implements ViewBinding {
   public final TextView tvStatus;
 
   private FragmentHomeBinding(@NonNull ScrollView rootView, @NonNull MaterialButton btnConnect,
-      @NonNull MaterialButton btnConnectById, @NonNull MaterialButton btnCopyId,
-      @NonNull MaterialButton btnMute, @NonNull MaterialButton btnStartMusic,
-      @NonNull MaterialButton btnStopMusic, @NonNull MaterialButton btnVoiceCommand,
-      @NonNull MaterialButton btnVolumeDown, @NonNull MaterialButton btnVolumeUp,
-      @NonNull MaterialCardView cardConnectId, @NonNull MaterialCardView cardConnection,
-      @NonNull MaterialCardView cardMusic, @NonNull MaterialCardView cardStatus,
-      @NonNull MaterialCardView cardUserId, @NonNull MaterialCardView cardVoice,
-      @NonNull MaterialCardView cardVolume, @NonNull TextInputEditText etTargetId,
-      @NonNull TextInputLayout tilTargetId, @NonNull TextView tvMusicStatus,
-      @NonNull TextView tvMyUserId, @NonNull TextView tvStatus) {
+      @NonNull MaterialButton btnCopyId, @NonNull MaterialButton btnCreateRoom,
+      @NonNull MaterialButton btnJoinRoom, @NonNull MaterialButton btnMute,
+      @NonNull MaterialButton btnStartMusic, @NonNull MaterialButton btnStopMusic,
+      @NonNull MaterialButton btnVoiceCommand, @NonNull MaterialButton btnVolumeDown,
+      @NonNull MaterialButton btnVolumeUp, @NonNull MaterialCardView cardConnection,
+      @NonNull MaterialCardView cardMusic, @NonNull MaterialCardView cardRoomManagement,
+      @NonNull MaterialCardView cardStatus, @NonNull MaterialCardView cardUserId,
+      @NonNull MaterialCardView cardVoice, @NonNull MaterialCardView cardVolume,
+      @NonNull TextInputEditText etRoomId, @NonNull TextInputLayout tilRoomId,
+      @NonNull TextView tvMusicStatus, @NonNull TextView tvMyUserId, @NonNull TextView tvStatus) {
     this.rootView = rootView;
     this.btnConnect = btnConnect;
-    this.btnConnectById = btnConnectById;
     this.btnCopyId = btnCopyId;
+    this.btnCreateRoom = btnCreateRoom;
+    this.btnJoinRoom = btnJoinRoom;
     this.btnMute = btnMute;
     this.btnStartMusic = btnStartMusic;
     this.btnStopMusic = btnStopMusic;
     this.btnVoiceCommand = btnVoiceCommand;
     this.btnVolumeDown = btnVolumeDown;
     this.btnVolumeUp = btnVolumeUp;
-    this.cardConnectId = cardConnectId;
     this.cardConnection = cardConnection;
     this.cardMusic = cardMusic;
+    this.cardRoomManagement = cardRoomManagement;
     this.cardStatus = cardStatus;
     this.cardUserId = cardUserId;
     this.cardVoice = cardVoice;
     this.cardVolume = cardVolume;
-    this.etTargetId = etTargetId;
-    this.tilTargetId = tilTargetId;
+    this.etRoomId = etRoomId;
+    this.tilRoomId = tilRoomId;
     this.tvMusicStatus = tvMusicStatus;
     this.tvMyUserId = tvMyUserId;
     this.tvStatus = tvStatus;
@@ -154,15 +158,21 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.btn_connect_by_id;
-      MaterialButton btnConnectById = ViewBindings.findChildViewById(rootView, id);
-      if (btnConnectById == null) {
-        break missingId;
-      }
-
       id = R.id.btn_copy_id;
       MaterialButton btnCopyId = ViewBindings.findChildViewById(rootView, id);
       if (btnCopyId == null) {
+        break missingId;
+      }
+
+      id = R.id.btn_create_room;
+      MaterialButton btnCreateRoom = ViewBindings.findChildViewById(rootView, id);
+      if (btnCreateRoom == null) {
+        break missingId;
+      }
+
+      id = R.id.btn_join_room;
+      MaterialButton btnJoinRoom = ViewBindings.findChildViewById(rootView, id);
+      if (btnJoinRoom == null) {
         break missingId;
       }
 
@@ -202,12 +212,6 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.card_connect_id;
-      MaterialCardView cardConnectId = ViewBindings.findChildViewById(rootView, id);
-      if (cardConnectId == null) {
-        break missingId;
-      }
-
       id = R.id.card_connection;
       MaterialCardView cardConnection = ViewBindings.findChildViewById(rootView, id);
       if (cardConnection == null) {
@@ -217,6 +221,12 @@ public final class FragmentHomeBinding implements ViewBinding {
       id = R.id.card_music;
       MaterialCardView cardMusic = ViewBindings.findChildViewById(rootView, id);
       if (cardMusic == null) {
+        break missingId;
+      }
+
+      id = R.id.card_room_management;
+      MaterialCardView cardRoomManagement = ViewBindings.findChildViewById(rootView, id);
+      if (cardRoomManagement == null) {
         break missingId;
       }
 
@@ -244,15 +254,15 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.et_target_id;
-      TextInputEditText etTargetId = ViewBindings.findChildViewById(rootView, id);
-      if (etTargetId == null) {
+      id = R.id.et_room_id;
+      TextInputEditText etRoomId = ViewBindings.findChildViewById(rootView, id);
+      if (etRoomId == null) {
         break missingId;
       }
 
-      id = R.id.til_target_id;
-      TextInputLayout tilTargetId = ViewBindings.findChildViewById(rootView, id);
-      if (tilTargetId == null) {
+      id = R.id.til_room_id;
+      TextInputLayout tilRoomId = ViewBindings.findChildViewById(rootView, id);
+      if (tilRoomId == null) {
         break missingId;
       }
 
@@ -274,10 +284,10 @@ public final class FragmentHomeBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentHomeBinding((ScrollView) rootView, btnConnect, btnConnectById, btnCopyId,
-          btnMute, btnStartMusic, btnStopMusic, btnVoiceCommand, btnVolumeDown, btnVolumeUp,
-          cardConnectId, cardConnection, cardMusic, cardStatus, cardUserId, cardVoice, cardVolume,
-          etTargetId, tilTargetId, tvMusicStatus, tvMyUserId, tvStatus);
+      return new FragmentHomeBinding((ScrollView) rootView, btnConnect, btnCopyId, btnCreateRoom,
+          btnJoinRoom, btnMute, btnStartMusic, btnStopMusic, btnVoiceCommand, btnVolumeDown,
+          btnVolumeUp, cardConnection, cardMusic, cardRoomManagement, cardStatus, cardUserId,
+          cardVoice, cardVolume, etRoomId, tilRoomId, tvMusicStatus, tvMyUserId, tvStatus);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

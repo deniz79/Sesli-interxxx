@@ -12,12 +12,12 @@
         "source": "/Users/denizyetik/.gradle/daemon/8.6/com.intercomapp-main-61:/layout/fragment_voice_room.xml"
     },
     {
-        "merged": "/Users/denizyetik/.gradle/daemon/8.6/com.intercomapp-mergeReleaseResources-59:/layout/activity_auth.xml",
-        "source": "/Users/denizyetik/.gradle/daemon/8.6/com.intercomapp-main-61:/layout/activity_auth.xml"
+        "merged": "com.intercomapp-mergeReleaseResources-59:/layout/fragment_voice_room.xml",
+        "source": "com.intercomapp-main-61:/layout/fragment_voice_room.xml"
     },
     {
-        "merged": "com.intercomapp-mergeReleaseResources-59:/layout/fragment_home.xml",
-        "source": "com.intercomapp-main-61:/layout/fragment_home.xml"
+        "merged": "/Users/denizyetik/.gradle/daemon/8.6/com.intercomapp-mergeReleaseResources-59:/layout/activity_auth.xml",
+        "source": "/Users/denizyetik/.gradle/daemon/8.6/com.intercomapp-main-61:/layout/activity_auth.xml"
     },
     {
         "merged": "/Users/denizyetik/.gradle/daemon/8.6/com.intercomapp-mergeReleaseResources-59:/layout/item_friend.xml",

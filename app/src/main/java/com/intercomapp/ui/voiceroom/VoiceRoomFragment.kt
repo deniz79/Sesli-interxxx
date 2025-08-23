@@ -31,6 +31,9 @@ class VoiceRoomFragment : Fragment() {
         
         viewModel = ViewModelProvider(this)[VoiceRoomViewModel::class.java]
         
+        // Set context for clipboard operations
+        viewModel.setContext(requireContext())
+        
         // Get service from MainActivity
         (activity as? MainActivity)?.let { mainActivity ->
             viewModel.setIntercomService(mainActivity.getIntercomService())
@@ -51,6 +54,11 @@ class VoiceRoomFragment : Fragment() {
     }
     
     private fun setupViews() {
+        // Copy room ID button
+        binding.btnCopyRoomId.setOnClickListener {
+            viewModel.copyRoomIdToClipboard()
+        }
+        
         // Mute button
         binding.btnMute.setOnClickListener {
             viewModel.toggleMute()
@@ -88,19 +96,24 @@ class VoiceRoomFragment : Fragment() {
         
         // Other user info
         viewModel.otherUserInfo.observe(viewLifecycleOwner) { userInfo ->
-            binding.tvOtherName.text = userInfo.name
-            binding.tvOtherStatus.text = if (userInfo.isMuted) "🔇 Ses kapalı" else "🎤 Ses açık"
-            binding.tvOtherStatus.setTextColor(
-                resources.getColor(
-                    if (userInfo.isMuted) com.intercomapp.R.color.error 
-                    else com.intercomapp.R.color.success, 
-                    null
+            if (userInfo != null && userInfo.id.isNotEmpty()) {
+                binding.cardOtherUser.visibility = View.VISIBLE
+                binding.tvOtherName.text = userInfo.name
+                binding.tvOtherStatus.text = if (userInfo.isMuted) "🔇 Ses kapalı" else "🎤 Ses açık"
+                binding.tvOtherStatus.setTextColor(
+                    resources.getColor(
+                        if (userInfo.isMuted) com.intercomapp.R.color.error 
+                        else com.intercomapp.R.color.success, 
+                        null
+                    )
                 )
-            )
-            binding.ivOtherMicStatus.setImageResource(
-                if (userInfo.isMuted) com.intercomapp.R.drawable.ic_mic_off 
-                else com.intercomapp.R.drawable.ic_mic_on
-            )
+                binding.ivOtherMicStatus.setImageResource(
+                    if (userInfo.isMuted) com.intercomapp.R.drawable.ic_mic_off 
+                    else com.intercomapp.R.drawable.ic_mic_on
+                )
+            } else {
+                binding.cardOtherUser.visibility = View.GONE
+            }
         }
         
         // Connection status
@@ -110,9 +123,11 @@ class VoiceRoomFragment : Fragment() {
             
             // Update button visibility based on call status
             updateButtonVisibility()
-            
-            // Update participants count
-            updateParticipantsCount()
+        }
+        
+        // Participant count
+        viewModel.participantCount.observe(viewLifecycleOwner) { count ->
+            binding.tvParticipantsTitle.text = "👥 Katılımcılar ($count)"
         }
         
         // Messages
@@ -128,12 +143,7 @@ class VoiceRoomFragment : Fragment() {
         binding.btnMute.visibility = View.VISIBLE
     }
     
-    private fun updateParticipantsCount() {
-        // Count participants based on connection status
-        val isConnected = viewModel.connectionStatus.value?.message?.contains("Ses bağlantısı kuruldu") == true
-        val participantCount = if (isConnected) 2 else 1
-        binding.tvParticipantsTitle.text = "👥 Katılımcılar ($participantCount)"
-    }
+
     
     override fun onDestroyView() {
         super.onDestroyView()

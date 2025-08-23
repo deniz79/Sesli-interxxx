@@ -2992,6 +2992,7 @@ int drawable exo_styled_controls_subtitle_on 0x7f0800e8
 int drawable exo_styled_controls_vr 0x7f0800e9
 int drawable googleg_disabled_color_18 0x7f0800ea
 int drawable googleg_standard_color_18 0x7f0800eb
+int drawable ic_add 0x7f080154
 int drawable ic_arrow_back_black_24 0x7f0800ec
 int drawable ic_call 0x7f0800ed
 int drawable ic_call_end 0x7f0800ee
@@ -3001,6 +3002,7 @@ int drawable ic_contacts 0x7f0800f1
 int drawable ic_group 0x7f0800f2
 int drawable ic_groups 0x7f0800f3
 int drawable ic_home 0x7f0800f4
+int drawable ic_join 0x7f080155
 int drawable ic_keyboard_black_24dp 0x7f0800f5
 int drawable ic_launcher_foreground 0x7f0800f6
 int drawable ic_launcher_simple 0x7f0800f7
@@ -3207,9 +3209,10 @@ int id browser_actions_menu_items 0x7f0a006a
 int id browser_actions_menu_view 0x7f0a006b
 int id btn_add_friend 0x7f0a006c
 int id btn_connect 0x7f0a006d
-int id btn_connect_by_id 0x7f0a006e
 int id btn_copy_id 0x7f0a006f
+int id btn_create_room 0x7f0a028d
 int id btn_disconnect 0x7f0a0070
+int id btn_join_room 0x7f0a028e
 int id btn_login 0x7f0a0071
 int id btn_logout 0x7f0a0072
 int id btn_mute 0x7f0a0073
@@ -3225,13 +3228,13 @@ int id callMeasure 0x7f0a007c
 int id cancel_action 0x7f0a007d
 int id cancel_button 0x7f0a007e
 int id card_add_friend 0x7f0a007f
-int id card_connect_id 0x7f0a0080
 int id card_connection 0x7f0a0081
 int id card_controls 0x7f0a0082
 int id card_header 0x7f0a0083
 int id card_music 0x7f0a0084
 int id card_my_user 0x7f0a0085
 int id card_other_user 0x7f0a0086
+int id card_room_management 0x7f0a028f
 int id card_status 0x7f0a0087
 int id card_user_id 0x7f0a0088
 int id card_users 0x7f0a0089
@@ -3320,7 +3323,7 @@ int id et_friend_id 0x7f0a00db
 int id et_name 0x7f0a00dc
 int id et_password 0x7f0a00dd
 int id et_phone 0x7f0a00de
-int id et_target_id 0x7f0a00df
+int id et_room_id 0x7f0a0290
 int id exitUntilCollapsed 0x7f0a00e0
 int id exo_ad_overlay 0x7f0a00e1
 int id exo_artwork 0x7f0a00e2
@@ -3685,7 +3688,7 @@ int id til_email 0x7f0a0248
 int id til_name 0x7f0a0249
 int id til_password 0x7f0a024a
 int id til_phone 0x7f0a024b
-int id til_target_id 0x7f0a024c
+int id til_room_id 0x7f0a0291
 int id time 0x7f0a024d
 int id title 0x7f0a024e
 int id titleDividerNoCustom 0x7f0a024f
