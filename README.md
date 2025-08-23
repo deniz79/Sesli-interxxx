@@ -1,129 +1,137 @@
-# Intercom App
+# 🎧 Sesli Intercom Android App
 
-Motorcular için geliştirilmiş intercom sistemi Android uygulaması. Bu uygulama, kullanıcıların kulaklıklarını intercom cihazları gibi kullanabilmelerini sağlar.
+Motorcuların kullandığı intercom sistemlerine benzer şekilde çalışan Android uygulaması. Kullanıcılar kulaklıklarını intercom cihazları gibi kullanabilirler.
 
-## Özellikler
+## 📱 Özellikler
 
-### 🔗 Gerçek Zamanlı İletişim
-- **WebRTC** tabanlı düşük gecikmeli ses iletişimi
-- **Bluetooth** ve **internet** üzerinden bağlantı
-- **Grup konuşmaları** ve **birebir görüşmeler**
+### 🔐 Kimlik Doğrulama
+- Firebase Authentication ile güvenli kayıt ve giriş
+- Kullanıcı profili yönetimi
+- Şifre sıfırlama
 
-### 🎵 Müzik Paylaşımı
-- Kullanıcıların kendi müziklerini grup içinde paylaşabilmesi
-- **ExoPlayer** ile yüksek kaliteli ses çalma
+### 🆔 ID Sistemi
+- Her kullanıcının benzersiz ID'si
+- ID kopyalama ve paylaşma
+- ID ile doğrudan bağlantı kurma
+
+### 🔗 Bağlantı Sistemi
+- Google Nearby Connections ile peer-to-peer bağlantı
+- Bluetooth üzerinden düşük gecikmeli iletişim
+- Otomatik cihaz keşfi
+
+### 🎵 Ses Özellikleri
+- Gerçek zamanlı ses iletişimi
+- Müzik paylaşımı
+- Ses seviyesi kontrolü
+- Susturma özelliği
 
 ### 🎤 Sesli Komutlar
-- **Google Speech-to-Text** API ile sesli komut tanıma
-- Türkçe dil desteği
-- Komutlar: "bağlan", "kapat", "müzik başlat", "sustur" vb.
+- "Bağlan" / "Kapat" komutları
+- "Sustur" / "Susturma kaldır" komutları
+- "Müzik başlat" / "Müziği durdur" komutları
+- "Ses aç" / "Ses kıs" komutları
 
-### 📱 Kullanıcı Yönetimi
-- **Firebase Authentication** ile güvenli giriş
-- **Firestore** ile kullanıcı profilleri ve grup yönetimi
-- **Firebase Cloud Messaging** ile bildirimler
-
-### 🔧 Teknik Özellikler
-- **MVVM** mimari pattern
-- **Hilt** dependency injection
-- **Kotlin Coroutines** ile asenkron işlemler
-- **Material Design** UI
-- **Foreground Service** ile arka plan çalışma
-
-## Kurulum
+## 🚀 Kurulum
 
 ### Gereksinimler
 - Android Studio Arctic Fox veya üzeri
 - Android SDK 24+
-- Kotlin 1.8.0+
-- Firebase projesi
+- Java 17
+- Node.js (signaling server için)
 
 ### Adımlar
 
-1. **Projeyi klonlayın**
+1. **Repository'yi klonlayın:**
 ```bash
-git clone https://github.com/your-username/intercom-app.git
-cd intercom-app
+git clone https://github.com/deniz79/Sesli-interxxx.git
+cd Sesli-interxxx
 ```
 
-2. **Firebase projesi oluşturun**
+2. **Firebase projesini ayarlayın:**
    - [Firebase Console](https://console.firebase.google.com/)'a gidin
    - Yeni proje oluşturun
-   - Android uygulaması ekleyin (package: com.intercomapp)
-   - `google-services.json` dosyasını indirin ve `app/` klasörüne yerleştirin
+   - Android uygulaması ekleyin (package: `com.intercomapp`)
+   - `google-services.json` dosyasını `app/` klasörüne indirin
 
-3. **Firebase servislerini etkinleştirin**
-   - Authentication (Email/Password)
-   - Firestore Database
-   - Cloud Messaging
-
-4. **Projeyi derleyin**
+3. **Uygulamayı build edin:**
 ```bash
-./gradlew build
+./gradlew assembleDebug
 ```
 
-## Kullanım
+4. **Signaling server'ı başlatın (opsiyonel):**
+```bash
+cd signaling-server
+npm install
+node server.js
+```
 
-### İlk Kurulum
-1. Uygulamayı açın
-2. Kayıt olun veya giriş yapın
-3. Gerekli izinleri verin (mikrofon, bluetooth, konum)
+## 📥 APK İndirme
 
-### Temel Kullanım
-1. **Ana Sayfa**: Bağlantı durumu ve temel kontroller
-2. **Kişiler**: Birebir görüşme yapabileceğiniz kişiler
-3. **Gruplar**: Grup konuşmaları ve müzik paylaşımı
-4. **Profil**: Hesap ayarları ve çıkış
+Doğrudan APK dosyasını indirmek için:
+- [Sesli-Intercom-App.apk](Sesli-Intercom-App.apk) dosyasını indirin
+- Android cihazınıza yükleyin
 
-### Sesli Komutlar
-- "Bağlan" - Intercom sistemine bağlan
-- "Kapat" - Bağlantıyı kes
-- "Müzik başlat" - Müzik paylaşımını başlat
-- "Müziği durdur" - Müzik paylaşımını durdur
-- "Sustur" - Mikrofonu kapat
-- "Susturmayı kaldır" - Mikrofonu aç
-- "Ses aç" - Sesi artır
-- "Ses kıs" - Sesi azalt
+## 🛠️ Teknik Detaylar
 
-## Mimari
+### Kullanılan Teknolojiler
+- **Android:** Kotlin, Material Design
+- **Backend:** Firebase (Auth, Firestore, Cloud Messaging)
+- **Bağlantı:** Google Nearby Connections API
+- **Ses:** WebRTC (geçici olarak devre dışı)
+- **UI:** ViewBinding, Navigation Component
 
+### Mimari
+- **MVVM Pattern:** ViewModel ve LiveData kullanımı
+- **Repository Pattern:** Veri erişimi için
+- **Service Pattern:** Arka plan işlemleri için
+
+### İzinler
+```xml
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.BLUETOOTH" />
+<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+<uses-permission android:name="android.permission.RECORD_AUDIO" />
+<uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+```
+
+## 📱 Kullanım
+
+1. **Uygulamayı açın ve kayıt olun**
+2. **Ana sayfada kendi ID'nizi görün**
+3. **"Kopyala" butonuyla ID'nizi paylaşın**
+4. **Arkadaşınızın ID'sini "ID ile Bağlan" alanına girin**
+5. **"ID ile Bağlan" butonuna tıklayın**
+6. **İki kişi birbiriyle iletişime geçebilir!**
+
+## 🔧 Geliştirme
+
+### Proje Yapısı
 ```
 app/
-├── data/
-│   ├── model/          # Veri modelleri
-│   └── repository/     # Repository sınıfları
-├── communication/      # WebRTC ve sesli komut yönetimi
-├── service/           # Arka plan servisleri
-├── ui/                # UI bileşenleri
-│   ├── auth/          # Giriş/kayıt ekranları
-│   ├── home/          # Ana sayfa
-│   ├── contacts/      # Kişiler
-│   ├── groups/        # Gruplar
-│   └── profile/       # Profil
-└── di/                # Dependency injection
+├── src/main/
+│   ├── java/com/intercomapp/
+│   │   ├── communication/     # Bağlantı yönetimi
+│   │   ├── data/             # Veri katmanı
+│   │   ├── service/          # Arka plan servisleri
+│   │   └── ui/               # Kullanıcı arayüzü
+│   └── res/                  # Kaynaklar
+└── build.gradle              # Build konfigürasyonu
 ```
 
-## Teknolojiler
+### Önemli Dosyalar
+- `HomeFragment.kt` - Ana ekran
+- `ConnectionManager.kt` - Bağlantı yönetimi
+- `IntercomService.kt` - Arka plan servisi
+- `AuthActivity.kt` - Kimlik doğrulama
 
-- **Android**: Kotlin, Material Design
-- **Mimari**: MVVM, Repository Pattern
-- **Dependency Injection**: Hilt
-- **Asenkron İşlemler**: Kotlin Coroutines
-- **Ağ İletişimi**: Retrofit, OkHttp
-- **Gerçek Zamanlı İletişim**: WebRTC
-- **Sesli Komutlar**: Google Speech-to-Text
-- **Backend**: Firebase (Auth, Firestore, FCM)
-- **Ses İşleme**: ExoPlayer
-- **Bluetooth**: Google Play Services Nearby
+## 🐛 Bilinen Sorunlar
 
-## Güvenlik
+- WebRTC geçici olarak devre dışı (dependency sorunları)
+- Hilt dependency injection geçici olarak devre dışı
+- Google Speech API geçici olarak devre dışı
 
-- Firebase Authentication ile güvenli kullanıcı yönetimi
-- WebRTC ile şifrelenmiş ses iletişimi
-- HTTPS üzerinden güvenli veri transferi
-- Kullanıcı verilerinin Firestore'da güvenli saklanması
-
-## Katkıda Bulunma
+## 🤝 Katkıda Bulunma
 
 1. Fork yapın
 2. Feature branch oluşturun (`git checkout -b feature/amazing-feature`)
@@ -131,17 +139,21 @@ app/
 4. Push yapın (`git push origin feature/amazing-feature`)
 5. Pull Request oluşturun
 
-## Lisans
+## 📄 Lisans
 
-Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICENSE) dosyasına bakın.
+Bu proje MIT lisansı altında lisanslanmıştır.
 
-## İletişim
+## 📞 İletişim
 
-- Proje Linki: [https://github.com/your-username/intercom-app](https://github.com/your-username/intercom-app)
-- Sorunlar: [Issues](https://github.com/your-username/intercom-app/issues)
+- **GitHub:** [@deniz79](https://github.com/deniz79)
+- **Repository:** [Sesli-interxxx](https://github.com/deniz79/Sesli-interxxx)
 
-## Teşekkürler
+## 🙏 Teşekkürler
 
-- [WebRTC](https://webrtc.org/) - Gerçek zamanlı iletişim
-- [Firebase](https://firebase.google.com/) - Backend servisleri
-- [Material Design](https://material.io/) - UI tasarım sistemi
+- Firebase ekibine
+- Google Nearby Connections API ekibine
+- Android geliştirici topluluğuna
+
+---
+
+**Not:** Bu uygulama eğitim amaçlı geliştirilmiştir. Ticari kullanım için ek güvenlik önlemleri alınması gerekebilir.
