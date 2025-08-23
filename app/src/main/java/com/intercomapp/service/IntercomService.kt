@@ -53,6 +53,12 @@ class IntercomService : Service() {
         webRTCManager.initialize(this)
         webRTCManager.setConnectionManager(connectionManager)
         connectionManager.setWebRTCManager(webRTCManager)
+        
+        // Set call callback
+        connectionManager.setCallCallback { callType, endpointId ->
+            handleCallEvent(callType, endpointId)
+        }
+        
         voiceCommandManager.initialize()
         
         // Connect to signaling server
@@ -319,6 +325,21 @@ class IntercomService : Service() {
         isMuted = muted
         webRTCManager.setMuted(muted)
         updateNotification()
+    }
+    
+    private fun handleCallEvent(callType: String, endpointId: String) {
+        Log.d(TAG, "Call event: $callType from $endpointId")
+        
+        when (callType) {
+            "CALL_ACCEPTED" -> {
+                // Notify UI that call was accepted
+                Log.i(TAG, "📞 Arama kabul edildi: $endpointId")
+            }
+            "CALL_CONFIRMED" -> {
+                // Both parties confirmed, audio connection is ready
+                Log.i(TAG, "✅ Ses bağlantısı hazır: $endpointId")
+            }
+        }
     }
     
     override fun onDestroy() {

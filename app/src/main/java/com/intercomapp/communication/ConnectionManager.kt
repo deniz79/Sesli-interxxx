@@ -22,6 +22,7 @@ class ConnectionManager(private val context: Context) {
     private var isAdvertising = false
     private var userId: String? = null
     private var webRTCManager: WebRTCManager? = null
+    private var callCallback: ((String, String) -> Unit)? = null
     
     private val connectionLifecycleCallback = object : ConnectionLifecycleCallback() {
         override fun onConnectionInitiated(endpointId: String, info: ConnectionInfo) {
@@ -202,6 +203,11 @@ class ConnectionManager(private val context: Context) {
         Log.d(TAG, "WebRTC manager set for audio communication")
     }
     
+    fun setCallCallback(callback: (String, String) -> Unit) {
+        this.callCallback = callback
+        Log.d(TAG, "Call callback set")
+    }
+    
     private fun handleMessage(endpointId: String, message: String) {
         Log.d(TAG, "Received message from $endpointId: $message")
         // Handle different message types
@@ -322,13 +328,27 @@ class ConnectionManager(private val context: Context) {
             message.startsWith("CALL_ACCEPTED:") -> {
                 val accepterId = message.substringAfter("CALL_ACCEPTED:")
                 Log.i(TAG, "✅ Arama kabul edildi: $accepterId")
-                // Start audio connection
-                startWebRTCAudioConnection(endpointId)
+                
+                // Notify callback
+                callCallback?.invoke("CALL_ACCEPTED", endpointId)
+                
+                // Send acceptance confirmation
+                sendMessage(endpointId, "CALL_CONFIRMED:${userId ?: "unknown"}")
             }
             message.startsWith("CALL_REJECTED:") -> {
                 val rejecterId = message.substringAfter("CALL_REJECTED:")
                 Log.i(TAG, "❌ Arama reddedildi: $rejecterId")
                 // Handle call rejection
+            }
+            message.startsWith("CALL_CONFIRMED:") -> {
+                val confirmerId = message.substringAfter("CALL_CONFIRMED:")
+                Log.i(TAG, "✅ Arama onaylandı: $confirmerId")
+                
+                // Notify callback
+                callCallback?.invoke("CALL_CONFIRMED", endpointId)
+                
+                // Both parties confirmed, start audio connection
+                startWebRTCAudioConnection(endpointId)
             }
         }
     }

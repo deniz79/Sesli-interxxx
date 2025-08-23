@@ -122,6 +122,19 @@ class VoiceRoomViewModel : ViewModel() {
         _message.value = "Arama başlatıldı"
     }
     
+    fun onCallAccepted() {
+        // Called when the other party accepts the call
+        _connectionStatus.value = ConnectionStatus(
+            message = "Arama kabul edildi, bağlantı kuruluyor...",
+            color = R.color.success
+        )
+        
+        // Start audio connection after a short delay
+        android.os.Handler(android.os.Looper.getMainLooper()).postDelayed({
+            startAudioConnection()
+        }, 1000)
+    }
+    
     fun acceptCall() {
         if (isCallActive) return
         
@@ -134,8 +147,12 @@ class VoiceRoomViewModel : ViewModel() {
             color = R.color.success
         )
         
-        // Start audio connection
-        startAudioConnection()
+        // Send acceptance message to caller
+        otherUserId?.let { userId ->
+            intercomService?.let { service ->
+                service.connectionManager.sendMessage(userId, "CALL_ACCEPTED:${authRepository.currentUser?.uid ?: "unknown"}")
+            }
+        }
         
         _message.value = "Arama kabul edildi"
     }
