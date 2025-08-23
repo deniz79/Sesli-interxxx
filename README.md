@@ -69,7 +69,12 @@ node server.js
 
 Doğrudan APK dosyasını indirmek için:
 
-### 🟢 **Önerilen: Final APK (En İyi)**
+### 🟢 **Önerilen: Güncellenmiş APK (En İyi)**
+- [Sesli-Intercom-App-Updated.apk](Sesli-Intercom-App-Updated.apk) dosyasını indirin
+- Android cihazınıza yükleyin
+- **Bu APK en son güncellemeleri içerir ve doğru şekilde imzalanmıştır**
+
+### 🟡 **Alternatif: Final APK**
 - [Sesli-Intercom-App-Final.apk](Sesli-Intercom-App-Final.apk) dosyasını indirin
 - Android cihazınıza yükleyin
 - **Bu APK Gradle ile doğru şekilde imzalanmıştır**
