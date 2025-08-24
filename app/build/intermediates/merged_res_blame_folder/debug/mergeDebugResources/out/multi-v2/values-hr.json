@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.intercomapp-mergeDebugResources-58:/values-hr/values-hr.xml",
+            "outputFile": "com.intercomapp-mergeDebugResources-59:/values-hr/values-hr.xml",
             "map": [
                 {
                     "source": "/Users/denizyetik/.gradle/caches/transforms-4/2c77b6fb3811fa2a8278ba6c7fdbf250/transformed/play-services-basement-18.1.0/res/values-hr/values.xml",

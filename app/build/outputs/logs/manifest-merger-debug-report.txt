@@ -89,6 +89,7 @@ MERGED from [androidx.lifecycle:lifecycle-runtime:2.6.1] /Users/denizyetik/.grad
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.6.1] /Users/denizyetik/.gradle/caches/transforms-4/8820804908eb16736c854000ca50df51/transformed/lifecycle-viewmodel-2.6.1/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.6.1] /Users/denizyetik/.gradle/caches/transforms-4/d347e6803fd7ba63ed839a8063703bda/transformed/lifecycle-livedata-ktx-2.6.1/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1] /Users/denizyetik/.gradle/caches/transforms-4/f73a7528dc106e5c4b4b2bc8cf74a589/transformed/lifecycle-viewmodel-ktx-2.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [io.agora.rtc:full-sdk:3.7.0] /Users/denizyetik/.gradle/caches/transforms-4/7a061de61c5a77dd608714b39c790380/transformed/full-sdk-3.7.0/AndroidManifest.xml:2:1-11:12
 MERGED from [de.hdodenhof:circleimageview:3.1.0] /Users/denizyetik/.gradle/caches/transforms-4/5f48b372795765cee165fdda7fc6991e/transformed/circleimageview-3.1.0/AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/denizyetik/.gradle/caches/transforms-4/aeddbff9d0399547e36e20c0d94abfe5/transformed/transport-backend-cct-3.1.8/AndroidManifest.xml:15:1-37:12
 MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/denizyetik/.gradle/caches/transforms-4/aa2eebac81e829bd7476c3a672ab456e/transformed/transport-runtime-3.1.8/AndroidManifest.xml:15:1-41:12
@@ -559,6 +560,8 @@ MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.6.1] /Users/denizyetik/
 MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.6.1] /Users/denizyetik/.gradle/caches/transforms-4/d347e6803fd7ba63ed839a8063703bda/transformed/lifecycle-livedata-ktx-2.6.1/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1] /Users/denizyetik/.gradle/caches/transforms-4/f73a7528dc106e5c4b4b2bc8cf74a589/transformed/lifecycle-viewmodel-ktx-2.6.1/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1] /Users/denizyetik/.gradle/caches/transforms-4/f73a7528dc106e5c4b4b2bc8cf74a589/transformed/lifecycle-viewmodel-ktx-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [io.agora.rtc:full-sdk:3.7.0] /Users/denizyetik/.gradle/caches/transforms-4/7a061de61c5a77dd608714b39c790380/transformed/full-sdk-3.7.0/AndroidManifest.xml:7:5-9:41
+MERGED from [io.agora.rtc:full-sdk:3.7.0] /Users/denizyetik/.gradle/caches/transforms-4/7a061de61c5a77dd608714b39c790380/transformed/full-sdk-3.7.0/AndroidManifest.xml:7:5-9:41
 MERGED from [de.hdodenhof:circleimageview:3.1.0] /Users/denizyetik/.gradle/caches/transforms-4/5f48b372795765cee165fdda7fc6991e/transformed/circleimageview-3.1.0/AndroidManifest.xml:5:5-7:41
 MERGED from [de.hdodenhof:circleimageview:3.1.0] /Users/denizyetik/.gradle/caches/transforms-4/5f48b372795765cee165fdda7fc6991e/transformed/circleimageview-3.1.0/AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/denizyetik/.gradle/caches/transforms-4/aeddbff9d0399547e36e20c0d94abfe5/transformed/transport-backend-cct-3.1.8/AndroidManifest.xml:18:5-20:41

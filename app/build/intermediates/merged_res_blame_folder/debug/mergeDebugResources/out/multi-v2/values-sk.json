@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.intercomapp-mergeDebugResources-58:/values-sk/values-sk.xml",
+            "outputFile": "com.intercomapp-mergeDebugResources-59:/values-sk/values-sk.xml",
             "map": [
                 {
                     "source": "/Users/denizyetik/.gradle/caches/transforms-4/17a1664aa4842d1fcafe7342e3c6b6a6/transformed/browser-1.4.0/res/values-sk/values-sk.xml",
