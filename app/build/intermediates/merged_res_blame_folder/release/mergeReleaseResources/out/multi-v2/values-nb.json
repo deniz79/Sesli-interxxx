@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.intercomapp-mergeReleaseResources-58:/values-nb/values-nb.xml",
+            "outputFile": "com.intercomapp-mergeReleaseResources-59:/values-nb/values-nb.xml",
             "map": [
                 {
                     "source": "/Users/denizyetik/.gradle/caches/transforms-4/dfb2896d6453d957267e9d7b52e7930a/transformed/play-services-base-18.0.1/res/values-nb/values.xml",

@@ -10,13 +10,13 @@ import com.intercomapp.IntercomApplication
 import com.intercomapp.R
 import com.intercomapp.communication.VoiceCommand
 import com.intercomapp.communication.VoiceCommandManager
-import com.intercomapp.communication.SimpleAudioManager
+import com.intercomapp.communication.AgoraAudioManager
 import com.intercomapp.data.repository.AuthRepository
 import kotlinx.coroutines.*
 
 class IntercomService : Service() {
     
-    lateinit var audioManager: SimpleAudioManager
+    lateinit var audioManager: AgoraAudioManager
     private lateinit var voiceCommandManager: VoiceCommandManager
     private lateinit var authRepository: AuthRepository
     
@@ -42,7 +42,7 @@ class IntercomService : Service() {
         Log.d(TAG, "IntercomService created")
         
         // Initialize dependencies manually (Hilt disabled)
-        audioManager = SimpleAudioManager()
+        audioManager = AgoraAudioManager()
         voiceCommandManager = VoiceCommandManager(this)
         authRepository = AuthRepository()
         
@@ -50,7 +50,20 @@ class IntercomService : Service() {
         audioManager.initialize(this)
         voiceCommandManager.initialize()
         
-        Log.i(TAG, "✅ Basit ses sistemi aktif")
+        // Set up Agora callbacks
+        audioManager.setOnConnectionStateChanged { isConnected ->
+            Log.i(TAG, "🔗 Bağlantı durumu: ${if (isConnected) "Bağlandı" else "Kesildi"}")
+        }
+        
+        audioManager.setOnUserJoined { userId ->
+            Log.i(TAG, "👤 Kullanıcı katıldı: $userId")
+        }
+        
+        audioManager.setOnUserLeft { userId ->
+            Log.i(TAG, "👤 Kullanıcı ayrıldı: $userId")
+        }
+        
+        Log.i(TAG, "✅ Agora ses sistemi aktif")
         
         // Start voice command listening
         startVoiceCommandListening()
@@ -189,7 +202,7 @@ class IntercomService : Service() {
         
         serviceScope.launch {
             try {
-                audioManager.joinRoom(roomId, userId, serverIp)
+                audioManager.joinRoom(roomId, userId)
                 
                 // Update user status
                 val currentUser = authRepository.currentUser

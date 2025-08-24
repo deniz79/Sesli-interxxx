@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.intercomapp-mergeReleaseResources-58:/values-watch-v21/values-watch-v21.xml",
+            "outputFile": "com.intercomapp-mergeReleaseResources-59:/values-watch-v21/values-watch-v21.xml",
             "map": [
                 {
                     "source": "/Users/denizyetik/.gradle/caches/transforms-4/288e2ab2d82ed20242189c80dea214b2/transformed/appcompat-1.6.1/res/values-watch-v21/values-watch-v21.xml",

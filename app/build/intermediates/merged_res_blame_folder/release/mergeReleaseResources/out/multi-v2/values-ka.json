@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.intercomapp-mergeReleaseResources-58:/values-ka/values-ka.xml",
+            "outputFile": "com.intercomapp-mergeReleaseResources-59:/values-ka/values-ka.xml",
             "map": [
                 {
                     "source": "/Users/denizyetik/.gradle/caches/transforms-4/3e30de929a841d70957b4197d428117a/transformed/core-1.9.0/res/values-ka/values-ka.xml",

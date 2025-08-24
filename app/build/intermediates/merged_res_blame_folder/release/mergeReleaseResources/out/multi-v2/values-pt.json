@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.intercomapp-mergeReleaseResources-58:/values-pt/values-pt.xml",
+            "outputFile": "com.intercomapp-mergeReleaseResources-59:/values-pt/values-pt.xml",
             "map": [
                 {
                     "source": "/Users/denizyetik/.gradle/caches/transforms-4/288e2ab2d82ed20242189c80dea214b2/transformed/appcompat-1.6.1/res/values-pt/values-pt.xml",

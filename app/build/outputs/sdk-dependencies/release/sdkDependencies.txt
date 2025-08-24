@@ -1823,6 +1823,19 @@ library {
 }
 library {
   maven_library {
+    groupId: "io.agora.rtc"
+    artifactId: "full-sdk"
+    version: "3.7.0"
+  }
+  digests {
+    sha256: "\374\270\340u\265Z~,m\205n\020}o\355X\207\201Vm\247\310\354.\212vjZ\223\364\336W"
+  }
+  repo_index {
+    value: 1
+  }
+}
+library {
+  maven_library {
     groupId: "com.squareup.retrofit2"
     artifactId: "retrofit"
     version: "2.9.0"
@@ -3021,44 +3034,44 @@ library_dependencies {
   library_dep_index: 8
 }
 library_dependencies {
-  library_index: 150
-  library_dep_index: 151
+  library_index: 151
+  library_dep_index: 152
 }
 library_dependencies {
-  library_index: 151
+  library_index: 152
   library_dep_index: 112
   library_dep_index: 2
 }
 library_dependencies {
-  library_index: 152
-  library_dep_index: 150
+  library_index: 153
+  library_dep_index: 151
   library_dep_index: 108
 }
 library_dependencies {
-  library_index: 153
-  library_dep_index: 151
+  library_index: 154
+  library_dep_index: 152
   library_dep_index: 5
 }
 library_dependencies {
-  library_index: 154
-  library_dep_index: 155
+  library_index: 155
   library_dep_index: 156
   library_dep_index: 157
+  library_dep_index: 158
   library_dep_index: 24
   library_dep_index: 48
-  library_dep_index: 158
+  library_dep_index: 159
   library_dep_index: 37
 }
 library_dependencies {
-  library_index: 155
+  library_index: 156
   library_dep_index: 1
 }
 library_dependencies {
-  library_index: 158
+  library_index: 159
   library_dep_index: 1
 }
 library_dependencies {
-  library_index: 160
+  library_index: 161
   library_dep_index: 45
   library_dep_index: 55
 }
@@ -3082,12 +3095,13 @@ module_dependencies {
   dependency_index: 136
   dependency_index: 137
   dependency_index: 150
-  dependency_index: 152
   dependency_index: 151
   dependency_index: 153
+  dependency_index: 152
   dependency_index: 154
-  dependency_index: 159
+  dependency_index: 155
   dependency_index: 160
+  dependency_index: 161
 }
 repositories {
   maven_repo {

@@ -130,12 +130,8 @@ class VoiceRoomViewModel : ViewModel() {
     
     private fun createRoom(roomId: String, userId: String) {
         intercomService?.let { service ->
-            val intent = android.content.Intent(service, IntercomService::class.java).apply {
-                action = "CREATE_ROOM"
-                putExtra("room_id", roomId)
-                putExtra("user_id", userId)
-            }
-            service.startService(intent)
+            // Use Agora directly
+            service.audioManager.createRoom(roomId, userId)
         }
     }
     

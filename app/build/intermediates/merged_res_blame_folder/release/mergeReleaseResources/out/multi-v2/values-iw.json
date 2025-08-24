@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.intercomapp-mergeReleaseResources-58:/values-iw/values-iw.xml",
+            "outputFile": "com.intercomapp-mergeReleaseResources-59:/values-iw/values-iw.xml",
             "map": [
                 {
                     "source": "/Users/denizyetik/.gradle/caches/transforms-4/22a73000f546dd9a6b5b6840281dc6a8/transformed/exoplayer-core-2.18.7/res/values-iw/values-iw.xml",

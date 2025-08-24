@@ -1002,6 +1002,19 @@
       externalAnnotations="annotations.zip"
       proguardRules="proguard.txt"/>
   <library
+      name="io.agora.rtc:full-sdk:3.7.0@aar"
+      jars="/Users/denizyetik/.gradle/caches/transforms-4/7a061de61c5a77dd608714b39c790380/transformed/full-sdk-3.7.0/jars/classes.jar:/Users/denizyetik/.gradle/caches/transforms-4/7a061de61c5a77dd608714b39c790380/transformed/full-sdk-3.7.0/jars/libs/agora-rtc-sdk.jar"
+      resolved="io.agora.rtc:full-sdk:3.7.0"
+      folder="/Users/denizyetik/.gradle/caches/transforms-4/7a061de61c5a77dd608714b39c790380/transformed/full-sdk-3.7.0"
+      manifest="AndroidManifest.xml"
+      resFolder="res"
+      assetsFolder="assets"
+      lintJar="lint.jar"
+      publicResources="public.txt"
+      symbolFile="R.txt"
+      externalAnnotations="annotations.zip"
+      proguardRules="proguard.txt"/>
+  <library
       name="de.hdodenhof:circleimageview:3.1.0@aar"
       jars="/Users/denizyetik/.gradle/caches/transforms-4/5f48b372795765cee165fdda7fc6991e/transformed/circleimageview-3.1.0/jars/classes.jar"
       resolved="de.hdodenhof:circleimageview:3.1.0"

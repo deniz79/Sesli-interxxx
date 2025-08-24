@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.intercomapp-mergeReleaseResources-58:/values-gu/values-gu.xml",
+            "outputFile": "com.intercomapp-mergeReleaseResources-59:/values-gu/values-gu.xml",
             "map": [
                 {
                     "source": "/Users/denizyetik/.gradle/caches/transforms-4/f337c43ad0a1aaeb2ccc6cefaaf7c065/transformed/exoplayer-ui-2.18.7/res/values-gu/values-gu.xml",
